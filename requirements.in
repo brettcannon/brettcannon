@@ -1,0 +1,9 @@
+# Code
+gidgethub
+httpx
+iso8601
+jinja2
+trio
+# Development
+black
+flake8

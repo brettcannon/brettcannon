@@ -1,0 +1,26 @@
+query ($username: String!, $endDate: DateTime) {
+  user(login: $username) {
+    contributionsCollection(to: $endDate) {
+      hasActivityInThePast
+      startedAt
+      endedAt
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository {
+          owner {
+            login
+          }
+          name
+          url
+          isFork
+          isPrivate
+          stargazers {
+            totalCount
+          }
+        }
+        contributions {
+          totalCount
+        }
+      }
+    }
+  }
+}
