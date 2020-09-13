@@ -143,6 +143,7 @@ async def main(token: str, username: str):
     )
 
     # XXX Get contributions that are manually recorded
+    # XXX Make sure GH Actions has SSO taken care of for Microsoft repositories
     print(generate_readme(impactful_creations, contributions, start_date, username))
 
 
