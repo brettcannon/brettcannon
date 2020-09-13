@@ -2,10 +2,14 @@ from __future__ import annotations
 
 import dataclasses
 import datetime
+import math
+import operator
 
 import gidgethub.httpx
+import gidgethub.abc
 import httpx
 import iso8601
+import jinja2
 import trio
 
 
@@ -19,6 +23,15 @@ class Project:
     url: str
     stars: int = 0
     commits: int = 0
+    contributors: int = 0
+
+    @property
+    def name_with_owner(self):
+        return f"{self.owner}/{self.name}"
+
+    @property
+    def sqrt_commits(self):
+        return math.isqrt(self.commits)
 
     def __eq__(self, other):
         return self.owner == other.owner and self.name == other.name
@@ -27,7 +40,12 @@ class Project:
         return hash((self.owner, self.name))
 
     def __repr__(self):
-        return f"<{self.owner}/{self.name}: ⭐️={self.stars:,}, 👩‍💻={self.commits:,}>"
+        stats = {"👷‍♀️": self.contributors, "⭐️": self.stars, "👩‍💻": self.commits}
+        formatted_stats = map(
+            lambda item: (item[0], format(item[1], ",")), stats.items()
+        )
+        stats_str = ", ".join("=".join(formatted_stats))
+        return f"<{self.owner}/{self.name}: {stats_str}>"
 
 
 async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
@@ -50,7 +68,6 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
         activity_in_the_past = data["hasActivityInThePast"]
         contributions_up_to = data["startedAt"]
         contributions_from = data["endedAt"]
-        print(f"{contributions_from} to {contributions_up_to}")
         for contribution in data["commitContributionsByRepository"]:
             repo = contribution["repository"]
             # Don't care about forks as those are not contributions to upstream.
@@ -68,6 +85,7 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
 
 
 def separate_creations_and_contributions(username, projects):
+    """Separate repositories based on which ones are owned by 'username'."""
     creations = set()
     contributions = set()
     for project in projects:
@@ -79,9 +97,33 @@ def separate_creations_and_contributions(username, projects):
     return creations, contributions
 
 
-# XXX async impactful_creations()
-# XXX recorded_contributions()
-# XXX generate_readme()
+async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: Project):
+    """Add the contributor count to the 'project' statistics."""
+    contributors = await gh.getitem(
+        "/repos/{owner}/{repo}/stats/contributors",
+        {"owner": project.owner, "repo": project.name},
+        accept="application/vnd.github.v3+json",
+    )
+    project.contributors = len(contributors)
+
+
+def generate_readme(creations, contributions, start_date: datetime.datetime, username):
+    """Create the README from TEMPLATE.md."""
+    with open("TEMPLATE.md", "r", encoding="utf-8") as file:
+        template = jinja2.Template(file.read())
+    sorted_creations = sorted(creations, key=operator.attrgetter("stars"), reverse=True)
+    sorted_contributions = sorted(
+        contributions, key=operator.attrgetter("commits"), reverse=True
+    )
+    today = datetime.date.today()
+    years_contributing = today.year - start_date.year
+    return template.render(
+        creations=sorted_creations,
+        contributions=sorted_contributions,
+        years_contributing=years_contributing,
+        username=username,
+        today=today.isoformat(),
+    )
 
 
 async def main(token: str, username: str):
@@ -90,20 +132,22 @@ async def main(token: str, username: str):
             client, "brettcannon/brettcannon", oauth_token=token
         )
         start_date, projects = await contribution_counts(gh, username)
-        # XXX Handle special cases (e.g. microsoft/vscode-python)
+        # XXX Handle special cases (e.g. microsoft/vscode-python; fake-cpython/cpython; which-film/which-film.info, DinoV/Pyjion)
 
     creations, contributions = separate_creations_and_contributions(username, projects)
-    print(f"Started {datetime.date.today().year - start_date.year} years ago")
-    print(creations)
-    print()
-    print(contributions)
-    # XXX Filter creations down to the "impactful" ones
+    async with trio.open_nursery() as nursery:
+        for project in creations:
+            nursery.start_soon(contributor_count, gh, project)
+    impactful_creations = frozenset(
+        creation for creation in creations if creation.contributors > 1
+    )
+
     # XXX Get contributions that are manually recorded
-    # XXX Generate README
+    print(generate_readme(impactful_creations, contributions, start_date, username))
 
 
 if __name__ == "__main__":
     import sys
 
     # XXX https://github.com/google/python-fire, https://click.palletsprojects.com, http://docopt.org/
-    trio.run(main, sys.argv[1], sys.argv[2])
+    trio.run(main, sys.argv[2], sys.argv[1])

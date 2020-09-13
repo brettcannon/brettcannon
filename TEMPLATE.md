@@ -1,17 +1,27 @@
-## Links
+# Biographical Links
 - [Curriculum Vitae](https://www.linkedin.com/in/drbrettcannon/) (including links to talk videos)
 - [Blog](https://snarky.ca/)
 - [Twitter](https://twitter.com/brettsky/)
 
-## Open Source
+# Open Source
 
-### Creations
-I have started XXX open source projects which have received _at least_ one external contribution (sorted by [stars](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars)).
+<span style="font-size: 50%">Last updated {{ today }}</span>
 
-XXX
+## Creations
+I have started {{ creations|length }} projects which have received _at least_ one external contribution (sorted by [stars](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars)).
 
-### Contributions
-I have made _some_ contribution to XXX open source projects over the past XXX years
-(font size is the square root of the number of commits I have made to the project).
+<ol style="list-style: none">
+{% for project in creations %}
+<li><a href="{{ project.url }}">{{ project.name }}</a></li>
+{% endfor %}
+</ol>
 
-XXX
+## Contributions
+I have made _some_ contribution to {{ contributions|length }} projects over the past {{ years_contributing }} years
+(sorted by my commit count to the project; font size is `√my_commits`).
+
+<ol style="list-style: none">
+{% for project in contributions %}
+<li><a href="https://github.com/{{ project.owner }}/{{ project.name }}/commits?author={{ username }}" style="font-size: {{ project.sqrt_commits }}pt">{{ project.name_with_owner }}</a></li>
+{% endfor %}
+</ol>

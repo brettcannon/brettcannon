@@ -161,7 +161,23 @@ mccabe==0.6.1 \
 mypy-extensions==0.4.3 \
     --hash=sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d \
     --hash=sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8 \
-    # via black
+    # via black, mypy, trio-typing
+mypy==0.782 \
+    --hash=sha256:2c6cde8aa3426c1682d35190b59b71f661237d74b053822ea3d748e2c9578a7c \
+    --hash=sha256:3fdda71c067d3ddfb21da4b80e2686b71e9e5c72cca65fa216d207a358827f86 \
+    --hash=sha256:5dd13ff1f2a97f94540fd37a49e5d255950ebcdf446fb597463a40d0df3fac8b \
+    --hash=sha256:6731603dfe0ce4352c555c6284c6db0dc935b685e9ce2e4cf220abe1e14386fd \
+    --hash=sha256:6bb93479caa6619d21d6e7160c552c1193f6952f0668cdda2f851156e85186fc \
+    --hash=sha256:81c7908b94239c4010e16642c9102bfc958ab14e36048fa77d0be3289dda76ea \
+    --hash=sha256:9c7a9a7ceb2871ba4bac1cf7217a7dd9ccd44c27c2950edbc6dc08530f32ad4e \
+    --hash=sha256:a4a2cbcfc4cbf45cd126f531dedda8485671545b43107ded25ce952aac6fb308 \
+    --hash=sha256:b7fbfabdbcc78c4f6fc4712544b9b0d6bf171069c6e0e3cb82440dd10ced3406 \
+    --hash=sha256:c05b9e4fb1d8a41d41dec8786c94f3b95d3c5f528298d769eb8e73d293abc48d \
+    --hash=sha256:d7df6eddb6054d21ca4d3c6249cae5578cb4602951fd2b6ee2f5510ffb098707 \
+    --hash=sha256:e0b61738ab504e656d1fe4ff0c0601387a5489ca122d55390ade31f9ca0e252d \
+    --hash=sha256:eff7d4a85e9eea55afa34888dfeaccde99e7520b51f867ac28a48492c0b1130c \
+    --hash=sha256:f05644db6779387ccdb468cc47a44b4356fc2ffa9287135d05b70a98dc83b89a \
+    # via trio-typing
 outcome==1.0.1 \
     --hash=sha256:ee46c5ce42780cde85d55a61819d0e6b8cb490f1dbd749ba75ff2629771dcd2d \
     --hash=sha256:fc7822068ba7dd0fc2532743611e8a73246708d3564e29a39f93d6ab3701b66f \
@@ -229,10 +245,14 @@ toml==0.10.1 \
     --hash=sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f \
     --hash=sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88 \
     # via black
+trio-typing==0.5.0 \
+    --hash=sha256:35f1bec8df2150feab6c8b073b54135321722c9d9289bbffa78a9a091ea83b72 \
+    --hash=sha256:f2007df617a6c26a2294db0dd63645b5451149757e1bde4cb8dbf3e1369174fb \
+    # via -r requirements.in
 trio==0.16.0 \
     --hash=sha256:451ddb27b4e5215e00646fcbb8028d341fccf284e053dc376506a14bb133dbcf \
     --hash=sha256:df067dd0560c321af39d412cd81fc3a7d13f55af9150527daab980683e9fcf3c \
-    # via -r requirements.in
+    # via -r requirements.in, trio-typing
 typed-ast==1.4.1 \
     --hash=sha256:0666aa36131496aed8f7be0410ff974562ab7eeac11ef351def9ea6fa28f6355 \
     --hash=sha256:0c2c07682d61a629b68433afb159376e24e5b2fd4641d35424e462169c0a7919 \
@@ -255,12 +275,12 @@ typed-ast==1.4.1 \
     --hash=sha256:d5d33e9e7af3b34a40dc05f498939f0ebf187f07c385fd58d591c533ad8562fe \
     --hash=sha256:fc0fea399acb12edbf8a628ba8d2312f583bdbdb3335635db062fa98cf71fca4 \
     --hash=sha256:fe460b922ec15dd205595c9b5b99e2f056fd98ae8f9f56b888e7a17dc2b757e7 \
-    # via black
+    # via black, mypy
 typing-extensions==3.7.4.3 \
     --hash=sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918 \
     --hash=sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c \
     --hash=sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f \
-    # via black
+    # via black, mypy, trio-typing
 uritemplate==3.0.1 \
     --hash=sha256:07620c3f3f8eed1f12600845892b0e036a2420acf513c53f7de0abd911a5894f \
     --hash=sha256:5af8ad10cec94f215e3f48112de2022e1d5a37ed427fbd88652fa908f2ab7cae \

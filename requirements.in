@@ -4,6 +4,7 @@ httpx
 iso8601
 jinja2
 trio
+trio-typing
 # Development
 black
 flake8
