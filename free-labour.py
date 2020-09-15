@@ -133,6 +133,7 @@ async def main(token: str, username: str):
         )
         start_date, projects = await contribution_counts(gh, username)
         # XXX Handle special cases (e.g. microsoft/vscode-python; fake-cpython/cpython; which-film/which-film.info, DinoV/Pyjion)
+        # XXX Can use REST API call for microsoft/vscode-python
 
     creations, contributions = separate_creations_and_contributions(username, projects)
     async with trio.open_nursery() as nursery:
