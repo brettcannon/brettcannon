@@ -1,6 +1,6 @@
 [github]
 
-remove = ["fake-python/cpython", "DinoV/Pyjion", "django/django"]
+remove = ["DinoV/Pyjion", "django/django", "DonJayamanne/pythonVSCode", "fake-python/cpython"]
 
 created = ["Which-Film/which-film.info"]
 

@@ -16,7 +16,7 @@ import tomlkit
 import trio
 
 if typing.TYPE_CHECKING:
-    from typing import Iterable, List, Set, Tuple
+    from typing import FrozenSet, Iterable, List, Set, Tuple
 
     class Contribution(typing.Protocol):
 
@@ -24,7 +24,7 @@ if typing.TYPE_CHECKING:
 
         repo_name: str
         contributions_url: str
-        commits: int = 0
+        commits: int
 
     class _GitHubOverrides(typing.TypedDict, total=False):
         remove: List[str]
@@ -40,6 +40,14 @@ if typing.TYPE_CHECKING:
     class OverridesData(typing.TypedDict):
         github: _GitHubOverrides
         contributions: List[_ContributionOverrides]
+
+
+@dataclasses.dataclass
+class RecordedContribution:
+
+    repo_name: str
+    contributions_url: str
+    commits: int
 
 
 @dataclasses.dataclass
@@ -143,17 +151,42 @@ async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     project.stars = data["repository"]["stargazers"]["totalCount"]
 
 
-async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
-    """Add the contributor count to the 'project' statistics."""
+async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
+    """Get the contributors list for a project."""
     # None of my projects are popular enough to have over 100 contributors,
     # so just hard-code the number to keep it simple.
-    contributors = await gh.getitem(
+    return await gh.getitem(
         "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
         {"owner": project.owner, "repo": project.name},
         accept="application/vnd.github.v3+json",
     )
-    contributor_names = {contributor["author"]["login"] for contributor in contributors}
+
+
+async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
+    """Add the contributor count to the 'project' statistics."""
+    # None of my projects are popular enough to have over 100 contributors,
+    # so just hard-code the number to keep it simple.
+    contributors_list = await contributors(gh, project)
+    contributor_names = {
+        contributor["author"]["login"] for contributor in contributors_list
+    }
     project.contributors = len(contributor_names - {"actions-user"})
+
+
+async def my_contributions(
+    gh: gidgethub.abc.GitHubAPI, project: GitHubProject, username: str
+):
+    contributors_list = await contributors(gh, project)
+    for contributor in contributors_list:
+        if contributor["author"]["login"] != username:
+            continue
+        else:
+            project.commits = int(contributor["total"])
+            break
+    else:
+        raise ValueError(
+            f"{username!r} not found to be a contributor to {project.repo_name}"
+        )
 
 
 def generate_readme(
@@ -181,13 +214,24 @@ def generate_readme(
     )
 
 
+def gh_overrides_repos(
+    repo_names: List[str], username: str
+) -> FrozenSet[GitHubProject]:
+    repos = set()
+    for name in repo_names:
+        repos.add(GitHubProject(*name.split("/", 2), username))
+    return frozenset(repos)
+
+
 async def main(token: str, username: str):
     with open("overrides.toml", "r", encoding="utf-8") as file:
         manual_overrides: OverridesData = tomlkit.loads(file.read())
-    creation_overrides = {
-        GitHubProject(*repo_name.split("/", 2), username)
-        for repo_name in manual_overrides["github"]["created"]
-    }
+    creation_overrides = gh_overrides_repos(
+        manual_overrides["github"]["created"], username
+    )
+    contribution_overrides = gh_overrides_repos(
+        manual_overrides["github"]["contributed"], username
+    )
     async with httpx.AsyncClient() as client:
         gh = gidgethub.httpx.GitHubAPI(
             client, "brettcannon/brettcannon", oauth_token=token
@@ -199,20 +243,36 @@ async def main(token: str, username: str):
         creations, contributions = separate_creations_and_contributions(
             username, projects
         )
+        for creation in creation_overrides:
+            try:
+                contributions.remove(creation)
+            except KeyError:
+                pass
         async with trio.open_nursery() as nursery:
             for project in creation_overrides:
                 nursery.start_soon(star_count, gh, project)
-            # XXX add GH contribution overrides; use REST API call to find contribution count
+            for project in contribution_overrides:
+                nursery.start_soon(my_contributions, gh, project, username)
             for project in creations:
                 nursery.start_soon(contributor_count, gh, project)
     impactful_creations = {
         creation for creation in creations if creation.contributors > 1
     }
     impactful_creations = frozenset(impactful_creations | creation_overrides)
-
-    # XXX add manual overrides
+    contributions |= contribution_overrides
+    contributions_list = list(contributions)
+    for project in manual_overrides["contributions"]:
+        name = project["name"]
+        url = project["url"]
+        if "commit_count" in project:
+            commits = project["commit_count"]
+        else:
+            commits = len(project["commits"])
+        contributions_list.append(RecordedContribution(name, url, commits))
     # XXX Make sure GH Actions has SSO taken care of for Microsoft repositories
-    print(generate_readme(impactful_creations, contributions, start_date, username))
+    print(
+        generate_readme(impactful_creations, contributions_list, start_date, username)
+    )
 
 
 if __name__ == "__main__":
