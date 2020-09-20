@@ -3,6 +3,7 @@ gidgethub
 httpx
 iso8601
 jinja2
+tomlkit
 trio
 trio-typing
 # Development

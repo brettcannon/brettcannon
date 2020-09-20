@@ -1,38 +1,73 @@
 from __future__ import annotations
 
+import abc
 import dataclasses
 import datetime
 import math
 import operator
+import typing
 
 import gidgethub.httpx
 import gidgethub.abc
 import httpx
 import iso8601
 import jinja2
+import tomlkit
 import trio
+
+if typing.TYPE_CHECKING:
+    from typing import Iterable, List, Set, Tuple
+
+    class Contribution(typing.Protocol):
+
+        """The interface expected by the README template for contributions."""
+
+        repo_name: str
+        contributions_url: str
+        commits: int = 0
+
+    class _GitHubOverrides(typing.TypedDict, total=False):
+        remove: List[str]
+        created: List[str]
+        contributed: List[str]
+
+    class _ContributionOverrides(typing.TypedDict, total=False):
+        name: str
+        url: str
+        commits: List[str]
+        commit_count: int
+
+    class OverridesData(typing.TypedDict):
+        github: _GitHubOverrides
+        contributions: List[_ContributionOverrides]
 
 
 @dataclasses.dataclass
-class Project:
+class GitHubProject:
 
-    """Representation of a GitHub project."""
+    """Representation of a GitHub project and one's contributions."""
 
     owner: str
     name: str
-    url: str
+    contributor: str = ""
     stars: int = 0
     commits: int = 0
     contributors: int = 0
 
     @property
-    def name_with_owner(self):
+    def repo_name(self):
         return f"{self.owner}/{self.name}"
 
     @property
-    def sqrt_commits(self):
-        return math.isqrt(self.commits)
+    def url(self):
+        return f"https://github.com/{self.owner}/{self.name}"
 
+    @property
+    def contributions_url(self):
+        return f"{self.url}/commits?author={self.contributor}"
+
+    # Cutting a corner here by leaving 'contributor' out, but it makes finding
+    # duplicates in a set in a generic fashion easier.
     def __eq__(self, other):
         return self.owner == other.owner and self.name == other.name
 
@@ -77,14 +112,17 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
                 continue
             owner = repo["owner"]["login"]
             name = repo["name"]
-            url = repo["url"]
-            project = contributions.setdefault((owner, name), Project(owner, name, url))
+            project = contributions.setdefault(
+                (owner, name), GitHubProject(owner, name, username)
+            )
             project.stars = repo["stargazers"]["totalCount"]
             project.commits += contribution["contributions"]["totalCount"]
-    return iso8601.parse_date(contributions_from), frozenset(contributions.values())
+    return iso8601.parse_date(contributions_from), set(contributions.values())
 
 
-def separate_creations_and_contributions(username, projects):
+def separate_creations_and_contributions(
+    username, projects
+) -> Tuple[Set[GitHubProject], Set[Contribution]]:
     """Separate repositories based on which ones are owned by 'username'."""
     creations = set()
     contributions = set()
@@ -97,17 +135,33 @@ def separate_creations_and_contributions(username, projects):
     return creations, contributions
 
 
-async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: Project):
+async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
+    """Add the star count to a GitHub project."""
+    with open("star_count.graphql", "r", encoding="utf-8") as file:
+        query = file.read()
+    data = await gh.graphql(query, owner=project.owner, name=project.name)
+    project.stars = data["repository"]["stargazers"]["totalCount"]
+
+
+async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Add the contributor count to the 'project' statistics."""
+    # None of my projects are popular enough to have over 100 contributors,
+    # so just hard-code the number to keep it simple.
     contributors = await gh.getitem(
-        "/repos/{owner}/{repo}/stats/contributors",
+        "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
         {"owner": project.owner, "repo": project.name},
         accept="application/vnd.github.v3+json",
     )
-    project.contributors = len(contributors)
+    contributor_names = {contributor["author"]["login"] for contributor in contributors}
+    project.contributors = len(contributor_names - {"actions-user"})
 
 
-def generate_readme(creations, contributions, start_date: datetime.datetime, username):
+def generate_readme(
+    creations: Iterable[GitHubProject],
+    contributions: Iterable[Contribution],
+    start_date: datetime.datetime,
+    username,
+):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
         template = jinja2.Template(file.read())
@@ -123,27 +177,40 @@ def generate_readme(creations, contributions, start_date: datetime.datetime, use
         years_contributing=years_contributing,
         username=username,
         today=today.isoformat(),
+        sqrt=math.isqrt,
     )
 
 
 async def main(token: str, username: str):
+    with open("overrides.toml", "r", encoding="utf-8") as file:
+        manual_overrides: OverridesData = tomlkit.loads(file.read())
+    creation_overrides = {
+        GitHubProject(*repo_name.split("/", 2), username)
+        for repo_name in manual_overrides["github"]["created"]
+    }
     async with httpx.AsyncClient() as client:
         gh = gidgethub.httpx.GitHubAPI(
             client, "brettcannon/brettcannon", oauth_token=token
         )
         start_date, projects = await contribution_counts(gh, username)
-        # XXX Handle special cases (e.g. microsoft/vscode-python; fake-cpython/cpython; which-film/which-film.info, DinoV/Pyjion)
-        # XXX Can use REST API call for microsoft/vscode-python
-
-    creations, contributions = separate_creations_and_contributions(username, projects)
-    async with trio.open_nursery() as nursery:
-        for project in creations:
-            nursery.start_soon(contributor_count, gh, project)
-    impactful_creations = frozenset(
+        for remove in manual_overrides["github"]["remove"]:
+            owner, _, name = remove.partition("/")
+            projects.remove(GitHubProject(owner, name))
+        creations, contributions = separate_creations_and_contributions(
+            username, projects
+        )
+        async with trio.open_nursery() as nursery:
+            for project in creation_overrides:
+                nursery.start_soon(star_count, gh, project)
+            # XXX add GH contribution overrides; use REST API call to find contribution count
+            for project in creations:
+                nursery.start_soon(contributor_count, gh, project)
+    impactful_creations = {
         creation for creation in creations if creation.contributors > 1
-    )
+    }
+    impactful_creations = frozenset(impactful_creations | creation_overrides)
 
-    # XXX Get contributions that are manually recorded
+    # XXX add manual overrides
     # XXX Make sure GH Actions has SSO taken care of for Microsoft repositories
     print(generate_readme(impactful_creations, contributions, start_date, username))
 

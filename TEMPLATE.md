@@ -17,11 +17,12 @@ I have started {{ creations|length }} projects which have received _at least_ on
 </ol>
 
 ## Contributions
-I have made _some_ contribution to {{ contributions|length }} projects over the past {{ years_contributing }} years
-(sorted by my commit count to the project; font size is `√my_commits`).
+I have made _at least_ a commit to {{ contributions|length }} projects over the past {{ years_contributing }} years
+(sorted by my commit count to the project; font size is `√my_commits` to
+de-emphasize casual contributions).
 
 <ol style="list-style: none">
 {% for project in contributions %}
-<li><a href="https://github.com/{{ project.owner }}/{{ project.name }}/commits?author={{ username }}" style="font-size: {{ project.sqrt_commits }}pt">{{ project.name_with_owner }}</a></li>
+<li><a href="{{ project.contributions_url }}" style="font-size: {{ sqrt(project.commits) }}pt">{{ project.repo_name }}</a></li>
 {% endfor %}
 </ol>

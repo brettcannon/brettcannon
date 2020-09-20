@@ -245,6 +245,10 @@ toml==0.10.1 \
     --hash=sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f \
     --hash=sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88 \
     # via black
+tomlkit==0.7.0 \
+    --hash=sha256:6babbd33b17d5c9691896b0e68159215a9387ebfa938aa3ac42f4a4beeb2b831 \
+    --hash=sha256:ac57f29693fab3e309ea789252fcce3061e19110085aa31af5446ca749325618 \
+    # via -r requirements.in
 trio-typing==0.5.0 \
     --hash=sha256:35f1bec8df2150feab6c8b073b54135321722c9d9289bbffa78a9a091ea83b72 \
     --hash=sha256:f2007df617a6c26a2294db0dd63645b5451149757e1bde4cb8dbf3e1369174fb \

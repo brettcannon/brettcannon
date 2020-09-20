@@ -1,0 +1,56 @@
+[github]
+
+remove = ["fake-python/cpython", "DinoV/Pyjion", "django/django"]
+
+created = ["Which-Film/which-film.info"]
+
+contributed = ["microsoft/vscode-python"]
+
+
+[[contributions]]
+name = "PyPy"
+url = "https://foss.heptapod.net/pypy/pypy/-/commit/fde2d9745a1cbce34b90d73c359a4b9ffa2ecaa9"
+commits = ["fde2d9745a1cbce34b90d73c359a4b9ffa2ecaa9"]
+
+[[contributions]]
+name = "defusedexpat"
+url = "https://github.com/tiran/defusedexpat/commit/549a2a0013537cc5f7a540db1d583f3e5c496cb3"
+commits = ["549a2a0013537cc5f7a540db1d583f3e5c496cb3"]
+
+[[contributions]]
+name = "expat"
+url = "https://github.com/libexpat/libexpat/commit/021ea9f68c5b64799a4fbbc32ab30e1df9fbe3b7"
+commits = ["021ea9f68c5b64799a4fbbc32ab30e1df9fbe3b7"]
+
+[[contributions]]
+name = "importlib_metadata"
+url = "https://gitlab.com/python-devs/importlib_metadata/-/commits/master?author=Brett%20Cannon"
+commits = ["996696b59db72778af30c8797c7e1b51211faf57"]
+
+[[contributions]]
+name = "importlib_resources"
+url = "https://gitlab.com/python-devs/importlib_resources/-/commits/master?author=Brett%20Cannon"
+commit_count = 90
+
+[[contributions]]
+name = "Mercurial"
+url = "https://www.mercurial-scm.org/repo/hg/rev/33119d0252c1"
+commits = ["33119d0252c1"]
+
+[[contributions]]
+name = "python-hglib"
+url = "https://selenic.com/repo/python-hglib/log?rev=brett%40python.org"
+commits = ["91329df47df5", "16496e0f3c09", "2104fc9aa513", "6564544576b9",
+           "6d273d0a51aa", "6ec4075191ce", "11202c85737e", "ef8eb78fc88d",
+           "0808bb03add5", "b91356bf7186"]
+
+[[contributions]]
+name = "Django"
+url = "https://github.com/django/django/"
+commits = ["c485e236bd7e5ea40c64b2fe54d85dbb15b2fd39",
+           "64b74804c537b12d4cca64f7cb529c0478b4c4d9"]
+
+[[contributions]]
+name = "vim"
+url = "https://github.com/vim/vim/commit/c81e5e79a0f2f5c2ac1896fa51cbe47e2e2a8d97"
+commits = ["c81e5e79a0f2f5c2ac1896fa51cbe47e2e2a8d97"]
