@@ -22,7 +22,7 @@ I have started {{ creations|length }} projects which have received _at least_ on
 I have made _some_ commit to {{ contributions|length }} projects spanning {{ years_contributing }} years.
 
 
-<span style="font-size: 50%">(Sorted by my commit count to the project; font size is `√my_commits` to
+<span style="font-size: 50%">(Sorted by my commit count to the project; font size is `√my_commits`, where supported by your Markdown viewer, to
 de-emphasize casual contributions.)</span>
 
 <ol style="list-style: none">
