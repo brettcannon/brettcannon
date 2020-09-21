@@ -276,7 +276,10 @@ async def main(token: str, username: str):
 
 
 if __name__ == "__main__":
-    import sys
+    import fire
 
-    # XXX https://github.com/google/python-fire, https://click.palletsprojects.com, http://docopt.org/
-    trio.run(main, sys.argv[2], sys.argv[1])
+    def cli(token: str, username: str):
+        """Provide a CLI for the script for use by Fire."""
+        trio.run(main, token, username)
+
+    fire.Fire(cli)
