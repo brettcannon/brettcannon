@@ -15,35 +15,10 @@ import jinja2
 import tomlkit
 import trio
 
-if typing.TYPE_CHECKING:
-    from typing import FrozenSet, Iterable, List, Set, Tuple
 
-    class Contribution(typing.Protocol):
+class Contribution(typing.Protocol):
 
-        """The interface expected by the README template for contributions."""
-
-        repo_name: str
-        contributions_url: str
-        commits: int
-
-    class _GitHubOverrides(typing.TypedDict, total=False):
-        remove: List[str]
-        created: List[str]
-        contributed: List[str]
-
-    class _ContributionOverrides(typing.TypedDict, total=False):
-        name: str
-        url: str
-        commits: List[str]
-        commit_count: int
-
-    class OverridesData(typing.TypedDict):
-        github: _GitHubOverrides
-        contributions: List[_ContributionOverrides]
-
-
-@dataclasses.dataclass
-class RecordedContribution:
+    """The interface expected by the README template for contributions."""
 
     repo_name: str
     contributions_url: str
@@ -51,7 +26,15 @@ class RecordedContribution:
 
 
 @dataclasses.dataclass
-class GitHubProject:
+class RecordedContribution(Contribution):
+
+    repo_name: str
+    contributions_url: str
+    commits: int
+
+
+@dataclasses.dataclass
+class GitHubProject(Contribution):
 
     """Representation of a GitHub project and one's contributions."""
 
@@ -130,7 +113,7 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
 
 def separate_creations_and_contributions(
     username, projects
-) -> Tuple[Set[GitHubProject], Set[Contribution]]:
+) -> tuple[set[GitHubProject], set[Contribution]]:
     """Separate repositories based on which ones are owned by 'username'."""
     creations = set()
     contributions = set()
@@ -190,10 +173,10 @@ async def my_contributions(
 
 
 def generate_readme(
-    creations: Iterable[GitHubProject],
-    contributions: Iterable[Contribution],
+    creations: typing.Iterable[GitHubProject],
+    contributions: typing.Iterable[Contribution],
     start_date: datetime.datetime,
-    username,
+    username: str,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -215,8 +198,8 @@ def generate_readme(
 
 
 def gh_overrides_repos(
-    repo_names: List[str], username: str
-) -> FrozenSet[GitHubProject]:
+    repo_names: list[str], username: str
+) -> frozenset[GitHubProject]:
     repos = set()
     for name in repo_names:
         repos.add(GitHubProject(*name.split("/", 2), username))
@@ -225,7 +208,7 @@ def gh_overrides_repos(
 
 async def main(token: str, username: str):
     with open("overrides.toml", "r", encoding="utf-8") as file:
-        manual_overrides: OverridesData = tomlkit.loads(file.read())
+        manual_overrides = tomlkit.loads(file.read())
     creation_overrides = gh_overrides_repos(
         manual_overrides["github"]["created"], username
     )
