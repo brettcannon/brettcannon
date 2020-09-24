@@ -231,6 +231,13 @@ async def main(token: str, username: str):
                 contributions.remove(creation)
             except KeyError:
                 pass
+        try:
+            await contributors(gh, contribution_overrides.copy().pop())
+        except gidgethub.GitHubException:
+            # For some annoying reason, the /repos/{owner}/{repo}/stats/contributors
+            # endpoint needs a warm-up call, otherwise it will throw an exception
+            # over the 'Accepted' header.
+            pass
         async with trio.open_nursery() as nursery:
             for project in creation_overrides:
                 nursery.start_soon(star_count, gh, project)
@@ -252,7 +259,6 @@ async def main(token: str, username: str):
         else:
             commits = len(project["commits"])
         contributions_list.append(RecordedContribution(name, url, commits))
-    # XXX Make sure GH Actions has SSO taken care of for Microsoft repositories
     print(
         generate_readme(impactful_creations, contributions_list, start_date, username)
     )
