@@ -3,6 +3,7 @@ from __future__ import annotations
 import abc
 import dataclasses
 import datetime
+import http
 import math
 import operator
 import typing
@@ -136,13 +137,26 @@ async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
 
 async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Get the contributors list for a project."""
-    # None of my projects are popular enough to have over 100 contributors,
-    # so just hard-code the number to keep it simple.
-    return await gh.getitem(
-        "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
-        {"owner": project.owner, "repo": project.name},
-        accept="application/vnd.github.v3+json",
-    )
+    # Sometimes GitHub returns a 202/Accepted response when requesting the
+    # contributors. But if you give it enough time it will eventually return
+    # a 200/OK.
+    tries = 10
+    while tries:
+        try:
+            return await gh.getitem(
+                # None of my projects are popular enough to have over 100 contributors,
+                # so just hard-code the number to keep it simple.
+                "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
+                {"owner": project.owner, "repo": project.name},
+                accept="application/vnd.github.v3+json",
+            )
+        except gidgethub.HTTPException as exc:
+            if exc.status_code != http.HTTPStatus.ACCEPTED or not tries:
+                raise
+            else:
+                tries -= 1
+                await trio.sleep(1)
+                continue
 
 
 async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
@@ -231,13 +245,6 @@ async def main(token: str, username: str):
                 contributions.remove(creation)
             except KeyError:
                 pass
-        try:
-            await contributors(gh, next(iter(contribution_overrides)))
-        except gidgethub.GitHubException:
-            # For some annoying reason, the /repos/{owner}/{repo}/stats/contributors
-            # endpoint needs a warm-up call, otherwise it will throw an exception
-            # over the 'Accepted' header.
-            pass
         async with trio.open_nursery() as nursery:
             for project in creation_overrides:
                 nursery.start_soon(star_count, gh, project)
