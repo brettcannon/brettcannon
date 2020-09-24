@@ -232,7 +232,7 @@ async def main(token: str, username: str):
             except KeyError:
                 pass
         try:
-            await contributors(gh, contribution_overrides.copy().pop())
+            await contributors(gh, next(iter(contribution_overrides)))
         except gidgethub.GitHubException:
             # For some annoying reason, the /repos/{owner}/{repo}/stats/contributors
             # endpoint needs a warm-up call, otherwise it will throw an exception
