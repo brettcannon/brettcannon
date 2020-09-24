@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
       - name: Update README.md
-        run: python --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} > README.md
+        run: python free-labour.py --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} > README.md
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
