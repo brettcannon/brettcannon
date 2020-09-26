@@ -1,6 +1,6 @@
 name: Daily Update
 on:
-  # push:
+  push:
   schedule:
     - cron: "0 0 * * *"
 env:
