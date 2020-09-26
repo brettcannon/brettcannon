@@ -5,12 +5,12 @@
 
 # Open Source
 
-<span style="font-size: 50%">Last updated {{ today }}</span>
+<small>Last updated {{ today }}.</small>
 
 ## Creations
 I have started {{ creations|length }} projects which have received _at least_ one external contribution.
 
-<span style="font-size: 50%">(Sorted by [stars](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars).)</span>
+<small>(Sorted by [☆](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars).)</small>
 
 <ol style="list-style: none">
 {% for project in creations %}
@@ -21,12 +21,21 @@ I have started {{ creations|length }} projects which have received _at least_ on
 ## Contributions
 I have made _some_ commit to {{ contributions|length }} projects spanning {{ years_contributing }} years.
 
+<small>(Grouped by commit count.)</small>
 
-<span style="font-size: 50%">(Sorted by my commit count to the project; font size is `√my_commits`, where supported by your Markdown viewer, to
-de-emphasize casual contributions.)</span>
 
-<ol style="list-style: none">
+{% for exponent in range (3, 0, -1) %}
+
+<details><summary>&ge; 10<sup>{{ exponent }}</sup></summary>
+
+<ol>
 {% for project in contributions %}
-<li><a href="{{ project.contributions_url }}" style="font-size: {{ sqrt(project.commits) }}pt">{{ project.repo_name }}</a></li>
+{% if 10**(exponent + 1) > project.commits >= 10**exponent %}
+<li><a href="{{ project.contributions_url }}">{{ project.repo_name }}</a></li>
+{% endif %}
 {% endfor %}
 </ol>
+
+</details>
+
+{% endfor %}
