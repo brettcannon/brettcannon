@@ -24,7 +24,7 @@ I have made _some_ commit to {{ contributions|length }} projects spanning {{ yea
 <small>(Grouped by commit count.)</small>
 
 
-{% for exponent in range (3, 0, -1) %}
+{% for exponent in range (3, -1, -1) %}
 
 <details><summary>&ge; 10<sup>{{ exponent }}</sup></summary>
 
