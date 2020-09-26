@@ -259,9 +259,9 @@ trio-typing==0.5.0 \
     --hash=sha256:35f1bec8df2150feab6c8b073b54135321722c9d9289bbffa78a9a091ea83b72 \
     --hash=sha256:f2007df617a6c26a2294db0dd63645b5451149757e1bde4cb8dbf3e1369174fb \
     # via -r requirements.in
-trio==0.16.0 \
-    --hash=sha256:451ddb27b4e5215e00646fcbb8028d341fccf284e053dc376506a14bb133dbcf \
-    --hash=sha256:df067dd0560c321af39d412cd81fc3a7d13f55af9150527daab980683e9fcf3c \
+trio==0.17.0 \
+    --hash=sha256:e85cf9858e445465dfbb0e3fdf36efe92082d2df87bfe9d62585eedd6e8e9d7d \
+    --hash=sha256:fc70c74e8736d1105b3c05cc2e49b30c58755733740f9c51ae6d88a4d6d0a291 \
     # via -r requirements.in, trio-typing
 typed-ast==1.4.1 \
     --hash=sha256:0666aa36131496aed8f7be0410ff974562ab7eeac11ef351def9ea6fa28f6355 \
