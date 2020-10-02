@@ -140,7 +140,8 @@ async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     # Sometimes GitHub returns a 202/Accepted response when requesting the
     # contributors. But if you give it enough time it will eventually return
     # a 200/OK.
-    tries = 10
+    tries = 6
+    sleep_for = 10
     while tries:
         try:
             return await gh.getitem(
@@ -155,8 +156,10 @@ async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
                 raise
             else:
                 tries -= 1
-                await trio.sleep(1)
+                await trio.sleep(sleep_for)
                 continue
+    else:
+        raise RuntimeError(f"{project.repo_name()} never stopped returning ACCEPTED after {tries * sleep_for} seconds")
 
 
 async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
