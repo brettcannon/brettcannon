@@ -101,9 +101,9 @@ httpcore==0.11.0 \
     --hash=sha256:35ffc735d746b83f8fc6d36f82600e56117b9e8adc65d0c0423264b6ebfef7bf \
     --hash=sha256:7a6804b18e1b8fc61ec4df868cb5c679d225fffbb81e48455ee9b57792cc3ac6 \
     # via httpx
-httpx==0.15.4 \
-    --hash=sha256:4c81dbf98a29cb4f51f415140df56542f9d4860798d713e336642e953cddd1db \
-    --hash=sha256:7b3c07bfdcdadd92020dd4c07b15932abdcf1c898422a4e98de3d19b2223310b \
+httpx==0.15.5 \
+    --hash=sha256:02326f2d3c61133db31e4b88dd3432479b434e52a68d813eab6db930f13611ea \
+    --hash=sha256:254b371e3880a8e2387bf9ead6949bac797bd557fda26eba19a6153a0c06bd2b \
     # via -r requirements.in
 idna==2.10 \
     --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
