@@ -8,6 +8,7 @@ import math
 import operator
 import typing
 
+import feedparser
 import gidgethub.httpx
 import gidgethub.abc
 import httpx
@@ -159,7 +160,9 @@ async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
                 await trio.sleep(sleep_for)
                 continue
     else:
-        raise RuntimeError(f"{project.repo_name} never stopped returning ACCEPTED after {tries * sleep_for} seconds")
+        raise RuntimeError(
+            f"{project.repo_name} never stopped returning ACCEPTED after {tries * sleep_for} seconds"
+        )
 
 
 async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
@@ -189,31 +192,6 @@ async def my_contributions(
         )
 
 
-def generate_readme(
-    creations: typing.Iterable[GitHubProject],
-    contributions: typing.Iterable[Contribution],
-    start_date: datetime.datetime,
-    username: str,
-):
-    """Create the README from TEMPLATE.md."""
-    with open("TEMPLATE.md", "r", encoding="utf-8") as file:
-        template = jinja2.Template(file.read())
-    sorted_creations = sorted(creations, key=operator.attrgetter("stars"), reverse=True)
-    sorted_contributions = sorted(
-        contributions, key=operator.attrgetter("commits"), reverse=True
-    )
-    today = datetime.date.today()
-    years_contributing = today.year - start_date.year
-    return template.render(
-        creations=sorted_creations,
-        contributions=sorted_contributions,
-        years_contributing=years_contributing,
-        username=username,
-        today=today.isoformat(),
-        sqrt=math.isqrt,
-    )
-
-
 def gh_overrides_repos(
     repo_names: list[str], username: str
 ) -> frozenset[GitHubProject]:
@@ -223,7 +201,8 @@ def gh_overrides_repos(
     return frozenset(repos)
 
 
-async def main(token: str, username: str):
+async def contribution_details(client, token, username):
+    """Gather relevant contribution details."""
     with open("overrides.toml", "r", encoding="utf-8") as file:
         manual_overrides = tomlkit.loads(file.read())
     creation_overrides = gh_overrides_repos(
@@ -232,29 +211,25 @@ async def main(token: str, username: str):
     contribution_overrides = gh_overrides_repos(
         manual_overrides["github"]["contributed"], username
     )
-    async with httpx.AsyncClient() as client:
-        gh = gidgethub.httpx.GitHubAPI(
-            client, "brettcannon/brettcannon", oauth_token=token
-        )
-        start_date, projects = await contribution_counts(gh, username)
-        for remove in manual_overrides["github"]["remove"]:
-            owner, _, name = remove.partition("/")
-            projects.remove(GitHubProject(owner, name))
-        creations, contributions = separate_creations_and_contributions(
-            username, projects
-        )
-        for creation in creation_overrides:
-            try:
-                contributions.remove(creation)
-            except KeyError:
-                pass
-        async with trio.open_nursery() as nursery:
-            for project in creation_overrides:
-                nursery.start_soon(star_count, gh, project)
-            for project in contribution_overrides:
-                nursery.start_soon(my_contributions, gh, project, username)
-            for project in creations:
-                nursery.start_soon(contributor_count, gh, project)
+    gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
+    start_date, projects = await contribution_counts(gh, username)
+    for remove in manual_overrides["github"]["remove"]:
+        owner, _, name = remove.partition("/")
+        projects.remove(GitHubProject(owner, name))
+    creations, contributions = separate_creations_and_contributions(username, projects)
+    for creation in creation_overrides:
+        try:
+            contributions.remove(creation)
+        except KeyError:
+            pass
+    async with trio.open_nursery() as nursery:
+        for project in creation_overrides:
+            nursery.start_soon(star_count, gh, project)
+        for project in contribution_overrides:
+            nursery.start_soon(my_contributions, gh, project, username)
+        for project in creations:
+            nursery.start_soon(contributor_count, gh, project)
+
     impactful_creations = {
         creation for creation in creations if creation.contributors > 1
     }
@@ -269,16 +244,65 @@ async def main(token: str, username: str):
         else:
             commits = len(project["commits"])
         contributions_list.append(RecordedContribution(name, url, commits))
-    print(
-        generate_readme(impactful_creations, contributions_list, start_date, username)
+
+    return {
+        "creations": impactful_creations,
+        "contributions": contributions_list,
+        "start_date": start_date,
+    }
+
+
+async def latest_blog_post(client, feed):
+    """Find the latest blog post's URL and publication date."""
+    rss_xml = await httpx.get(feed)
+    rss_feed = feedparser.parse(rss_xml)
+    post = rss_feed.entries[0]
+    url = post.link
+    date = datetime.DateTime(*post.published_parsed[:6])
+    return {"post_url": url, "post_date": date}
+
+
+def generate_readme(
+    creations: typing.Iterable[GitHubProject],
+    contributions: typing.Iterable[Contribution],
+    start_date: datetime.datetime,
+    username: str,
+    post_url: str,
+    post_date: datetime.DateTime,
+):
+    """Create the README from TEMPLATE.md."""
+    with open("TEMPLATE.md", "r", encoding="utf-8") as file:
+        template = jinja2.Template(file.read())
+    sorted_creations = sorted(creations, key=operator.attrgetter("stars"), reverse=True)
+    sorted_contributions = sorted(
+        contributions, key=operator.attrgetter("commits"), reverse=True
     )
+    today = datetime.date.today()
+    years_contributing = today.year - start_date.year
+    return template.render(
+        post_url=post_url,
+        post_date=post_date.strftime("%Y-%m-%d"),
+        creations=sorted_creations,
+        contributions=sorted_contributions,
+        years_contributing=years_contributing,
+        username=username,
+        today=today.isoformat(),
+        sqrt=math.isqrt,
+    )
+
+
+async def main(token: str, username: str, feed: str):
+    async with httpx.AsyncClient() as client:
+        post_details = await latest_blog_post(client, feed)
+        contrib_details = await contribution_details(client, token, username)
+    print(generate_readme(username=username, **contrib_details, **post_details))
 
 
 if __name__ == "__main__":
     import fire
 
-    def cli(token: str, username: str):
+    def cli(token: str, username: str, feed: str):
         """Provide a CLI for the script for use by Fire."""
-        trio.run(main, token, username)
+        trio.run(main, token, username, feed)
 
     fire.Fire(cli)
