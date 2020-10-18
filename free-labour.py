@@ -258,7 +258,7 @@ async def latest_blog_post(client, feed):
     rss_feed = feedparser.parse(rss_xml)
     post = rss_feed.entries[0]
     url = post.link
-    date = datetime.DateTime(*post.published_parsed[:6])
+    date = datetime.datetime(*post.published_parsed[:6])
     return {"post_url": url, "post_date": date}
 
 
@@ -268,7 +268,7 @@ def generate_readme(
     start_date: datetime.datetime,
     username: str,
     post_url: str,
-    post_date: datetime.DateTime,
+    post_date: datetime.datetime,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -281,7 +281,7 @@ def generate_readme(
     years_contributing = today.year - start_date.year
     return template.render(
         post_url=post_url,
-        post_date=post_date.strftime("%Y-%m-%d"),
+        post_date=post_date.date.isoformat(),
         creations=sorted_creations,
         contributions=sorted_contributions,
         years_contributing=years_contributing,
