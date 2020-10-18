@@ -254,7 +254,7 @@ async def contribution_details(client, token, username):
 
 async def latest_blog_post(client, feed):
     """Find the latest blog post's URL and publication date."""
-    rss_xml = await httpx.get(feed)
+    rss_xml = await client.get(feed)
     rss_feed = feedparser.parse(rss_xml)
     post = rss_feed.entries[0]
     url = post.link
