@@ -1,6 +1,6 @@
 # Biographical Links
 - [Curriculum Vitae](https://www.linkedin.com/in/drbrettcannon/) (including links to talk videos)
-- [Blog](https://snarky.ca/)
+- [Blog](https://snarky.ca/) ([latest post]({{ post_url }}) published on {{ post_date }})
 - [Twitter](https://twitter.com/brettsky/)
 
 # Open Source
