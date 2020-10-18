@@ -281,7 +281,7 @@ def generate_readme(
     years_contributing = today.year - start_date.year
     return template.render(
         post_url=post_url,
-        post_date=post_date.date.isoformat(),
+        post_date=post_date.date().isoformat(),
         creations=sorted_creations,
         contributions=sorted_contributions,
         years_contributing=years_contributing,
