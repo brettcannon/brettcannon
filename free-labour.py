@@ -291,9 +291,12 @@ def generate_readme(
     )
 
 
-async def main(token: str, username: str, feed: str):
+async def main(token: str, username: str, feed: str = ""):
     async with httpx.AsyncClient() as client:
-        post_details = await latest_blog_post(client, feed)
+        if feed:
+            post_details = await latest_blog_post(client, feed)
+        else:
+            post_details = {"post_url": "", "post_date": datetime.datetime(1, 1, 1)}
         contrib_details = await contribution_details(client, token, username)
     print(generate_readme(username=username, **contrib_details, **post_details))
 
