@@ -32,7 +32,7 @@ jobs:
       - name: Update README.md
         run: python free-labour.py --feed ${{ env.BLOG_FEED }} --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} > README.md
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v4.7.1
         with:
           commit_message: Update README.md
           file_pattern: README.md
