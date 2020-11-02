@@ -4,6 +4,7 @@ import abc
 import dataclasses
 import datetime
 import http
+import json
 import math
 import operator
 import typing
@@ -262,6 +263,19 @@ async def latest_blog_post(client, feed):
     return {"post_url": url, "post_date": date}
 
 
+async def twitter_follower_count(client, bearer_token, username):
+    """Find out the follower count of *username* on Twitter."""
+    # https://developer.twitter.com/en/docs/authentication/oauth-2-0
+    headers = {"authorization": f"Bearer {bearer_token}"}
+    # https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by-username-username
+    url = f"https://api.twitter.com/2/users/by/username/{username}"
+    params = {"user.fields": ",".join(["public_metrics"])}
+
+    raw_data = await client.get(url, params=params, headers=headers)
+    data = json.loads(raw_data)
+    return data["public_metrics"]["followers_count"]
+
+
 def generate_readme(
     creations: typing.Iterable[GitHubProject],
     contributions: typing.Iterable[Contribution],
@@ -269,6 +283,7 @@ def generate_readme(
     username: str,
     post_url: str,
     post_date: datetime.datetime,
+    twitter_follower_count: int,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -288,24 +303,50 @@ def generate_readme(
         username=username,
         today=today.isoformat(),
         sqrt=math.isqrt,
+        twitter_follow_count=format(twitter_follower_count, ","),
     )
 
 
-async def main(token: str, username: str, feed: str = ""):
+async def main(
+    token: str,
+    username: str,
+    feed: str = "",
+    twitter_username: str = "",
+    twitter_token: str = "",
+):
     async with httpx.AsyncClient() as client:
         if feed:
             post_details = await latest_blog_post(client, feed)
         else:
             post_details = {"post_url": "", "post_date": datetime.datetime(1, 1, 1)}
+        if twitter_username and twitter_token:
+            follower_count = await twitter_follower_count(
+                client, twitter_token, twitter_username
+            )
+        else:
+            follower_count = -1
         contrib_details = await contribution_details(client, token, username)
-    print(generate_readme(username=username, **contrib_details, **post_details))
+    print(
+        generate_readme(
+            username=username,
+            **contrib_details,
+            **post_details,
+            twitter_follower_count=follower_count,
+        )
+    )
 
 
 if __name__ == "__main__":
     import fire
 
-    def cli(token: str, username: str, feed: str):
+    def cli(
+        token: str,
+        username: str,
+        feed: str,
+        twitter_username: str,
+        twitter_token: str,
+    ):
         """Provide a CLI for the script for use by Fire."""
-        trio.run(main, token, username, feed)
+        trio.run(main, token, username, feed, twitter_username, twitter_token)
 
     fire.Fire(cli)
