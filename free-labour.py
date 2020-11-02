@@ -274,7 +274,7 @@ async def twitter_follower_count(client, bearer_token, username):
     response = await client.get(url, params=params, headers=headers)
     response.raise_for_status()
     data = response.json()
-    return data["public_metrics"]["followers_count"]
+    return data["data"]["public_metrics"]["followers_count"]
 
 
 def generate_readme(
