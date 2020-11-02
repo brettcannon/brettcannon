@@ -23,16 +23,6 @@ url = "https://github.com/libexpat/libexpat/commit/021ea9f68c5b64799a4fbbc32ab30
 commits = ["021ea9f68c5b64799a4fbbc32ab30e1df9fbe3b7"]
 
 [[contributions]]
-name = "importlib_metadata"
-url = "https://gitlab.com/python-devs/importlib_metadata/-/commits/master?author=Brett%20Cannon"
-commits = ["996696b59db72778af30c8797c7e1b51211faf57"]
-
-[[contributions]]
-name = "importlib_resources"
-url = "https://gitlab.com/python-devs/importlib_resources/-/commits/master?author=Brett%20Cannon"
-commit_count = 90
-
-[[contributions]]
 name = "Mercurial"
 url = "https://www.mercurial-scm.org/repo/hg/rev/33119d0252c1"
 commits = ["33119d0252c1"]
