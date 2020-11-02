@@ -4,7 +4,6 @@ import abc
 import dataclasses
 import datetime
 import http
-import json
 import math
 import operator
 import typing
@@ -256,6 +255,7 @@ async def contribution_details(client, token, username):
 async def latest_blog_post(client, feed):
     """Find the latest blog post's URL and publication date."""
     rss_xml = await client.get(feed)
+    rss_xml.raise_for_status()
     rss_feed = feedparser.parse(rss_xml)
     post = rss_feed.entries[0]
     url = post.link
@@ -271,8 +271,9 @@ async def twitter_follower_count(client, bearer_token, username):
     url = f"https://api.twitter.com/2/users/by/username/{username}"
     params = {"user.fields": ",".join(["public_metrics"])}
 
-    raw_data = await client.get(url, params=params, headers=headers)
-    data = json.loads(raw_data)
+    response = await client.get(url, params=params, headers=headers)
+    response.raise_for_status()
+    data = response.json()
     return data["public_metrics"]["followers_count"]
 
 
