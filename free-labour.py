@@ -304,7 +304,7 @@ def generate_readme(
         username=username,
         today=today.isoformat(),
         sqrt=math.isqrt,
-        twitter_follow_count=format(twitter_follower_count, ","),
+        twitter_follower_count=format(twitter_follower_count, ","),
     )
 
 
