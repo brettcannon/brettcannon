@@ -19,7 +19,7 @@ I have started {{ creations|length }} projects which have received _at least_ on
 </ol>
 
 ## Contributions
-I have made _some_ commit to {{ contributions|length }} projects spanning {{ years_contributing }} years.
+Over the past {{ years_contributing }} years, I have made _some_ commit to {{ contributions|length }} projects.
 
 <small>(Grouped by commit count.)</small>
 
