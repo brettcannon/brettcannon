@@ -37,7 +37,7 @@ I have started 10 projects which have received _at least_ one external contribut
 </ol>
 
 ## Contributions
-I have made _some_ commit to 160 projects spanning 17 years.
+I have made _some_ commit to 158 projects spanning 17 years.
 
 <small>(Grouped by commit count.)</small>
 
@@ -50,10 +50,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 <li><a href="https://github.com/python/cpython/commits?author=brettcannon">python/cpython</a></li>
-
-
-
-
 
 
 
@@ -708,10 +704,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-
-
-
-
 </ol>
 
 </details>
@@ -738,10 +730,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 <li><a href="https://github.com/microsoft/pvscbot/commits?author=brettcannon">microsoft/pvscbot</a></li>
-
-
-
-<li><a href="https://gitlab.com/python-devs/importlib_resources/-/commits/master?author=Brett%20Cannon">importlib_resources</a></li>
 
 
 
@@ -785,11 +773,11 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/Azure-Samples/Azure-MachineLearning-DataScience/commits?author=brettcannon">Azure-Samples/Azure-MachineLearning-DataScience</a></li>
-
-
-
 <li><a href="https://github.com/python/core-workflow/commits?author=brettcannon">python/core-workflow</a></li>
+
+
+
+<li><a href="https://github.com/Azure-Samples/Azure-MachineLearning-DataScience/commits?author=brettcannon">Azure-Samples/Azure-MachineLearning-DataScience</a></li>
 
 
 
@@ -801,15 +789,15 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/Azure/msrest-for-python/commits?author=brettcannon">Azure/msrest-for-python</a></li>
-
-
-
 <li><a href="https://github.com/Azure/msrestazure-for-python/commits?author=brettcannon">Azure/msrestazure-for-python</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/TypeScript-Handbook/commits?author=brettcannon">microsoft/TypeScript-Handbook</a></li>
+<li><a href="https://github.com/Azure/msrest-for-python/commits?author=brettcannon">Azure/msrest-for-python</a></li>
+
+
+
+<li><a href="https://github.com/pypa/distutils/commits?author=brettcannon">pypa/distutils</a></li>
 
 
 
@@ -821,7 +809,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/pypa/distutils/commits?author=brettcannon">pypa/distutils</a></li>
+<li><a href="https://github.com/microsoft/TypeScript-Handbook/commits?author=brettcannon">microsoft/TypeScript-Handbook</a></li>
 
 
 
@@ -830,8 +818,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 <li><a href="https://selenic.com/repo/python-hglib/log?rev=brett%40python.org">python-hglib</a></li>
-
-
 
 
 
@@ -1161,8 +1147,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-
-
 <li><a href="https://github.com/python3statement/python3statement.github.io/commits?author=brettcannon">python3statement/python3statement.github.io</a></li>
 
 
@@ -1171,19 +1155,11 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/eclipse/ceylon-lang.org/commits?author=brettcannon">eclipse/ceylon-lang.org</a></li>
-
-
-
 <li><a href="https://github.com/microsoft/vscode-anaconda-extension-pack/commits?author=brettcannon">microsoft/vscode-anaconda-extension-pack</a></li>
 
 
 
-<li><a href="https://github.com/Azure/azure-sdk-for-python/commits?author=brettcannon">Azure/azure-sdk-for-python</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-docs/commits?author=brettcannon">microsoft/vscode-docs</a></li>
+<li><a href="https://github.com/eclipse/ceylon-lang.org/commits?author=brettcannon">eclipse/ceylon-lang.org</a></li>
 
 
 
@@ -1191,7 +1167,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/python/cherry-picker/commits?author=brettcannon">python/cherry-picker</a></li>
+<li><a href="https://github.com/Azure/azure-sdk-for-python/commits?author=brettcannon">Azure/azure-sdk-for-python</a></li>
 
 
 
@@ -1199,7 +1175,11 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
+<li><a href="https://github.com/microsoft/vscode-docs/commits?author=brettcannon">microsoft/vscode-docs</a></li>
+
+
+
+<li><a href="https://github.com/python/cherry-picker/commits?author=brettcannon">python/cherry-picker</a></li>
 
 
 
@@ -1207,15 +1187,15 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/microsoft/vscode/commits?author=brettcannon">microsoft/vscode</a></li>
-
-
-
 <li><a href="https://github.com/python/planet/commits?author=brettcannon">python/planet</a></li>
 
 
 
-<li><a href="https://github.com/pypa/packaging.python.org/commits?author=brettcannon">pypa/packaging.python.org</a></li>
+<li><a href="https://github.com/microsoft/vscode/commits?author=brettcannon">microsoft/vscode</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
 
 
 
@@ -1223,7 +1203,19 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
+<li><a href="https://github.com/pypa/packaging.python.org/commits?author=brettcannon">pypa/packaging.python.org</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-python-devicesimulator/commits?author=brettcannon">microsoft/vscode-python-devicesimulator</a></li>
+
+
+
 <li><a href="https://github.com/square/dagger/commits?author=brettcannon">square/dagger</a></li>
+
+
+
+<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
 
 
 
@@ -1235,23 +1227,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/microsoft/vscode-python-devicesimulator/commits?author=brettcannon">microsoft/vscode-python-devicesimulator</a></li>
-
-
-
-<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
-
-
-
-<li><a href="https://github.com/cookiecutter/cookiecutter/commits?author=brettcannon">cookiecutter/cookiecutter</a></li>
-
-
-
 <li><a href="https://github.com/conda/conda/commits?author=brettcannon">conda/conda</a></li>
-
-
-
-<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
 
 
 
@@ -1259,11 +1235,15 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
+<li><a href="https://github.com/cookiecutter/cookiecutter/commits?author=brettcannon">cookiecutter/cookiecutter</a></li>
+
+
+
 <li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/language-server-protocol/commits?author=brettcannon">microsoft/language-server-protocol</a></li>
+<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
 
 
 
@@ -1271,7 +1251,15 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
+<li><a href="https://github.com/python-hyper/hyper-h2/commits?author=brettcannon">python-hyper/hyper-h2</a></li>
+
+
+
+<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
 
 
 
@@ -1279,7 +1267,23 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/beeware/liquid-demo/commits?author=brettcannon">beeware/liquid-demo</a></li>
+<li><a href="https://github.com/takluyver/flit/commits?author=brettcannon">takluyver/flit</a></li>
+
+
+
+<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
+
+
+
+<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
+
+
+
+<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
 
 
 
@@ -1287,11 +1291,43 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/python/core-sprint/commits?author=brettcannon">python/core-sprint</a></li>
+<li><a href="https://github.com/python/python-docs-theme/commits?author=brettcannon">python/python-docs-theme</a></li>
 
 
 
-<li><a href="https://github.com/progit/progit2/commits?author=brettcannon">progit/progit2</a></li>
+<li><a href="https://github.com/python/steering-council/commits?author=brettcannon">python/steering-council</a></li>
+
+
+
+<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
+
+
+
+<li><a href="https://github.com/matplotlib/matplotlib/commits?author=brettcannon">matplotlib/matplotlib</a></li>
+
+
+
+<li><a href="https://github.com/w3c/ServiceWorker/commits?author=brettcannon">w3c/ServiceWorker</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/language-server-protocol/commits?author=brettcannon">microsoft/language-server-protocol</a></li>
+
+
+
+<li><a href="https://github.com/beeware/liquid-demo/commits?author=brettcannon">beeware/liquid-demo</a></li>
+
+
+
+<li><a href="https://github.com/python/importlib_metadata/commits?author=brettcannon">python/importlib_metadata</a></li>
+
+
+
+<li><a href="https://github.com/microsoftarchive/msgraph-sdk-python/commits?author=brettcannon">microsoftarchive/msgraph-sdk-python</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
 
 
 
@@ -1303,39 +1339,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
-
-
-
-<li><a href="https://github.com/takluyver/flit/commits?author=brettcannon">takluyver/flit</a></li>
-
-
-
-<li><a href="https://github.com/python-hyper/hyper-h2/commits?author=brettcannon">python-hyper/hyper-h2</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
-
-
-
-<li><a href="https://github.com/matplotlib/matplotlib/commits?author=brettcannon">matplotlib/matplotlib</a></li>
-
-
-
-<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
-
-
-
-<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
-
-
-
-<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
-
-
-
-<li><a href="https://github.com/python/importlib_metadata/commits?author=brettcannon">python/importlib_metadata</a></li>
+<li><a href="https://github.com/progit/progit2/commits?author=brettcannon">progit/progit2</a></li>
 
 
 
@@ -1343,31 +1347,11 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
+<li><a href="https://github.com/python/core-sprint/commits?author=brettcannon">python/core-sprint</a></li>
 
 
 
-<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
-
-
-
-<li><a href="https://github.com/python/steering-council/commits?author=brettcannon">python/steering-council</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
-
-
-
-<li><a href="https://github.com/python/python-docs-theme/commits?author=brettcannon">python/python-docs-theme</a></li>
-
-
-
-<li><a href="https://github.com/microsoftarchive/msgraph-sdk-python/commits?author=brettcannon">microsoftarchive/msgraph-sdk-python</a></li>
-
-
-
-<li><a href="https://github.com/w3c/ServiceWorker/commits?author=brettcannon">w3c/ServiceWorker</a></li>
+<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
 
 
 
@@ -1375,7 +1359,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
+<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
 
 
 
@@ -1383,171 +1367,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
-
-
-
-<li><a href="https://github.com/eamodio/vscode-gitlens/commits?author=brettcannon">eamodio/vscode-gitlens</a></li>
-
-
-
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
-
-
-
-<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
-
-
-
-<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
-
-
-
-<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
-
-
-
-<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
-
-
-
-<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
-
-
-
-<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
-
-
-
-<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
-
-
-
-<li><a href="https://github.com/syl20bnr/spacemacs/commits?author=brettcannon">syl20bnr/spacemacs</a></li>
-
-
-
-<li><a href="https://github.com/github/gitignore/commits?author=brettcannon">github/gitignore</a></li>
-
-
-
-<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
-
-
-
-<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
-
-
-
 <li><a href="https://github.com/pytest-dev/pytest/commits?author=brettcannon">pytest-dev/pytest</a></li>
-
-
-
-<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
-
-
-
-<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
-
-
-
-<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
-
-
-
-<li><a href="https://github.com/thechangelog/show-notes/commits?author=brettcannon">thechangelog/show-notes</a></li>
-
-
-
-<li><a href="https://github.com/stellar/docs/commits?author=brettcannon">stellar/docs</a></li>
-
-
-
-<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
-
-
-
-<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
-
-
-
-<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
-
-
-
-<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
-
-
-
-<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
-
-
-
-<li><a href="https://github.com/pipxproject/pipx/commits?author=brettcannon">pipxproject/pipx</a></li>
-
-
-
-<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-languageserver-node-example/commits?author=brettcannon">microsoft/vscode-languageserver-node-example</a></li>
-
-
-
-<li><a href="https://github.com/MagicStack/MagicPython/commits?author=brettcannon">MagicStack/MagicPython</a></li>
-
-
-
-<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
-
-
-
-<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
-
-
-
-<li><a href="https://github.com/mozilla-services/konfig/commits?author=brettcannon">mozilla-services/konfig</a></li>
-
-
-
-<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
-
-
-
-<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs</a></li>
-
-
-
-<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
-
-
-
-<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
-
-
-
-<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
-
-
-
-<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
-
-
-
-<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
-
-
-
-<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
 
 
 
@@ -1555,75 +1375,7 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
-
-
-
-<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
-
-
-
-<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
-
-
-
-<li><a href="https://github.com/riscv/riscv-tests/commits?author=brettcannon">riscv/riscv-tests</a></li>
-
-
-
-<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
-
-
-
-<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
-
-
-
-<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/koltenb/awesome-stellar/commits?author=brettcannon">koltenb/awesome-stellar</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
-
-
-
-<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
-
-
-
-<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
-
-
-
-<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
-
-
-
-<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
-
-
-
-<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
-
-
-
-<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
-
-
-
-<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
+<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
 
 
 
@@ -1631,7 +1383,27 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
+<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
+
+
+
+<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
+
+
+
+<li><a href="https://github.com/pipxproject/pipx/commits?author=brettcannon">pipxproject/pipx</a></li>
+
+
+
+<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
+
+
+
+<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
+
+
+
+<li><a href="https://github.com/thechangelog/show-notes/commits?author=brettcannon">thechangelog/show-notes</a></li>
 
 
 
@@ -1639,11 +1411,39 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
-<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
+<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/PTVS/commits?author=brettcannon">microsoft/PTVS</a></li>
+<li><a href="https://github.com/MagicStack/MagicPython/commits?author=brettcannon">MagicStack/MagicPython</a></li>
+
+
+
+<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
+
+
+
+<li><a href="https://github.com/eamodio/vscode-gitlens/commits?author=brettcannon">eamodio/vscode-gitlens</a></li>
+
+
+
+<li><a href="https://github.com/stellar/docs/commits?author=brettcannon">stellar/docs</a></li>
+
+
+
+<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
+
+
+
+<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
+
+
+
+<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
+
+
+
+<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
 
 
 
@@ -1651,7 +1451,191 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 
+<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
+
+
+
+<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
+
+
+
+<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
+
+
+
+<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/PTVS/commits?author=brettcannon">microsoft/PTVS</a></li>
+
+
+
+<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
+
+
+
+<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
+
+
+
+<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
+
+
+
+<li><a href="https://github.com/mozilla-services/konfig/commits?author=brettcannon">mozilla-services/konfig</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
+
+
+
+<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
+
+
+
+<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
+
+
+
+<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
+
+
+
+<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
+
+
+
+<li><a href="https://github.com/syl20bnr/spacemacs/commits?author=brettcannon">syl20bnr/spacemacs</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
+
+
+
+<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
+
+
+
+<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs</a></li>
+
+
+
+<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
+
+
+
+<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
+
+
+
+<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
+
+
+
+<li><a href="https://github.com/koltenb/awesome-stellar/commits?author=brettcannon">koltenb/awesome-stellar</a></li>
+
+
+
+<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
+
+
+
 <li><a href="https://github.com/victor-o-silva/python-links-from-link-header/commits?author=brettcannon">victor-o-silva/python-links-from-link-header</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
+
+
+
+<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
+
+
+
+<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
+
+
+
+<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-languageserver-node-example/commits?author=brettcannon">microsoft/vscode-languageserver-node-example</a></li>
+
+
+
+<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
+
+
+
+<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
+
+
+
+<li><a href="https://github.com/github/gitignore/commits?author=brettcannon">github/gitignore</a></li>
+
+
+
+<li><a href="https://github.com/riscv/riscv-tests/commits?author=brettcannon">riscv/riscv-tests</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
+
+
+
+<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
+
+
+
+<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
+
+
+
+<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
+
+
+
+<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
+
+
+
+<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
+
+
+
+<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
 
 
 
@@ -1664,10 +1648,6 @@ I have made _some_ commit to 160 projects spanning 17 years.
 
 
 <li><a href="https://github.com/libexpat/libexpat/commit/021ea9f68c5b64799a4fbbc32ab30e1df9fbe3b7">expat</a></li>
-
-
-
-<li><a href="https://gitlab.com/python-devs/importlib_metadata/-/commits/master?author=Brett%20Cannon">importlib_metadata</a></li>
 
 
 
