@@ -93,9 +93,9 @@ flake8==3.8.4 \
     --hash=sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839 \
     --hash=sha256:aadae8761ec651813c24be05c6f7b4680857ef6afaae4651a4eccaef97ce6c3b \
     # via -r requirements.in
-gidgethub==4.1.1 \
-    --hash=sha256:cfabfa696d422ee91eaf1e3f01ea75e576721233cc3ea8badc7d86c30061df8e \
-    --hash=sha256:fab527a36fd89a27f68686f4c726b2efd989c3d2cac1c46149b1dd46c4e3ab7d \
+gidgethub==4.2.0 \
+    --hash=sha256:5526cc2a06bfad707d10ec118393e0d33c2aa524605255d96958c22c93e8e7aa \
+    --hash=sha256:d1c39d17d3c775f9d3267df44d907cf94411077e4b0872f120d9e8a8714fbbf8 \
     # via -r requirements.in
 h11==0.9.0 \
     --hash=sha256:33d4bca7be0fa039f4e84d50ab00531047e53d6ee8ffbc83501ea602c169cae1 \
