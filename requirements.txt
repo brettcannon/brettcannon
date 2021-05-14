@@ -90,9 +90,9 @@ feedparser==6.0.2 \
 fire==0.4.0 \
     --hash=sha256:c5e2b8763699d1142393a46d0e3e790c5eb2f0706082df8f647878842c216a62
     # via -r requirements.in
-flake8==3.9.1 \
-    --hash=sha256:1aa8990be1e689d96c745c5682b687ea49f2e05a443aff1f8251092b0014e378 \
-    --hash=sha256:3b9f848952dddccf635be78098ca75010f073bfe14d2c6bda867154bea728d2a
+flake8==3.9.2 \
+    --hash=sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b \
+    --hash=sha256:bf8fd333346d844f616e8d47905ef3a3384edae6b4e9beb0c5101e25e3110907
     # via -r requirements.in
 gidgethub==5.0.1 \
     --hash=sha256:3efbd6998600254ec7a2869318bd3ffde38edc3a0d37be0c14bc46b45947b682 \
