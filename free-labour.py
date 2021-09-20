@@ -72,7 +72,7 @@ class GitHubProject(Contribution):
         formatted_stats = map(
             lambda item: (item[0], format(item[1], ",")), stats.items()
         )
-        stats_str = ", ".join("=".join(formatted_stats))
+        stats_str = ", ".join(map("=".join, formatted_stats))
         return f"<{self.owner}/{self.name}: {stats_str}>"
 
 
