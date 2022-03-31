@@ -8,7 +8,9 @@
 <small>Last updated {{ today }}.</small>
 
 ## Creations
-I have started {{ creations|length }} projects which have received _at least_ one external contribution.
+
+<details>
+<summary>I have started {{ creations|length }} projects which have received _at least_ one external contribution.</summary>
 
 <small>(Sorted by [☆](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars).)</small>
 
@@ -17,8 +19,11 @@ I have started {{ creations|length }} projects which have received _at least_ on
 <li><a href="{{ project.url }}">{{ project.name }}</a></li>
 {% endfor %}
 </ol>
+  
+  </details>
 
 ## Contributions
+
 Over the past {{ years_contributing }} years, I have made _some_ commit to {{ contributions|length }} projects.
 
 <small>(Grouped by commit count.)</small>
@@ -39,3 +44,19 @@ Over the past {{ years_contributing }} years, I have made _some_ commit to {{ co
 </details>
 
 {% endfor %}
+
+## Planets My Code has Visited
+
+<details>
+  <summary>2/8</summary>
+
+- [ ] Mercury
+- [ ] Venus
+- [X] Earth
+- [X] [Mars](https://linuxunplugged.com/396?t=2580)
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+  
+</details>
