@@ -1,7 +1,8 @@
 # Biographical Links
-- [Curriculum Vitae](https://www.linkedin.com/in/drbrettcannon/) (including links to talks and interviews)
-- [Blog](https://snarky.ca/) ([latest post](https://snarky.ca/unravelling-assignment-expressions/) published on 2022-11-02)
-- [Twitter](https://twitter.com/brettsky/) (with 17,974 followers)
+- <a rel="me" href="https://www.linkedin.com/in/drbrettcannon/">Curriculum Vitae</a> (including links to talks and interviews)
+- <a rel="me" href="https://snarky.ca/">Blog</a> ([latest post](https://snarky.ca/unravelling-assignment-expressions/) published on 2022-11-02)
+- <a rel="me" href="https://twitter.com/brettsky/">Twitter</a> (with 17,974 followers)
+- <a rel="me" href="https://fosstodon.org/@brettcannon">Mastodon</a>
 
 # Open Source
 
