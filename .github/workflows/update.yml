@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: "0 0 * * *"
 env:
-  USERNAME: brettcannon
+  USERNAME: "brettcannon"
   BLOG_FEED: "https://snarky.ca/rss/"
-  TWITTER_USERNAME: brettsky
+  TWITTER_USERNAME: "brettsky"
   MASTODON_SERVER: "https://fosstodon.org"
   MASTODON_ACCOUNT_ID: "108285802173994961"
 jobs:
@@ -34,7 +34,7 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Update README.md
         # --twitter_username ${{ env.TWITTER_USERNAME }} --twitter_token ${{ secrets.TWITTER_BEARER_TOKEN }}
-        run: python free-labour.py --feed ${{ env.BLOG_FEED }} --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} --mastodon_server ${{ MASTODON_SERVER }} --mastodon_account_id ${{ MASTODON_ACCOUNT_ID }} > README.md
+        run: python free-labour.py --feed ${{ env.BLOG_FEED }} --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} --mastodon_server ${{ env.MASTODON_SERVER }} --mastodon_account_id ${{ env.MASTODON_ACCOUNT_ID }} > README.md
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
