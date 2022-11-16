@@ -277,6 +277,14 @@ async def twitter_follower_count(client, bearer_token, username):
     return data["data"]["public_metrics"]["followers_count"]
 
 
+async def fetch_mastodon_follower_count(client, server, user_id):
+    url = f"{server}/api/v1/accounts/{user_id}"
+    response = await client.get(url)
+    response.raise_for_status()
+    data = response.json()
+    return data["followers_count"]
+
+
 def generate_readme(
     creations: typing.Iterable[GitHubProject],
     contributions: typing.Iterable[Contribution],
@@ -284,7 +292,8 @@ def generate_readme(
     username: str,
     post_url: str,
     post_date: datetime.datetime,
-    twitter_follower_count: int,
+    #twitter_follower_count: int,
+    mastodon_follower_count: int,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -304,7 +313,8 @@ def generate_readme(
         username=username,
         today=today.isoformat(),
         sqrt=math.isqrt,
-        twitter_follower_count=format(twitter_follower_count, ","),
+        #twitter_follower_count=format(twitter_follower_count, ","),
+        mastodon_follower_count=format(mastodon_follower_count, ","),
     )
 
 
@@ -312,27 +322,34 @@ async def main(
     token: str,
     username: str,
     feed: str = "",
-    twitter_username: str = "",
-    twitter_token: str = "",
+    mastodon_server = "",
+    mastodon_account_id = "",
 ):
     async with httpx.AsyncClient() as client:
         if feed:
             post_details = await latest_blog_post(client, feed)
         else:
             post_details = {"post_url": "", "post_date": datetime.datetime(1, 1, 1)}
-        if twitter_username and twitter_token:
-            follower_count = await twitter_follower_count(
-                client, twitter_token, twitter_username
-            )
+
+        # if twitter_username and twitter_token:
+        #     follower_count = await twitter_follower_count(
+        #         client, twitter_token, twitter_username
+        #     )
+        # else:
+        #     follower_count = -1
+
+        if mastodon_server and mastodon_account_id:
+            mastodon_follower_count = await fetch_mastodon_follower_count(client, mastodon_server, mastodon_account_id)
         else:
-            follower_count = -1
+            mastodon_follower_count = -1
+
         contrib_details = await contribution_details(client, token, username)
     print(
         generate_readme(
             username=username,
             **contrib_details,
             **post_details,
-            twitter_follower_count=follower_count,
+            mastodon_follower_count=mastodon_follower_count,
         )
     )
 
@@ -344,10 +361,12 @@ if __name__ == "__main__":
         token: str,
         username: str,
         feed: str,
-        twitter_username: str,
-        twitter_token: str,
+        #twitter_username: str,
+        #twitter_token: str,
+        mastodon_server: str,
+        mastodon_account_id: str,
     ):
         """Provide a CLI for the script for use by Fire."""
-        trio.run(main, token, username, feed, twitter_username, twitter_token)
+        trio.run(main, token, username, feed, mastodon_server, mastodon_account_id)
 
     fire.Fire(cli)

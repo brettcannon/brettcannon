@@ -1,8 +1,8 @@
 # Biographical Links
-- <a rel="me" href="https://www.linkedin.com/in/drbrettcannon/">Curriculum Vitae</a> (including links to talks and interviews)
-- <a rel="me" href="https://snarky.ca/">Blog</a> ([latest post]({{ post_url }}) published on {{ post_date }})
-- <a rel="me" href="https://twitter.com/brettsky/">Twitter</a> (with {{ twitter_follower_count }} followers)
-- <a rel="me" href="https://fosstodon.org/@brettcannon">Mastodon</a>
+- [Curriculum Vitae](https://www.linkedin.com/in/drbrettcannon/) (including links to talks and interviews)
+- [Blog](https://snarky.ca) ([latest post]({{ post_url }}) published on {{ post_date }})
+<!-- - [Twitter](https://twitter.com/brettsky/) (with {{ twitter_follower_count }} followers) -->
+- [Mastodon](https://fosstodon.org/@brettcannon) (with {{mastodon_follower_count}} followers)
 
 # Open Source
 
@@ -20,7 +20,7 @@
 <li><a href="{{ project.url }}">{{ project.name }}</a></li>
 {% endfor %}
 </ol>
-  
+
   </details>
 
 ## Contributions
@@ -59,5 +59,5 @@ Over the past {{ years_contributing }} years, I have made _some_ commit to {{ co
 - [ ] Saturn
 - [ ] Uranus
 - [ ] Neptune
-  
+
 </details>
