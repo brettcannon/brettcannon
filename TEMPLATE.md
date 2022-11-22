@@ -10,7 +10,7 @@
 ## Creations
 
 <details>
-<summary>I have started {{ creations|length }} projects which have received _at least_ one external contribution.</summary>
+<summary>I have started {{ creations|length }} projects which have received at least one external contribution.</summary>
 
 <small>(Sorted by [☆](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars).)</small>
 
