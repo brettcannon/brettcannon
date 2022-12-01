@@ -6,15 +6,20 @@ import datetime
 import http
 import math
 import operator
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
+
 import typing
 
 import feedparser
-import gidgethub.httpx
 import gidgethub.abc
+import gidgethub.httpx
 import httpx
 import iso8601
 import jinja2
-import tomlkit
 import trio
 
 
@@ -204,7 +209,7 @@ def gh_overrides_repos(
 async def contribution_details(client, token, username):
     """Gather relevant contribution details."""
     with open("overrides.toml", "r", encoding="utf-8") as file:
-        manual_overrides = tomlkit.loads(file.read())
+        manual_overrides = tomllib.loads(file.read())
     creation_overrides = gh_overrides_repos(
         manual_overrides["github"]["created"], username
     )
@@ -292,7 +297,7 @@ def generate_readme(
     username: str,
     post_url: str,
     post_date: datetime.datetime,
-    #twitter_follower_count: int,
+    # twitter_follower_count: int,
     mastodon_follower_count: int,
 ):
     """Create the README from TEMPLATE.md."""
@@ -313,7 +318,7 @@ def generate_readme(
         username=username,
         today=today.isoformat(),
         sqrt=math.isqrt,
-        #twitter_follower_count=format(twitter_follower_count, ","),
+        # twitter_follower_count=format(twitter_follower_count, ","),
         mastodon_follower_count=format(mastodon_follower_count, ","),
     )
 
@@ -322,8 +327,8 @@ async def main(
     token: str,
     username: str,
     feed: str = "",
-    mastodon_server = "",
-    mastodon_account_id = "",
+    mastodon_server="",
+    mastodon_account_id="",
 ):
     async with httpx.AsyncClient() as client:
         if feed:
@@ -339,7 +344,9 @@ async def main(
         #     follower_count = -1
 
         if mastodon_server and mastodon_account_id:
-            mastodon_follower_count = await fetch_mastodon_follower_count(client, mastodon_server, mastodon_account_id)
+            mastodon_follower_count = await fetch_mastodon_follower_count(
+                client, mastodon_server, mastodon_account_id
+            )
         else:
             mastodon_follower_count = -1
 
@@ -361,8 +368,8 @@ if __name__ == "__main__":
         token: str,
         username: str,
         feed: str,
-        #twitter_username: str,
-        #twitter_token: str,
+        # twitter_username: str,
+        # twitter_token: str,
         mastodon_server: str,
         mastodon_account_id: str,
     ):

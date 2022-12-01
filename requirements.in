@@ -5,9 +5,9 @@ gidgethub
 httpx
 iso8601
 jinja2
-tomlkit
+tomli; python_version < "3.11"
 trio
-trio-typing
 # Development
-black
-flake8
+#black
+#flake8
+#trio-typing
