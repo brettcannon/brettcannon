@@ -1,5 +1,5 @@
 # Biographical Links
-- [FAQ about me]([https://www.linkedin.com/in/drbrettcannon/](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions)) (including links to talks and interviews)
+- [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/state-of-wasi-support-for-cpython-march-2024/) published on 2024-03-17)
 - [Mastodon](https://fosstodon.org/@brettcannon) (with 3,037 followers)
 
