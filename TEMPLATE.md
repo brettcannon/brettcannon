@@ -24,7 +24,7 @@
 
 ## Contributions
 
-Over the past {{ years_contributing }} years, I have made _some_ commit to {{ contributions|length }} projects.
+Over the past [{{ years_contributing }} years](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610), I have made _some_ commit to {{ contributions|length }} projects.
 
 <small>(Grouped by commit count.)</small>
 
