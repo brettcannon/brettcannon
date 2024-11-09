@@ -24,7 +24,6 @@ import trio
 
 
 class Contribution(typing.Protocol):
-
     """The interface expected by the README template for contributions."""
 
     repo_name: str
@@ -34,7 +33,6 @@ class Contribution(typing.Protocol):
 
 @dataclasses.dataclass
 class RecordedContribution(Contribution):
-
     repo_name: str
     contributions_url: str
     commits: int
@@ -42,7 +40,6 @@ class RecordedContribution(Contribution):
 
 @dataclasses.dataclass
 class GitHubProject(Contribution):
-
     """Representation of a GitHub project and one's contributions."""
 
     owner: str
@@ -268,26 +265,20 @@ async def latest_blog_post(client, feed):
     return {"post_url": url, "post_date": date}
 
 
-async def twitter_follower_count(client, bearer_token, username):
-    """Find out the follower count of *username* on Twitter."""
-    # https://developer.twitter.com/en/docs/authentication/oauth-2-0
-    headers = {"authorization": f"Bearer {bearer_token}"}
-    # https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by-username-username
-    url = f"https://api.twitter.com/2/users/by/username/{username}"
-    params = {"user.fields": ",".join(["public_metrics"])}
-
-    response = await client.get(url, params=params, headers=headers)
-    response.raise_for_status()
-    data = response.json()
-    return data["data"]["public_metrics"]["followers_count"]
-
-
 async def fetch_mastodon_follower_count(client, server, user_id):
     url = f"{server}/api/v1/accounts/{user_id}"
     response = await client.get(url)
     response.raise_for_status()
     data = response.json()
     return data["followers_count"]
+
+
+async def fetch_bluesky_follower_count(client):
+    url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=snarky.ca"
+    response = await client.get(url)
+    response.raise_for_status()
+    data = response.json()
+    return data["followersCount"]
 
 
 def generate_readme(
@@ -299,6 +290,7 @@ def generate_readme(
     post_date: datetime.datetime,
     # twitter_follower_count: int,
     mastodon_follower_count: int,
+    bluesky_follower_count: int,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -320,6 +312,7 @@ def generate_readme(
         sqrt=math.isqrt,
         # twitter_follower_count=format(twitter_follower_count, ","),
         mastodon_follower_count=format(mastodon_follower_count, ","),
+        bluesky_follower_count=format(bluesky_follower_count, ","),
     )
 
 
@@ -336,13 +329,6 @@ async def main(
         else:
             post_details = {"post_url": "", "post_date": datetime.datetime(1, 1, 1)}
 
-        # if twitter_username and twitter_token:
-        #     follower_count = await twitter_follower_count(
-        #         client, twitter_token, twitter_username
-        #     )
-        # else:
-        #     follower_count = -1
-
         if mastodon_server and mastodon_account_id:
             mastodon_follower_count = await fetch_mastodon_follower_count(
                 client, mastodon_server, mastodon_account_id
@@ -351,12 +337,15 @@ async def main(
             mastodon_follower_count = -1
 
         contrib_details = await contribution_details(client, token, username)
+
+        bluesky_follower_count = await fetch_bluesky_follower_count(client)
     print(
         generate_readme(
             username=username,
             **contrib_details,
             **post_details,
             mastodon_follower_count=mastodon_follower_count,
+            bluesky_follower_count=bluesky_follower_count,
         )
     )
 
@@ -368,8 +357,6 @@ if __name__ == "__main__":
         token: str,
         username: str,
         feed: str,
-        # twitter_username: str,
-        # twitter_token: str,
         mastodon_server: str,
         mastodon_account_id: str,
     ):
