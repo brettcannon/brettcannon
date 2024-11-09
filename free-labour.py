@@ -330,7 +330,7 @@ async def main(
         "mastodon_follower_count": -1,
     }
     async with httpx.AsyncClient() as client:
-        with trio.open_nursery() as nursery:
+        async with trio.open_nursery() as nursery:
             if feed:
                 nursery.run_soon(latest_blog_post, details, client, feed)
             if mastodon_server and mastodon_account_id:
