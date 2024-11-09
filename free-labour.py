@@ -332,17 +332,17 @@ async def main(
     async with httpx.AsyncClient() as client:
         async with trio.open_nursery() as nursery:
             if feed:
-                nursery.run_soon(latest_blog_post, details, client, feed)
+                nursery.start_soon(latest_blog_post, details, client, feed)
             if mastodon_server and mastodon_account_id:
-                nursery.run_soon(
+                nursery.start_soon(
                     fetch_mastodon_follower_count,
                     details,
                     client,
                     mastodon_server,
                     mastodon_account_id,
                 )
-            nursery.run_soon(contribution_details, details, client, token, username)
-            nursery.run_soon(fetch_bluesky_follower_count, details, client)
+            nursery.start_soon(contribution_details, details, client, token, username)
+            nursery.start_soon(fetch_bluesky_follower_count, details, client)
 
     print(generate_readme(username=username, **details))
 
