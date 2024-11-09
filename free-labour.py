@@ -318,11 +318,11 @@ def generate_readme(
 
 
 async def main(
-    token: str,
-    username: str,
+    token: str = "",
+    username: str = "",
     feed: str = "",
-    mastodon_server="",
-    mastodon_account_id="",
+    mastodon_server: str = "",
+    mastodon_account_id: str = "",
 ):
     details = {
         "post_url": "",
@@ -331,6 +331,10 @@ async def main(
     }
     async with httpx.AsyncClient() as client:
         async with trio.open_nursery() as nursery:
+            if token and username:
+                nursery.start_soon(
+                    contribution_details, details, client, token, username
+                )
             if feed:
                 nursery.start_soon(latest_blog_post, details, client, feed)
             if mastodon_server and mastodon_account_id:
@@ -341,7 +345,6 @@ async def main(
                     mastodon_server,
                     mastodon_account_id,
                 )
-            nursery.start_soon(contribution_details, details, client, token, username)
             nursery.start_soon(fetch_bluesky_follower_count, details, client)
 
     print(generate_readme(username=username, **details))
