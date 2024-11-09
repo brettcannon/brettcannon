@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import abc
 import dataclasses
 import datetime
 import http
@@ -203,7 +202,7 @@ def gh_overrides_repos(
     return frozenset(repos)
 
 
-async def contribution_details(client, token, username):
+async def contribution_details(details, client, token, username):
     """Gather relevant contribution details."""
     with open("overrides.toml", "r", encoding="utf-8") as file:
         manual_overrides = tomllib.loads(file.read())
@@ -247,14 +246,16 @@ async def contribution_details(client, token, username):
             commits = len(project["commits"])
         contributions_list.append(RecordedContribution(name, url, commits))
 
-    return {
-        "creations": impactful_creations,
-        "contributions": contributions_list,
-        "start_date": start_date,
-    }
+    details.update(
+        {
+            "creations": impactful_creations,
+            "contributions": contributions_list,
+            "start_date": start_date,
+        }
+    )
 
 
-async def latest_blog_post(client, feed):
+async def latest_blog_post(details, client, feed):
     """Find the latest blog post's URL and publication date."""
     rss_xml = await client.get(feed)
     rss_xml.raise_for_status()
@@ -262,23 +263,23 @@ async def latest_blog_post(client, feed):
     post = rss_feed.entries[0]
     url = post.link
     date = datetime.datetime(*post.published_parsed[:6])
-    return {"post_url": url, "post_date": date}
+    details.update({"post_url": url, "post_date": date})
 
 
-async def fetch_mastodon_follower_count(client, server, user_id):
+async def fetch_mastodon_follower_count(details, client, server, user_id):
     url = f"{server}/api/v1/accounts/{user_id}"
     response = await client.get(url)
     response.raise_for_status()
     data = response.json()
-    return data["followers_count"]
+    details["mastodon_follower_count"] = data["followers_count"]
 
 
-async def fetch_bluesky_follower_count(client):
+async def fetch_bluesky_follower_count(details, client):
     url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=snarky.ca"
     response = await client.get(url)
     response.raise_for_status()
     data = response.json()
-    return data["followersCount"]
+    details["bluesky_follower_count"] = data["followersCount"]
 
 
 def generate_readme(
@@ -323,31 +324,27 @@ async def main(
     mastodon_server="",
     mastodon_account_id="",
 ):
+    details = {
+        "post_url": "",
+        "post_date": datetime.datetime(1, 1, 1),
+        "mastodon_follower_count": -1,
+    }
     async with httpx.AsyncClient() as client:
-        if feed:
-            post_details = await latest_blog_post(client, feed)
-        else:
-            post_details = {"post_url": "", "post_date": datetime.datetime(1, 1, 1)}
+        with trio.open_nursery() as nursery:
+            if feed:
+                nursery.run_soon(latest_blog_post, details, client, feed)
+            if mastodon_server and mastodon_account_id:
+                nursery.run_soon(
+                    fetch_mastodon_follower_count,
+                    details,
+                    client,
+                    mastodon_server,
+                    mastodon_account_id,
+                )
+            nursery.run_soon(contribution_details, details, client, token, username)
+            nursery.run_soon(fetch_bluesky_follower_count, details, client)
 
-        if mastodon_server and mastodon_account_id:
-            mastodon_follower_count = await fetch_mastodon_follower_count(
-                client, mastodon_server, mastodon_account_id
-            )
-        else:
-            mastodon_follower_count = -1
-
-        contrib_details = await contribution_details(client, token, username)
-
-        bluesky_follower_count = await fetch_bluesky_follower_count(client)
-    print(
-        generate_readme(
-            username=username,
-            **contrib_details,
-            **post_details,
-            mastodon_follower_count=mastodon_follower_count,
-            bluesky_follower_count=bluesky_follower_count,
-        )
-    )
+    print(generate_readme(username=username, **details))
 
 
 if __name__ == "__main__":
