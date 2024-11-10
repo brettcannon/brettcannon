@@ -295,7 +295,6 @@ async def pep_details(details, client):
     details["pep_count"] = author_count["Brett Cannon"]
 
     author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
-    print("Top 10 PEP author rankings:", author_rankings[:10])
 
     ranking = author_rankings.index("Brett Cannon") + 1
 
