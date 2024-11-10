@@ -22,6 +22,12 @@ import jinja2
 import trio
 
 
+async def fetch_json(url, client):
+    response = await client.get(url)
+    response.raise_for_status()
+    return response.json()
+
+
 class Contribution(typing.Protocol):
     """The interface expected by the README template for contributions."""
 
@@ -268,18 +274,37 @@ async def latest_blog_post(details, client, feed):
 
 async def fetch_mastodon_follower_count(details, client, server, user_id):
     url = f"{server}/api/v1/accounts/{user_id}"
-    response = await client.get(url)
-    response.raise_for_status()
-    data = response.json()
+    data = await fetch_json(url, client)
     details["mastodon_follower_count"] = data["followers_count"]
 
 
 async def fetch_bluesky_follower_count(details, client):
     url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=snarky.ca"
-    response = await client.get(url)
-    response.raise_for_status()
-    data = response.json()
+    data = await fetch_json(url, client)
     details["bluesky_follower_count"] = data["followersCount"]
+
+
+async def pep_details(details, client):
+    url = "https://peps.python.org/api/peps.json"
+    data = await fetch_json(url, client)
+    author_count = {}
+    for pep in data.values():
+        authors = pep["authors"].split(", ")
+        for author in authors:
+            author_count[author] = author_count.get(author, 0) + 1
+    details["pep_count"] = author_count["Brett Cannon"]
+
+    author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
+
+    ranking = author_rankings.index("Brett Cannon") + 1
+
+    not_th = {1: "st", 2: "nd", 3: "rd"}
+    # Exceptions
+    if ranking in {11, 12, 13}:
+        ending = "th"
+    else:
+        ending = not_th.get(ranking % 10, "th")
+    details["pep_author_ranking"] = f"{ranking}{ending}"
 
 
 def generate_readme(
@@ -292,6 +317,8 @@ def generate_readme(
     # twitter_follower_count: int,
     mastodon_follower_count: int,
     bluesky_follower_count: int,
+    pep_count: int,
+    pep_author_ranking: str,
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -314,6 +341,8 @@ def generate_readme(
         # twitter_follower_count=format(twitter_follower_count, ","),
         mastodon_follower_count=format(mastodon_follower_count, ","),
         bluesky_follower_count=format(bluesky_follower_count, ","),
+        pep_count=pep_count,
+        pep_author_ranking=pep_author_ranking,
     )
 
 
@@ -346,6 +375,7 @@ async def main(
                     mastodon_account_id,
                 )
             nursery.start_soon(fetch_bluesky_follower_count, details, client)
+            nursery.start_soon(pep_details, details, client)
 
     print(generate_readme(username=username, **details))
 

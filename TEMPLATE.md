@@ -46,6 +46,10 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 {% endfor %}
 
+## Python Enhancement Proposals
+
+I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_author_ranking}} most prolific).
+
 ## Planets My Code has Visited
 
 <details>
