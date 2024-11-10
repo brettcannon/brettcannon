@@ -55,6 +55,8 @@ I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_autho
 <details>
 <summary>PEPs I have (co-authored)</summary>
 
+In creation order, oldest to newest.
+
 <details>
 <summary>Status legend</summary>
 
@@ -72,17 +74,16 @@ I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_autho
 
 </details>
 
-<dl>
+<ol>
+
 {% for pep in pep_details %}
-<dt>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a>
-{% if pep[3] %}
-(with {{pep[3]}})
-{% endif %}</dt>
-<dd>{{pep[2]}}</dd>
+<li>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a>{% if pep[3] %} (with {{pep[3]}}){% endif %}: {{pep[2]}}</li>
 {% endfor %}
-</dl>
+
+</ol>
 
 </details>
+
 ## Planets My Code has Visited
 
 <details>
