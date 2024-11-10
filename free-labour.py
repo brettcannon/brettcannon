@@ -1,16 +1,20 @@
 from __future__ import annotations
 
+# /// script
+# dependencies = [
+#   "feedparser",
+#   "fire",
+#   "gidgethub",
+#   "httpx",
+#   "iso8601",
+#   "jinja2",
+#   "trio",
+# ]
 import dataclasses
 import datetime
 import http
 import math
 import operator
-
-try:
-    import tomllib
-except ModuleNotFoundError:
-    import tomli as tomllib
-
 import typing
 
 import feedparser
@@ -19,6 +23,7 @@ import gidgethub.httpx
 import httpx
 import iso8601
 import jinja2
+import tomllib
 import trio
 
 

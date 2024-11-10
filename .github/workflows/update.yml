@@ -18,17 +18,13 @@ jobs:
       - name: Get Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.13"
           cache: "pip"
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
-          cache-dependency-glob: "requirements.txt"
-      - name: Install dependencies
-        run: uv pip install -r requirements.txt
-        env:
-          UV_SYSTEM_PYTHON: 1
+          cache-dependency-glob: "free-labour.py"
       - name: Update README.md
         run: uv run free-labour.py --feed ${{ env.BLOG_FEED }} --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} --mastodon_server ${{ env.MASTODON_SERVER }} --mastodon_account_id ${{ env.MASTODON_ACCOUNT_ID }} > README.md
         env:
