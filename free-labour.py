@@ -329,7 +329,7 @@ async def pep_details(details, client):
         pep_details.append(
             (
                 pep["number"],
-                statuses[pep["status"]],
+                (pep["status"], statuses[pep["status"]]),
                 pep["title"],
                 ", ".join(co_authors),
             )

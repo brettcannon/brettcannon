@@ -57,22 +57,7 @@ I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_autho
 
 Listed in creation order, oldest to newest.
 
-<details>
-<summary>Status legend</summary>
-
-<dl>
-<dt>✍</dt><dd>Draft</dd>
-<dt>🚧</dt><dd>Provisional</dd>
-<dt>👍</dt><dd>Accepted</dd>
-<dt>✅</dt><dd>Final</dd>
-<dt>🏃</dt><dd>Active</dd>
-<dt>❌</dt><dd>Rejected</dd>
-<dt>🤦</dt><dd>Withdrawn</dd>
-<dt>✋</dt><dd>Deferred</dd>
-<dt>🪜</dt><dd>Superceded</dd>
-</dl>
-
-</details>
+(Hover over the status emojis for the textual representation.)
 
 <table>
 
@@ -91,7 +76,7 @@ Listed in creation order, oldest to newest.
 <tr>
 <td><a href="https://peps.python.org/{{pep[0]}}">{{pep[0]}}</a></td>
 <td>{{pep[2]}}</td>
-<td>{{pep[1]}}</td>
+<td title="{{pep[1][0]}}">{{pep[1][1]}}</td>
 <td>{{pep[3]}}</td>
 </tr>
 {% endfor %}
