@@ -50,14 +50,10 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 ### [Python Enhancement Proposals](https://peps.python.org)
 
-I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_author_ranking}} most prolific).
-
 <details>
-<summary>PEPs I have (co-authored)</summary>
+<summary>I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_author_ranking}} most prolific).</summary>
 
-Listed in creation order, oldest to newest.
-
-(Hover over the status emojis for the textual representation.)
+(Listed from oldest to newest, although I may have become a co-author post-creation.)
 
 <table>
 
