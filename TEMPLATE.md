@@ -46,10 +46,40 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 {% endfor %}
 
-## Python Enhancement Proposals
+## [Python](https://python.org)
+
+### [Python Enhancement Proposals](https://peps.python.org)
 
 I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_author_ranking}} most prolific).
 
+<details>
+<summary>PEPs I have (co-authored)</summary>
+
+<details>
+<summary>Status legend</summary>
+
+<dl>
+<dt>✍</dt><dd>Draft</dd>
+<dt>🚧</dt><dd>Provisional</dd>
+<dt>👍</dt><dd>Accepted</dd>
+<dt>✅</dt><dd>Final</dd>
+<dt>🏃</dt><dd>Active</dd>
+<dt>❌</dt><dd>Rejected</dd>
+<dt>🤦</dt><dd>Withdrawn</dd>
+<dt>✋</dt><dd>Deferred</dd>
+<dt>🪜</dt><dd>Superceded</dd>
+</dl>
+
+</details>
+
+<dl>
+{% for pep in pep_details %}
+<dt>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a></dt>
+<dd>{{pep[2]}}</dd>
+{% endfor %}
+</dl>
+
+</details>
 ## Planets My Code has Visited
 
 <details>

@@ -288,9 +288,12 @@ async def pep_details(details, client):
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
     author_count = {}
+    my_peps = []
     for pep in data.values():
         authors = pep["authors"].split(", ")
         for author in authors:
+            if author == "Brett Cannon":
+                my_peps.append(pep)
             author_count[author] = author_count.get(author, 0) + 1
     details["pep_count"] = author_count["Brett Cannon"]
 
@@ -306,6 +309,29 @@ async def pep_details(details, client):
         ending = not_th.get(ranking % 10, "th")
     details["pep_author_ranking"] = f"{ranking}{ending}"
 
+    statuses = {
+        "Draft": "✍",
+        "Provisional": "🚧",
+        "Accepted": "👍",
+        "Final": "✅",
+        "Active": "🏃",
+        "Rejected": "❌",
+        "Withdrawn": "🤦",
+        "Deferred": "✋",
+        "Superseded": "🪜",
+    }
+
+    pep_details = []
+    for pep in my_peps:
+        pep_details.append((pep["number"], statuses[pep["status"]], pep["title"]))
+    pep_details.sort(
+        key=lambda pep_data: datetime.datetime.strptime(
+            my_peps[pep_data[0]], "%d-%b-%Y"
+        ).date()
+    )
+
+    details["pep_details"] = pep_details
+
 
 def generate_readme(
     creations: typing.Iterable[GitHubProject],
@@ -319,6 +345,7 @@ def generate_readme(
     bluesky_follower_count: int,
     pep_count: int,
     pep_author_ranking: str,
+    pep_details: tuple[int, str, str],
 ):
     """Create the README from TEMPLATE.md."""
     with open("TEMPLATE.md", "r", encoding="utf-8") as file:
@@ -343,6 +370,7 @@ def generate_readme(
         bluesky_follower_count=format(bluesky_follower_count, ","),
         pep_count=pep_count,
         pep_author_ranking=pep_author_ranking,
+        pep_details=pep_details,
     )
 
 
