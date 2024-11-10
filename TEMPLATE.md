@@ -78,7 +78,7 @@ Listed in creation order, oldest to newest.
 
 <thead>
 <tr>
-<th>Number</th>
+<th>#</th>
 <th>Title</th>
 <th>Status</th>
 <th>Co-authors</th>
