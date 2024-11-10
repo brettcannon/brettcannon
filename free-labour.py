@@ -95,7 +95,7 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
     All private repositories and forks are dropped.
 
     """
-    with open("commit_counts.graphql", "r", encoding="utf-8") as file:
+    with open("queries/commit_counts.graphql", "r", encoding="utf-8") as file:
         query = file.read()
     contributions = {}
     activity_in_the_past = True
@@ -143,7 +143,7 @@ def separate_creations_and_contributions(
 
 async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Add the star count to a GitHub project."""
-    with open("star_count.graphql", "r", encoding="utf-8") as file:
+    with open("queries/star_count.graphql", "r", encoding="utf-8") as file:
         query = file.read()
     data = await gh.graphql(query, owner=project.owner, name=project.name)
     project.stars = data["repository"]["stargazers"]["totalCount"]
