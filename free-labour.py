@@ -288,12 +288,12 @@ async def pep_details(details, client):
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
     author_count = {}
-    my_peps = {}
-    for number, pep in data.items():
+    my_peps = []
+    for pep in data.values():
         authors = pep["authors"].split(", ")
         for author in authors:
             if author == "Brett Cannon":
-                my_peps[number] = pep
+                my_peps.append(pep)
             author_count[author] = author_count.get(author, 0) + 1
     details["pep_count"] = author_count["Brett Cannon"]
 
@@ -322,7 +322,7 @@ async def pep_details(details, client):
     }
 
     pep_details = []
-    for pep in my_peps.values():
+    for pep in my_peps:
         co_authors = [
             name for name in pep["authors"].split(", ") if name != "Brett Cannon"
         ]
@@ -336,7 +336,7 @@ async def pep_details(details, client):
         )
     pep_details.sort(
         key=lambda pep_data: datetime.datetime.strptime(
-            my_peps[pep_data[0]]["created"], "%d-%b-%Y"
+            data[str(pep_data[0])]["created"], "%d-%b-%Y"
         ).date()
     )
 
