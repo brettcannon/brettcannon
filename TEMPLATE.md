@@ -79,9 +79,9 @@ Listed in creation order, oldest to newest.
 <thead>
 <tr>
 <th>Number</th>
+<th>Title</th>
 <th>Status</th>
 <th>Co-authors</th>
-<th>Title</th>
 </tr>
 </thead>
 
@@ -89,10 +89,10 @@ Listed in creation order, oldest to newest.
 
 {% for pep in pep_details %}
 <tr>
-<td><a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a></td>
+<td><a href="https://peps.python.org/{{pep[0]}}">{{pep[0]}}</a></td>
+<td>{{pep[2]}}</td>
 <td>{{pep[1]}}</td>
 <td>{{pep[3]}}</td>
-<td>{{pep[2]}}</td>
 </tr>
 {% endfor %}
 
