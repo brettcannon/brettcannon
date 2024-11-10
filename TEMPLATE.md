@@ -74,7 +74,10 @@ I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_autho
 
 <dl>
 {% for pep in pep_details %}
-<dt>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a></dt>
+<dt>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a>
+{% if pep[3] %}
+(with {{pep[3]}})
+{% endif %}</dt>
 <dd>{{pep[2]}}</dd>
 {% endfor %}
 </dl>
