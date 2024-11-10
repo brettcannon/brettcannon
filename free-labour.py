@@ -326,7 +326,7 @@ async def pep_details(details, client):
         pep_details.append((pep["number"], statuses[pep["status"]], pep["title"]))
     pep_details.sort(
         key=lambda pep_data: datetime.datetime.strptime(
-            my_peps[pep_data[0]], "%d-%b-%Y"
+            my_peps[pep_data[0]]["status"], "%d-%b-%Y"
         ).date()
     )
 
