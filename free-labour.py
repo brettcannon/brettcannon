@@ -323,10 +323,15 @@ async def pep_details(details, client):
 
     pep_details = []
     for pep in my_peps:
-        pep_details.append((pep["number"], statuses[pep["status"]], pep["title"]))
+        co_authors = [
+            name for name in pep["authors"].split(", ") if name != "Brett Cannon"
+        ]
+        pep_details.append(
+            (pep["number"], statuses[pep["status"]], pep["title"], co_authors)
+        )
     pep_details.sort(
         key=lambda pep_data: datetime.datetime.strptime(
-            my_peps[pep_data[0]]["status"], "%d-%b-%Y"
+            my_peps[pep_data[0]]["created"], "%d-%b-%Y"
         ).date()
     )
 
