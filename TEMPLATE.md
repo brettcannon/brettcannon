@@ -55,7 +55,7 @@ I have (co-)authored {{pep_count}} [PEPs](https://peps.python.org/) ({{pep_autho
 <details>
 <summary>PEPs I have (co-authored)</summary>
 
-In creation order, oldest to newest.
+Listed in creation order, oldest to newest.
 
 <details>
 <summary>Status legend</summary>
@@ -74,13 +74,30 @@ In creation order, oldest to newest.
 
 </details>
 
-<ol>
+<table>
+
+<thead>
+<tr>
+<th>Number</th>
+<th>Status</th>
+<th>Co-authors</th>
+<th>Title</th>
+</tr>
+</thead>
+
+<tbody>
 
 {% for pep in pep_details %}
-<li>{{pep[1]}} <a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a>{% if pep[3] %} (with {{pep[3]}}){% endif %}: {{pep[2]}}</li>
+<tr>
+<td><a href="https://peps.python.org/{{pep[0]}}">PEP {{pep[0]}}</a></td>
+<td>{{pep[1]}}</td>
+<td>{{pep[3]}}</td>
+<td>{{pep[2]}}</td>
+</tr>
 {% endfor %}
 
-</ol>
+</tbody>
+</table>
 
 </details>
 
