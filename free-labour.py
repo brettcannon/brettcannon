@@ -236,8 +236,8 @@ async def contribution_details(details, client):
     )
     contribution_overrides = [
         RecordedContribution(
-            repo["repo"],
-            f"https://github.com/{repo}/commits?author=brettcannon",
+            f"{repo['owner']}/{repo['name']}",
+            f"https://github.com/{repo['owner']}/{repo['name']}/commits?author=brettcannon",
             repo["commits"],
         )
         for repo in manual_overrides["github"]["repos"]
@@ -247,10 +247,9 @@ async def contribution_details(details, client):
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
         projects.remove(GitHubProject(owner, name))
-    for remove in contribution_overrides:
-        owner, _, name = remove["repo"].partition("/")
+    for remove in manual_overrides["github"]["repos"]:
         try:
-            projects.remove(GitHubProject(owner, name))
+            projects.remove(GitHubProject(remove["owner"], remove["name"]))
         except KeyError:
             pass
     creations, contributions = separate_creations_and_contributions(username, projects)

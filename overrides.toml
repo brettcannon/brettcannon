@@ -3,7 +3,8 @@ remove = ["brettcannon/brettcannon", "DinoV/Pyjion", "django/django", "DonJayama
 created = ["Which-Film/which-film.info"]
 
 [[github.repos]]
-repo = "microsoft/vscode-python"
+owner = "microsoft"
+name = "vscode-python"
 commits = 691
 
 [[contributions]]
