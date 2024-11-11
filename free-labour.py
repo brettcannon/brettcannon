@@ -181,8 +181,6 @@ async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
 
 async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Add the contributor count to the 'project' statistics."""
-    # None of my projects are popular enough to have over 100 contributors,
-    # so just hard-code the number to keep it simple.
     contributors_list = await contributors(gh, project)
     contributor_names = {
         contributor["author"]["login"] for contributor in contributors_list
@@ -202,7 +200,8 @@ async def my_contributions(
             break
     else:
         raise ValueError(
-            f"{username!r} not found to be a contributor to {project.repo_name}"
+            f"{username!r} not found to be a contributor to {project.repo_name} "
+            f"among {len(contributors_list)} contributors"
         )
 
 
