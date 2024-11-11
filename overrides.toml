@@ -1,11 +1,10 @@
 [github]
-
 remove = ["brettcannon/brettcannon", "DinoV/Pyjion", "django/django", "DonJayamanne/pythonVSCode", "fake-python/cpython"]
-
 created = ["Which-Film/which-film.info"]
 
-contributed = ["microsoft/vscode-python"]
-
+[[github.repos]]
+repo = "microsoft/vscode-python"
+commits = 691
 
 [[contributions]]
 name = "PyPy"

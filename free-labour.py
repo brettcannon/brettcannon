@@ -234,14 +234,25 @@ async def contribution_details(details, client):
     creation_overrides = gh_overrides_repos(
         manual_overrides["github"]["created"], username
     )
-    contribution_overrides = gh_overrides_repos(
-        manual_overrides["github"]["contributed"], username
-    )
+    contribution_overrides = [
+        RecordedContribution(
+            repo["repo"],
+            f"https://github.com/{repo}/commits?author=brettcannon",
+            repo["commits"],
+        )
+        for repo in manual_overrides["github"]["repos"]
+    ]
     gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
     start_date, projects = await contribution_counts(gh, username)
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
         projects.remove(GitHubProject(owner, name))
+    for remove in contribution_overrides:
+        owner, _, name = remove["repo"].partition("/")
+        try:
+            projects.remove(GitHubProject(owner, name))
+        except KeyError:
+            pass
     creations, contributions = separate_creations_and_contributions(username, projects)
     for creation in creation_overrides:
         try:
@@ -251,8 +262,6 @@ async def contribution_details(details, client):
     async with trio.open_nursery() as nursery:
         for project in creation_overrides:
             nursery.start_soon(star_count, gh, project)
-        for project in contribution_overrides:
-            nursery.start_soon(my_contributions, gh, project, username)
         for project in creations:
             nursery.start_soon(contributor_count, gh, project)
 
