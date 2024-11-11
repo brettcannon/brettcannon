@@ -161,7 +161,8 @@ async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
         try:
             return await gh.getitem(
                 # None of my projects are popular enough to have over 100 contributors,
-                # so just hard-code the number to keep it simple.
+                # so just hard-code the number to keep it simple and avoid going over
+                # quota limits.
                 "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
                 {"owner": project.owner, "repo": project.name},
                 accept="application/vnd.github.v3+json",
