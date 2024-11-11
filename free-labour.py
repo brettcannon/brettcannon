@@ -234,14 +234,14 @@ async def contribution_details(details, client):
     creation_overrides = gh_overrides_repos(
         manual_overrides["github"]["created"], username
     )
-    contribution_overrides = {
+    contribution_overrides = [
         RecordedContribution(
             f"{repo['owner']}/{repo['name']}",
             f"https://github.com/{repo['owner']}/{repo['name']}/commits?author=brettcannon",
             repo["commits"],
         )
         for repo in manual_overrides["github"]["repos"]
-    }
+    ]
     gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
     start_date, projects = await contribution_counts(gh, username)
     for remove in manual_overrides["github"]["remove"]:
@@ -268,8 +268,8 @@ async def contribution_details(details, client):
         creation for creation in creations if creation.contributors > 1
     }
     impactful_creations = frozenset(impactful_creations | creation_overrides)
-    contributions |= contribution_overrides
     contributions_list = list(contributions)
+    contributions_list.extend(contribution_overrides)
     for project in manual_overrides["contributions"]:
         name = project["name"]
         url = project["url"]
