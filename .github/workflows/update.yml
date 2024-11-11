@@ -3,12 +3,7 @@ on:
   push:
   schedule:
     - cron: "0 0 * * *"
-env:
-  USERNAME: "brettcannon"
-  BLOG_FEED: "https://snarky.ca/rss/"
-  TWITTER_USERNAME: "brettsky"
-  MASTODON_SERVER: "https://fosstodon.org"
-  MASTODON_ACCOUNT_ID: "108285802173994961"
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -25,9 +20,10 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "free-labour.py"
       - name: Update README.md
-        run: uv run free-labour.py --feed ${{ env.BLOG_FEED }} --username ${{ env.USERNAME }} --token ${{ secrets.GITHUB_TOKEN }} --mastodon_server ${{ env.MASTODON_SERVER }} --mastodon_account_id ${{ env.MASTODON_ACCOUNT_ID }} > README.md
+        run: uv run free-labour.py > README.md
         env:
           UV_SYSTEM_PYTHON: 1
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

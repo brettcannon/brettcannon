@@ -3,19 +3,20 @@ from __future__ import annotations
 # /// script
 # dependencies = [
 #   "feedparser",
-#   "fire",
 #   "gidgethub",
 #   "httpx",
 #   "iso8601",
 #   "jinja2",
 #   "trio",
 # ]
+# requires-python = ">=3.13"
 # ///
 import dataclasses
 import datetime
 import http
 import math
 import operator
+import os
 import typing
 
 import feedparser
@@ -214,8 +215,20 @@ def gh_overrides_repos(
     return frozenset(repos)
 
 
-async def contribution_details(details, client, token, username):
+async def contribution_details(details, client):
     """Gather relevant contribution details."""
+    details["username"] = username = "brettcannon"
+    if not (token := os.environ.get("GITHUB_TOKEN")):
+        details.update(
+            {
+                "creations": [],
+                "contributions": [],
+                # 2003-04-18 21:00 PDT
+                "start_date": datetime.datetime(2003, 4, 19, 4, tzinfo=datetime.UTC),
+            }
+        )
+        return
+
     with open("overrides.toml", "r", encoding="utf-8") as file:
         manual_overrides = tomllib.loads(file.read())
     creation_overrides = gh_overrides_repos(
@@ -267,8 +280,9 @@ async def contribution_details(details, client, token, username):
     )
 
 
-async def latest_blog_post(details, client, feed):
+async def latest_blog_post(details, client):
     """Find the latest blog post's URL and publication date."""
+    feed = "https://snarky.ca/rss/"
     rss_xml = await client.get(feed)
     rss_xml.raise_for_status()
     rss_feed = feedparser.parse(rss_xml)
@@ -278,19 +292,23 @@ async def latest_blog_post(details, client, feed):
     details.update({"post_url": url, "post_date": date})
 
 
-async def fetch_mastodon_follower_count(details, client, server, user_id):
+async def fetch_mastodon_follower_count(details, client):
+    server = "https://fosstodon.org"
+    user_id = "108285802173994961"
     url = f"{server}/api/v1/accounts/{user_id}"
     data = await fetch_json(url, client)
     details["mastodon_follower_count"] = data["followers_count"]
 
 
 async def fetch_bluesky_follower_count(details, client):
-    url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=snarky.ca"
+    profile = "snarky.ca"
+    url = f"https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={profile}"
     data = await fetch_json(url, client)
     details["bluesky_follower_count"] = data["followersCount"]
 
 
 async def pep_details(details, client):
+    author_name = "Brett Cannon"
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
     author_count = {}
@@ -298,14 +316,14 @@ async def pep_details(details, client):
     for pep in data.values():
         authors = pep["authors"].split(", ")
         for author in authors:
-            if author == "Brett Cannon":
+            if author == author_name:
                 my_peps.append(pep)
             author_count[author] = author_count.get(author, 0) + 1
-    details["pep_count"] = author_count["Brett Cannon"]
+    details["pep_count"] = author_count[author_name]
 
     author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
 
-    ranking = author_rankings.index("Brett Cannon") + 1
+    ranking = author_rankings.index(author_name) + 1
 
     not_th = {1: "st", 2: "nd", 3: "rd"}
     # Exceptions
@@ -330,7 +348,7 @@ async def pep_details(details, client):
     pep_details = []
     for pep in my_peps:
         co_authors = [
-            name for name in pep["authors"].split(", ") if name != "Brett Cannon"
+            name for name in pep["authors"].split(", ") if name != author_name
         ]
         pep_details.append(
             (
@@ -356,7 +374,6 @@ def generate_readme(
     username: str,
     post_url: str,
     post_date: datetime.datetime,
-    # twitter_follower_count: int,
     mastodon_follower_count: int,
     bluesky_follower_count: int,
     pep_count: int,
@@ -381,7 +398,6 @@ def generate_readme(
         username=username,
         today=today.isoformat(),
         sqrt=math.isqrt,
-        # twitter_follower_count=format(twitter_follower_count, ","),
         mastodon_follower_count=format(mastodon_follower_count, ","),
         bluesky_follower_count=format(bluesky_follower_count, ","),
         pep_count=pep_count,
@@ -390,51 +406,21 @@ def generate_readme(
     )
 
 
-async def main(
-    token: str = "",
-    username: str = "",
-    feed: str = "",
-    mastodon_server: str = "",
-    mastodon_account_id: str = "",
-):
-    details = {
-        "post_url": "",
-        "post_date": datetime.datetime(1, 1, 1),
-        "mastodon_follower_count": -1,
-    }
+async def main():
+    details = {}
     async with httpx.AsyncClient() as client:
         async with trio.open_nursery() as nursery:
-            if token and username:
-                nursery.start_soon(
-                    contribution_details, details, client, token, username
-                )
-            if feed:
-                nursery.start_soon(latest_blog_post, details, client, feed)
-            if mastodon_server and mastodon_account_id:
-                nursery.start_soon(
-                    fetch_mastodon_follower_count,
-                    details,
-                    client,
-                    mastodon_server,
-                    mastodon_account_id,
-                )
-            nursery.start_soon(fetch_bluesky_follower_count, details, client)
-            nursery.start_soon(pep_details, details, client)
+            for func in (
+                contribution_details,
+                latest_blog_post,
+                fetch_mastodon_follower_count,
+                fetch_bluesky_follower_count,
+                pep_details,
+            ):
+                nursery.start_soon(func, details, client)
 
-    print(generate_readme(username=username, **details))
+    print(generate_readme(**details))
 
 
 if __name__ == "__main__":
-    import fire
-
-    def cli(
-        token: str,
-        username: str,
-        feed: str,
-        mastodon_server: str,
-        mastodon_account_id: str,
-    ):
-        """Provide a CLI for the script for use by Fire."""
-        trio.run(main, token, username, feed, mastodon_server, mastodon_account_id)
-
-    fire.Fire(cli)
+    trio.run(main)
