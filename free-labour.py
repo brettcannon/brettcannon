@@ -150,32 +150,22 @@ async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     project.stars = data["repository"]["stargazers"]["totalCount"]
 
 
-async def contributors(
-    gh: gidgethub.abc.GitHubAPI, project: GitHubProject, halt_on=None
-):
+async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Get the contributors list for a project."""
     # Sometimes GitHub returns a 202/Accepted response when requesting the
     # contributors. But if you give it enough time it will eventually return
     # a 200/OK.
     tries = 60
     sleep_for = 10
-    page = 1
-    people = []
     while tries:
         try:
-            new_people = await gh.getitem(
-                f"/repos/{{owner}}/{{repo}}/stats/contributors?anon=0&per_page=100&page={page}",
+            return await gh.getitem(
+                # None of my projects are popular enough to have over 100 contributors,
+                # so just hard-code the number to keep it simple.
+                "/repos/{owner}/{repo}/stats/contributors?anon=0&per_page=100&page=1",
                 {"owner": project.owner, "repo": project.name},
                 accept="application/vnd.github.v3+json",
             )
-            if not new_people:
-                return people
-            people.extend(new_people)
-            if halt_on and any(
-                person["author"]["login"] == halt_on for person in new_people
-            ):
-                return people
-            page += 1
         except gidgethub.HTTPException as exc:
             if exc.status_code != http.HTTPStatus.ACCEPTED or not tries:
                 raise
@@ -203,7 +193,7 @@ async def contributor_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject)
 async def my_contributions(
     gh: gidgethub.abc.GitHubAPI, project: GitHubProject, username: str
 ):
-    contributors_list = await contributors(gh, project, halt_on=username)
+    contributors_list = await contributors(gh, project)
     for contributor in contributors_list:
         if contributor["author"]["login"] != username:
             continue
