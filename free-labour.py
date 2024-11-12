@@ -373,7 +373,7 @@ def nth(number):
     return f"{number:,}{ending}"
 
 
-def generate_readme(creations, contributions, start_date, **details):
+def generate_readme(post_date, creations, contributions, start_date, **details):
     """Create the README from TEMPLATE.md."""
     status_emojis = {
         "Draft": "✍",
@@ -402,6 +402,7 @@ def generate_readme(creations, contributions, start_date, **details):
         today=today.isoformat(),
         years_contributing=years_contributing,
         # Changed data
+        post_date=post_date.date(),
         creations=sorted_creations,
         contributions=sorted_contributions,
         # Original data
