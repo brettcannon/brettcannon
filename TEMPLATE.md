@@ -70,10 +70,10 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 {% for pep in pep_details %}
 <tr>
-<td><a href="https://peps.python.org/{{pep[0]}}">{{pep[0]}}</a></td>
-<td>{{pep[2]}}</td>
-<td title="{{pep[1][0]}}">{{pep[1][1]}}</td>
-<td>{{pep[3]}}</td>
+<td><a href="https://peps.python.org/{{pep.number}}">{{pep.number}}</a></td>
+<td>{{pep.title}}</td>
+<td title="{{pep.status[0]}}">{{pep.status[1]}}</td>
+<td>{{pep.co_authors|join(", ")}}</td>
 </tr>
 {% endfor %}
 

@@ -315,6 +315,14 @@ async def fetch_bluesky_follower_count(details, client):
     details["bluesky_follower_count"] = data["followersCount"]
 
 
+@dataclasses.dataclass
+class PEP:
+    number: int
+    title: str
+    status: str
+    co_authors: list[str]
+
+
 async def pep_details(details, client):
     author_name = "Brett Cannon"
     url = "https://peps.python.org/api/peps.json"
@@ -359,16 +367,16 @@ async def pep_details(details, client):
             name for name in pep["authors"].split(", ") if name != author_name
         ]
         pep_details.append(
-            (
+            PEP(
                 pep["number"],
-                (pep["status"], statuses[pep["status"]]),
                 pep["title"],
-                ", ".join(co_authors),
+                (pep["status"], statuses[pep["status"]]),
+                co_authors,
             )
         )
     pep_details.sort(
         key=lambda pep_data: datetime.datetime.strptime(
-            data[str(pep_data[0])]["created"], "%d-%b-%Y"
+            data[str(pep_data.number)]["created"], "%d-%b-%Y"
         ).date()
     )
 
