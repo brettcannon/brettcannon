@@ -72,7 +72,7 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 <tr>
 <td><a href="https://peps.python.org/{{pep.number}}">{{pep.number}}</a></td>
 <td>{{pep.title}}</td>
-<td title="{{pep.status[0]}}">{{pep.status[1]}}</td>
+<td title="{{pep.status}}">{{pep.status|status_emoji}}</td>
 <td>{{pep.co_authors|join(", ")}}</td>
 </tr>
 {% endfor %}

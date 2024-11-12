@@ -14,7 +14,6 @@ from __future__ import annotations
 import dataclasses
 import datetime
 import http
-import math
 import operator
 import os
 import typing
@@ -349,18 +348,6 @@ async def pep_details(details, client):
         ending = not_th.get(ranking % 10, "th")
     details["pep_author_ranking"] = f"{ranking}{ending}"
 
-    statuses = {
-        "Draft": "✍",
-        "Provisional": "🚧",
-        "Accepted": "👍",
-        "Final": "✅",
-        "Active": "🏃",
-        "Rejected": "❌",
-        "Withdrawn": "🤦",
-        "Deferred": "✋",
-        "Superseded": "🪜",
-    }
-
     pep_details = []
     for pep in my_peps:
         co_authors = [
@@ -370,7 +357,7 @@ async def pep_details(details, client):
             PEP(
                 pep["number"],
                 pep["title"],
-                (pep["status"], statuses[pep["status"]]),
+                pep["status"],
                 co_authors,
             )
         )
@@ -387,38 +374,39 @@ def generate_readme(
     creations: typing.Iterable[GitHubProject],
     contributions: typing.Iterable[Contribution],
     start_date: datetime.datetime,
-    username: str,
-    post_url: str,
-    post_date: datetime.datetime,
-    mastodon_follower_count: int,
-    bluesky_follower_count: int,
-    pep_count: int,
-    pep_author_ranking: str,
-    pep_details: tuple[int, str, str],
+    **details,
 ):
     """Create the README from TEMPLATE.md."""
-    with open("TEMPLATE.md", "r", encoding="utf-8") as file:
-        template = jinja2.Template(file.read())
+    status_emojis = {
+        "Draft": "✍",
+        "Provisional": "🚧",
+        "Accepted": "👍",
+        "Final": "✅",
+        "Active": "🏃",
+        "Rejected": "❌",
+        "Withdrawn": "🤦",
+        "Deferred": "✋",
+        "Superseded": "🪜",
+    }
     sorted_creations = sorted(creations, key=operator.attrgetter("stars"), reverse=True)
     sorted_contributions = sorted(
         contributions, key=operator.attrgetter("commits"), reverse=True
     )
     today = datetime.date.today()
     years_contributing = today.year - start_date.year
+
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(["."]))
+    env.filters["status_emoji"] = status_emojis.__getitem__
+    template = env.get_template("TEMPLATE.md")
     return template.render(
-        post_url=post_url,
-        post_date=post_date.date().isoformat(),
+        # New data
+        today=today.isoformat(),
+        years_contributing=years_contributing,
+        # Changed data
         creations=sorted_creations,
         contributions=sorted_contributions,
-        years_contributing=years_contributing,
-        username=username,
-        today=today.isoformat(),
-        sqrt=math.isqrt,
-        mastodon_follower_count=mastodon_follower_count,
-        bluesky_follower_count=bluesky_follower_count,
-        pep_count=pep_count,
-        pep_author_ranking=pep_author_ranking,
-        pep_details=pep_details,
+        # Original data
+        **details,
     )
 
 
