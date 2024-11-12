@@ -252,7 +252,6 @@ async def contribution_details(details, client):
         except KeyError:
             pass
     creations, contributions = separate_creations_and_contributions(username, projects)
-    print(creations)
     for creation in creation_overrides:
         try:
             contributions.remove(creation)
@@ -267,7 +266,6 @@ async def contribution_details(details, client):
     impactful_creations = {
         creation for creation in creations if creation.contributors > 1
     }
-    print(impactful_creations)
     impactful_creations = frozenset(impactful_creations | creation_overrides)
     contributions_list = list(contributions)
     contributions_list.extend(contribution_overrides)
