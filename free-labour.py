@@ -337,16 +337,7 @@ async def pep_details(details, client):
     details["pep_count"] = author_count[author_name]
 
     author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
-
-    ranking = author_rankings.index(author_name) + 1
-
-    not_th = {1: "st", 2: "nd", 3: "rd"}
-    # Exceptions
-    if ranking in {11, 12, 13}:
-        ending = "th"
-    else:
-        ending = not_th.get(ranking % 10, "th")
-    details["pep_author_ranking"] = f"{ranking}{ending}"
+    details["pep_author_ranking"] = author_rankings.index(author_name) + 1
 
     pep_details = []
     for pep in my_peps:
@@ -370,12 +361,19 @@ async def pep_details(details, client):
     details["pep_details"] = pep_details
 
 
-def generate_readme(
-    creations: typing.Iterable[GitHubProject],
-    contributions: typing.Iterable[Contribution],
-    start_date: datetime.datetime,
-    **details,
-):
+def nth(number):
+    """Add the appropriate suffix to a ranking."""
+    # Not "th"
+    not_th = {1: "st", 2: "nd", 3: "rd"}
+    # Exceptions
+    if number % 100 in {11, 12, 13}:
+        ending = "th"
+    else:
+        ending = not_th.get(number % 10, "th")
+    return f"{number:,}{ending}"
+
+
+def generate_readme(creations, contributions, start_date, **details):
     """Create the README from TEMPLATE.md."""
     status_emojis = {
         "Draft": "✍",
@@ -397,6 +395,7 @@ def generate_readme(
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(["."]))
     env.filters["status_emoji"] = status_emojis.__getitem__
+    env.filters["nth"] = nth
     template = env.get_template("TEMPLATE.md")
     return template.render(
         # New data
