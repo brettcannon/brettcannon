@@ -126,21 +126,6 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
     return iso8601.parse_date(contributions_from), set(contributions.values())
 
 
-def separate_creations_and_contributions(
-    username, projects
-) -> tuple[set[GitHubProject], set[Contribution]]:
-    """Separate repositories based on which ones are owned by 'username'."""
-    creations = set()
-    contributions = set()
-    for project in projects:
-        if project.owner == username:
-            category = creations
-        else:
-            category = contributions
-        category.add(project)
-    return creations, contributions
-
-
 async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
     """Add the star count to a GitHub project."""
     with open("queries/star_count.graphql", "r", encoding="utf-8") as file:
@@ -220,7 +205,6 @@ async def contribution_details(details, client):
     if not (token := os.environ.get("GITHUB_TOKEN")):
         details.update(
             {
-                "creations": [],
                 "contributions": [],
                 # 2003-04-18 21:00 PDT
                 "start_date": datetime.datetime(2003, 4, 19, 4, tzinfo=datetime.UTC),
@@ -230,9 +214,6 @@ async def contribution_details(details, client):
 
     with open("overrides.toml", "r", encoding="utf-8") as file:
         manual_overrides = tomllib.loads(file.read())
-    creation_overrides = gh_overrides_repos(
-        manual_overrides["github"]["created"], username
-    )
     contribution_overrides = [
         RecordedContribution(
             f"{repo['owner']}/{repo['name']}",
@@ -251,23 +232,7 @@ async def contribution_details(details, client):
             projects.remove(GitHubProject(remove["owner"], remove["name"]))
         except KeyError:
             pass
-    creations, contributions = separate_creations_and_contributions(username, projects)
-    for creation in creation_overrides:
-        try:
-            contributions.remove(creation)
-        except KeyError:
-            pass
-    async with trio.open_nursery() as nursery:
-        for project in creation_overrides:
-            nursery.start_soon(star_count, gh, project)
-        for project in creations:
-            nursery.start_soon(contributor_count, gh, project)
-
-    impactful_creations = {
-        creation for creation in creations if creation.contributors > 1
-    }
-    impactful_creations = frozenset(impactful_creations | creation_overrides)
-    contributions_list = list(contributions)
+    contributions_list = list(projects)
     contributions_list.extend(contribution_overrides)
     for project in manual_overrides["contributions"]:
         name = project["name"]
@@ -280,7 +245,6 @@ async def contribution_details(details, client):
 
     details.update(
         {
-            "creations": impactful_creations,
             "contributions": contributions_list,
             "start_date": start_date,
         }
@@ -373,7 +337,7 @@ def nth(number):
     return f"{number:,}{ending}"
 
 
-def generate_readme(post_date, creations, contributions, start_date, **details):
+def generate_readme(post_date, contributions, start_date, **details):
     """Create the README from TEMPLATE.md."""
     status_emojis = {
         "Draft": "✍",
@@ -386,7 +350,6 @@ def generate_readme(post_date, creations, contributions, start_date, **details):
         "Deferred": "✋",
         "Superseded": "🪜",
     }
-    sorted_creations = sorted(creations, key=operator.attrgetter("stars"), reverse=True)
     sorted_contributions = sorted(
         contributions, key=operator.attrgetter("commits"), reverse=True
     )
@@ -403,7 +366,6 @@ def generate_readme(post_date, creations, contributions, start_date, **details):
         years_contributing=years_contributing,
         # Changed data
         post_date=post_date.date(),
-        creations=sorted_creations,
         contributions=sorted_contributions,
         # Original data
         **details,

@@ -8,24 +8,9 @@
 
 <small>Last updated {{ today }}.</small>
 
-## Creations
-
-<details>
-<summary>I have started {{ creations|length }} projects which have received at least one external contribution.</summary>
-
-<small>(Sorted by [☆](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars#about-stars).)</small>
-
-<ol style="list-style: none">
-{% for project in creations %}
-<li><a href="{{ project.url }}">{{ project.name }}</a></li>
-{% endfor %}
-</ol>
-
-  </details>
-
 ## Contributions
 
-Over the past [{{ years_contributing }} years](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610), I have made _some_ commit to {{ contributions|length }} projects.
+Over the past [{{ years_contributing }} years](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610), I have made _some_ commit to {{ contributions|length }} projects (some of which are my own).
 
 <small>(Grouped by commit count.)</small>
 
