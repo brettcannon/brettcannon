@@ -374,7 +374,7 @@ def generate_readme(post_date, contributions, start_date, **details):
 
 async def main():
     details = {}
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(timeout=10.0) as client:
         async with trio.open_nursery() as nursery:
             for func in (
                 contribution_details,
