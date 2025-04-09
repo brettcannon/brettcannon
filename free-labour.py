@@ -287,7 +287,7 @@ class PEP:
 
 
 async def pep_details(details, client):
-    author_name = "Brett Cannon"
+    details["my_name"] = author_name = "Brett Cannon"
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
     author_count = {}
