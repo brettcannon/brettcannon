@@ -67,6 +67,13 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 </details>
 
+<!-- Complete, ranked list of PEP authors -->
+<!--
+{% for author in author_rankings %}
+{{ loop.index }}. {{ author }} - {{ author_count[author] }}
+{% endfor %}
+-->
+
 ## Planets My Code has Visited
 
 <details>
