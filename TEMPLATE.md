@@ -69,7 +69,7 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 <ol>
 {% for author in author_rankings %}
-<li>{% if author == my_name %}<b>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</b>{% endif %}</li>
+<li>{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
 {% endfor %}
 
 </details>
