@@ -323,6 +323,8 @@ async def pep_details(details, client):
     )
 
     details["pep_details"] = pep_details
+    details["author_count"] = author_count
+    details["author_rankings"] = author_rankings
 
 
 def nth(number):
