@@ -14,9 +14,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 <small>(Grouped by commit count.)</small>
 
-
-
-
 <details><summary>&ge; 10<sup>3</sup></summary>
 
 <ol>
@@ -588,7 +585,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 </ol>
 
 </details>
-
 
 
 <details><summary>&ge; 10<sup>2</sup></summary>
@@ -1196,7 +1192,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 </details>
 
 
-
 <details><summary>&ge; 10<sup>1</sup></summary>
 
 <ol>
@@ -1262,11 +1257,11 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/python/devinabox/commits?author=brettcannon">python/devinabox</a></li>
-
-
-
 <li><a href="https://github.com/brettcannon/WWBD/commits?author=brettcannon">brettcannon/WWBD</a></li>
+
+
+
+<li><a href="https://github.com/python/devinabox/commits?author=brettcannon">python/devinabox</a></li>
 
 
 
@@ -1334,7 +1329,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/brettcannon/find-duplicate-files/commits?author=brettcannon">brettcannon/find-duplicate-files</a></li>
+<li><a href="https://github.com/elixir-lang/elixir-lang.github.com/commits?author=brettcannon">elixir-lang/elixir-lang.github.com</a></li>
 
 
 
@@ -1346,7 +1341,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/elixir-lang/elixir-lang.github.com/commits?author=brettcannon">elixir-lang/elixir-lang.github.com</a></li>
+<li><a href="https://github.com/brettcannon/find-duplicate-files/commits?author=brettcannon">brettcannon/find-duplicate-files</a></li>
 
 
 
@@ -1370,11 +1365,11 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/python/core-workflow/commits?author=brettcannon">python/core-workflow</a></li>
-
-
-
 <li><a href="https://github.com/microsoft/vscode-dev-containers/commits?author=brettcannon">microsoft/vscode-dev-containers</a></li>
+
+
+
+<li><a href="https://github.com/python/core-workflow/commits?author=brettcannon">python/core-workflow</a></li>
 
 
 
@@ -1382,11 +1377,11 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/microsoft/vscode-python-devicesimulator/commits?author=brettcannon">microsoft/vscode-python-devicesimulator</a></li>
-
-
-
 <li><a href="https://github.com/Azure-Samples/Azure-MachineLearning-DataScience/commits?author=brettcannon">Azure-Samples/Azure-MachineLearning-DataScience</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-python-devicesimulator/commits?author=brettcannon">microsoft/vscode-python-devicesimulator</a></li>
 
 
 
@@ -1402,10 +1397,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/pypa/distutils/commits?author=brettcannon">pypa/distutils</a></li>
-
-
-
 <li><a href="https://github.com/emmatyping/python-wasm/commits?author=brettcannon">emmatyping/python-wasm</a></li>
 
 
@@ -1415,6 +1406,10 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 <li><a href="https://github.com/python-hyper/uritemplate/commits?author=brettcannon">python-hyper/uritemplate</a></li>
+
+
+
+<li><a href="https://github.com/pypa/distutils/commits?author=brettcannon">pypa/distutils</a></li>
 
 
 
@@ -1868,7 +1863,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 </details>
 
 
-
 <details><summary>&ge; 10<sup>0</sup></summary>
 
 <ol>
@@ -2022,10 +2016,6 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/brettcannon/choose-a-font.dev/commits?author=brettcannon">brettcannon/choose-a-font.dev</a></li>
-
-
-
 <li><a href="https://github.com/python/steering-council/commits?author=brettcannon">python/steering-council</a></li>
 
 
@@ -2038,11 +2028,27 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/eclipse-archived/ceylon-lang.org/commits?author=brettcannon">eclipse-archived/ceylon-lang.org</a></li>
+<li><a href="https://github.com/brettcannon/choose-a-font.dev/commits?author=brettcannon">brettcannon/choose-a-font.dev</a></li>
+
+
+
+<li><a href="https://github.com/brettcannon/nowhere-on-the-web/commits?author=brettcannon">brettcannon/nowhere-on-the-web</a></li>
 
 
 
 <li><a href="https://github.com/python/blurb/commits?author=brettcannon">python/blurb</a></li>
+
+
+
+<li><a href="https://github.com/rescript-lang/rescript-lang.org/commits?author=brettcannon">rescript-lang/rescript-lang.org</a></li>
+
+
+
+<li><a href="https://github.com/eclipse-archived/ceylon-lang.org/commits?author=brettcannon">eclipse-archived/ceylon-lang.org</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-anaconda-extension-pack/commits?author=brettcannon">microsoft/vscode-anaconda-extension-pack</a></li>
 
 
 
@@ -2054,23 +2060,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/microsoft/vscode-anaconda-extension-pack/commits?author=brettcannon">microsoft/vscode-anaconda-extension-pack</a></li>
-
-
-
-<li><a href="https://github.com/brettcannon/nowhere-on-the-web/commits?author=brettcannon">brettcannon/nowhere-on-the-web</a></li>
-
-
-
-<li><a href="https://github.com/rescript-lang/rescript-lang.org/commits?author=brettcannon">rescript-lang/rescript-lang.org</a></li>
-
-
-
 <li><a href="https://github.com/python/cherry-picker/commits?author=brettcannon">python/cherry-picker</a></li>
-
-
-
-<li><a href="https://github.com/brettcannon/porting-to-python-3-notebook/commits?author=brettcannon">brettcannon/porting-to-python-3-notebook</a></li>
 
 
 
@@ -2082,15 +2072,11 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/brettcannon/porting-to-python-3-notebook/commits?author=brettcannon">brettcannon/porting-to-python-3-notebook</a></li>
+
+
+
 <li><a href="https://github.com/microsoft/vscode/commits?author=brettcannon">microsoft/vscode</a></li>
-
-
-
-<li><a href="https://github.com/python/planet/commits?author=brettcannon">python/planet</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
 
 
 
@@ -2102,19 +2088,11 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/square/dagger/commits?author=brettcannon">square/dagger</a></li>
+<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
 
 
 
-<li><a href="https://github.com/WebAssembly/design/commits?author=brettcannon">WebAssembly/design</a></li>
-
-
-
-<li><a href="https://github.com/Homebrew/legacy-homebrew/commits?author=brettcannon">Homebrew/legacy-homebrew</a></li>
-
-
-
-<li><a href="https://github.com/Homebrew/homebrew-core/commits?author=brettcannon">Homebrew/homebrew-core</a></li>
+<li><a href="https://github.com/python/planet/commits?author=brettcannon">python/planet</a></li>
 
 
 
@@ -2122,19 +2100,23 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
-
-
-
-<li><a href="https://github.com/aosabook/500lines/commits?author=brettcannon">aosabook/500lines</a></li>
-
-
-
 <li><a href="https://github.com/openlawlibrary/pygls/commits?author=brettcannon">openlawlibrary/pygls</a></li>
 
 
 
-<li><a href="https://github.com/brettcannon/vscode-zephyr-asdl/commits?author=brettcannon">brettcannon/vscode-zephyr-asdl</a></li>
+<li><a href="https://github.com/Homebrew/legacy-homebrew/commits?author=brettcannon">Homebrew/legacy-homebrew</a></li>
+
+
+
+<li><a href="https://github.com/square/dagger/commits?author=brettcannon">square/dagger</a></li>
+
+
+
+<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
+
+
+
+<li><a href="https://github.com/Homebrew/homebrew-core/commits?author=brettcannon">Homebrew/homebrew-core</a></li>
 
 
 
@@ -2142,15 +2124,23 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
+<li><a href="https://github.com/WebAssembly/design/commits?author=brettcannon">WebAssembly/design</a></li>
 
 
 
-<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
+<li><a href="https://github.com/aosabook/500lines/commits?author=brettcannon">aosabook/500lines</a></li>
 
 
 
-<li><a href="https://github.com/badges/shields/commits?author=brettcannon">badges/shields</a></li>
+<li><a href="https://github.com/brettcannon/vscode-zephyr-asdl/commits?author=brettcannon">brettcannon/vscode-zephyr-asdl</a></li>
+
+
+
+<li><a href="https://github.com/brettcannon/cpython-wasi-buildbot/commits?author=brettcannon">brettcannon/cpython-wasi-buildbot</a></li>
+
+
+
+<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
 
 
 
@@ -2162,7 +2152,15 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
+<li><a href="https://github.com/badges/shields/commits?author=brettcannon">badges/shields</a></li>
+
+
+
+<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
+
+
+
+<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
 
 
 
@@ -2170,7 +2168,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
+<li><a href="https://github.com/dotnet/docs/commits?author=brettcannon">dotnet/docs</a></li>
 
 
 
@@ -2178,55 +2176,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/brettcannon/cpython-wasi-buildbot/commits?author=brettcannon">brettcannon/cpython-wasi-buildbot</a></li>
-
-
-
-<li><a href="https://github.com/dotnet/docs/commits?author=brettcannon">dotnet/docs</a></li>
-
-
-
-<li><a href="https://github.com/python/pyperformance/commits?author=brettcannon">python/pyperformance</a></li>
-
-
-
-<li><a href="https://github.com/gleam-lang/language-tour/commits?author=brettcannon">gleam-lang/language-tour</a></li>
-
-
-
-<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
-
-
-
-<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
-
-
-
-<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
-
-
-
-<li><a href="https://github.com/WebAssembly/wasi-sdk/commits?author=brettcannon">WebAssembly/wasi-sdk</a></li>
-
-
-
-<li><a href="https://github.com/kushaldas/pep582/commits?author=brettcannon">kushaldas/pep582</a></li>
-
-
-
-<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
-
-
-
-<li><a href="https://github.com/asyncio-docs/asyncio-doc/commits?author=brettcannon">asyncio-docs/asyncio-doc</a></li>
-
-
-
-<li><a href="https://github.com/bytecodealliance/wasmtime/commits?author=brettcannon">bytecodealliance/wasmtime</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-isort/commits?author=brettcannon">microsoft/vscode-isort</a></li>
+<li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
 
 
 
@@ -2234,43 +2184,35 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/python/python-docs-theme/commits?author=brettcannon">python/python-docs-theme</a></li>
+
+
+
+<li><a href="https://github.com/jaraco/skeleton/commits?author=brettcannon">jaraco/skeleton</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/pep582/commits?author=brettcannon">kushaldas/pep582</a></li>
+
+
+
+<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
+
+
+
 <li><a href="https://github.com/python/typing/commits?author=brettcannon">python/typing</a></li>
 
 
 
-<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
+<li><a href="https://github.com/sarugaku/resolvelib/commits?author=brettcannon">sarugaku/resolvelib</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
-
-
-
-<li><a href="https://github.com/larryhastings/appeal/commits?author=brettcannon">larryhastings/appeal</a></li>
-
-
-
-<li><a href="https://github.com/conda/conda/commits?author=brettcannon">conda/conda</a></li>
-
-
-
-<li><a href="https://github.com/MeeseeksBox/meeseeksbox.github.io/commits?author=brettcannon">MeeseeksBox/meeseeksbox.github.io</a></li>
-
-
-
-<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
-
-
-
-<li><a href="https://github.com/MPOS/php-mpos/commits?author=brettcannon">MPOS/php-mpos</a></li>
-
-
-
-<li><a href="https://github.com/conda/ceps/commits?author=brettcannon">conda/ceps</a></li>
-
-
-
-<li><a href="https://github.com/python/core-sprint/commits?author=brettcannon">python/core-sprint</a></li>
+<li><a href="https://github.com/WebAssembly/wasi-sdk/commits?author=brettcannon">WebAssembly/wasi-sdk</a></li>
 
 
 
@@ -2282,15 +2224,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
+<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
 
 
 
@@ -2298,11 +2232,39 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-python-templates/commits?author=brettcannon">microsoft/vscode-python-templates</a></li>
+
+
+
+<li><a href="https://github.com/riverscuomo/apps/commits?author=brettcannon">riverscuomo/apps</a></li>
+
+
+
+<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
+
+
+
+<li><a href="https://github.com/MPOS/php-mpos/commits?author=brettcannon">MPOS/php-mpos</a></li>
+
+
+
+<li><a href="https://github.com/python/pyperformance/commits?author=brettcannon">python/pyperformance</a></li>
+
+
+
+<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
+
+
+
 <li><a href="https://github.com/matplotlib/matplotlib/commits?author=brettcannon">matplotlib/matplotlib</a></li>
-
-
-
-<li><a href="https://github.com/python/python-docs-theme/commits?author=brettcannon">python/python-docs-theme</a></li>
 
 
 
@@ -2314,39 +2276,51 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/asyncio-docs/asyncio-doc/commits?author=brettcannon">asyncio-docs/asyncio-doc</a></li>
+
+
+
+<li><a href="https://github.com/bytecodealliance/wasmtime/commits?author=brettcannon">bytecodealliance/wasmtime</a></li>
+
+
+
+<li><a href="https://github.com/MeeseeksBox/meeseeksbox.github.io/commits?author=brettcannon">MeeseeksBox/meeseeksbox.github.io</a></li>
+
+
+
+<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
+
+
+
+<li><a href="https://github.com/larryhastings/appeal/commits?author=brettcannon">larryhastings/appeal</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
+
+
+
 <li><a href="https://github.com/microsoftarchive/msgraph-sdk-python/commits?author=brettcannon">microsoftarchive/msgraph-sdk-python</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/vscode-python-templates/commits?author=brettcannon">microsoft/vscode-python-templates</a></li>
+<li><a href="https://github.com/gleam-lang/language-tour/commits?author=brettcannon">gleam-lang/language-tour</a></li>
 
 
 
-<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
+<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
 
 
 
-<li><a href="https://github.com/astral-sh/ruff/commits?author=brettcannon">astral-sh/ruff</a></li>
+<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
 
 
 
-<li><a href="https://github.com/jaraco/skeleton/commits?author=brettcannon">jaraco/skeleton</a></li>
+<li><a href="https://github.com/microsoft/vscode-isort/commits?author=brettcannon">microsoft/vscode-isort</a></li>
 
 
 
-<li><a href="https://github.com/sarugaku/resolvelib/commits?author=brettcannon">sarugaku/resolvelib</a></li>
-
-
-
-<li><a href="https://github.com/riverscuomo/apps/commits?author=brettcannon">riverscuomo/apps</a></li>
-
-
-
-<li><a href="https://github.com/beeware/liquid-demo/commits?author=brettcannon">beeware/liquid-demo</a></li>
-
-
-
-<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
+<li><a href="https://github.com/conda/ceps/commits?author=brettcannon">conda/ceps</a></li>
 
 
 
@@ -2354,91 +2328,27 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/python/core-sprint/commits?author=brettcannon">python/core-sprint</a></li>
+
+
+
+<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
+
+
+
+<li><a href="https://github.com/conda/conda/commits?author=brettcannon">conda/conda</a></li>
+
+
+
+<li><a href="https://github.com/beeware/liquid-demo/commits?author=brettcannon">beeware/liquid-demo</a></li>
+
+
+
+<li><a href="https://github.com/astral-sh/ruff/commits?author=brettcannon">astral-sh/ruff</a></li>
+
+
+
 <li><a href="https://github.com/django/django/">Django</a></li>
-
-
-
-<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
-
-
-
-<li><a href="https://github.com/syl20bnr/spacemacs/commits?author=brettcannon">syl20bnr/spacemacs</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
-
-
-
-<li><a href="https://github.com/astral-sh/uv/commits?author=brettcannon">astral-sh/uv</a></li>
-
-
-
-<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
-
-
-
-<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/w3c/ServiceWorker/commits?author=brettcannon">w3c/ServiceWorker</a></li>
-
-
-
-<li><a href="https://github.com/spotify/pedalboard/commits?author=brettcannon">spotify/pedalboard</a></li>
-
-
-
-<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
-
-
-
-<li><a href="https://github.com/stellar-deprecated/docs/commits?author=brettcannon">stellar-deprecated/docs</a></li>
-
-
-
-<li><a href="https://github.com/absurdia/absurdia-py/commits?author=brettcannon">absurdia/absurdia-py</a></li>
-
-
-
-<li><a href="https://github.com/huggingface/agents-course/commits?author=brettcannon">huggingface/agents-course</a></li>
-
-
-
-<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
-
-
-
-<li><a href="https://github.com/Homebrew/brew/commits?author=brettcannon">Homebrew/brew</a></li>
-
-
-
-<li><a href="https://github.com/pytest-dev/pytest/commits?author=brettcannon">pytest-dev/pytest</a></li>
-
-
-
-<li><a href="https://github.com/pdm-project/pdm/commits?author=brettcannon">pdm-project/pdm</a></li>
-
-
-
-<li><a href="https://github.com/gleam-lang/gleam/commits?author=brettcannon">gleam-lang/gleam</a></li>
-
-
-
-<li><a href="https://github.com/brettcannon/character-frequency/commits?author=brettcannon">brettcannon/character-frequency</a></li>
-
-
-
-<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
-
-
-
-<li><a href="https://github.com/ebkalderon/tower-lsp/commits?author=brettcannon">ebkalderon/tower-lsp</a></li>
-
-
-
-<li><a href="https://github.com/WebAssembly/component-model/commits?author=brettcannon">WebAssembly/component-model</a></li>
 
 
 
@@ -2446,347 +2356,7 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/score-spec/spec/commits?author=brettcannon">score-spec/spec</a></li>
-
-
-
-<li><a href="https://github.com/gleam-lang/website/commits?author=brettcannon">gleam-lang/website</a></li>
-
-
-
-<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
-
-
-
-<li><a href="https://github.com/scikit-learn/scikit-learn/commits?author=brettcannon">scikit-learn/scikit-learn</a></li>
-
-
-
-<li><a href="https://github.com/google/yapf/commits?author=brettcannon">google/yapf</a></li>
-
-
-
-<li><a href="https://github.com/ericpalakovichcarr/pytest-pythonpath/commits?author=brettcannon">ericpalakovichcarr/pytest-pythonpath</a></li>
-
-
-
-<li><a href="https://github.com/hynek/build-and-inspect-python-package/commits?author=brettcannon">hynek/build-and-inspect-python-package</a></li>
-
-
-
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
-
-
-
-<li><a href="https://github.com/dusty-phillips/macabre/commits?author=brettcannon">dusty-phillips/macabre</a></li>
-
-
-
-<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
-
-
-
-<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
-
-
-
-<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
-
-
-
-<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
-
-
-
-<li><a href="https://github.com/cometkim/rescript-vitest/commits?author=brettcannon">cometkim/rescript-vitest</a></li>
-
-
-
-<li><a href="https://github.com/wntrblm/nox/commits?author=brettcannon">wntrblm/nox</a></li>
-
-
-
-<li><a href="https://github.com/stellar/awesome-stellar/commits?author=brettcannon">stellar/awesome-stellar</a></li>
-
-
-
-<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
-
-
-
-<li><a href="https://github.com/jupyter-book/mystmd.org/commits?author=brettcannon">jupyter-book/mystmd.org</a></li>
-
-
-
-<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
-
-
-
-<li><a href="https://github.com/starship/starship/commits?author=brettcannon">starship/starship</a></li>
-
-
-
-<li><a href="https://github.com/riscv-software-src/riscv-tests/commits?author=brettcannon">riscv-software-src/riscv-tests</a></li>
-
-
-
-<li><a href="https://github.com/gleam-lang/otp/commits?author=brettcannon">gleam-lang/otp</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
-
-
-
-<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
-
-
-
-<li><a href="https://github.com/victor-o-silva/python-links-from-link-header/commits?author=brettcannon">victor-o-silva/python-links-from-link-header</a></li>
-
-
-
-<li><a href="https://github.com/lorenzofox3/zora/commits?author=brettcannon">lorenzofox3/zora</a></li>
-
-
-
-<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
-
-
-
-<li><a href="https://github.com/Quansight-Labs/free-threaded-compatibility/commits?author=brettcannon">Quansight-Labs/free-threaded-compatibility</a></li>
-
-
-
-<li><a href="https://github.com/zwaldowski/match-label-action/commits?author=brettcannon">zwaldowski/match-label-action</a></li>
-
-
-
-<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
-
-
-
-<li><a href="https://github.com/mesonbuild/meson/commits?author=brettcannon">mesonbuild/meson</a></li>
-
-
-
-<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
-
-
-
-<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
-
-
-
-<li><a href="https://github.com/GraphQLGuide/book/commits?author=brettcannon">GraphQLGuide/book</a></li>
-
-
-
-<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/log/commits?author=brettcannon">rust-lang/log</a></li>
-
-
-
-<li><a href="https://github.com/nayafia/nayafia/commits?author=brettcannon">nayafia/nayafia</a></li>
-
-
-
-<li><a href="https://github.com/luabud/hello-vscodespaces/commits?author=brettcannon">luabud/hello-vscodespaces</a></li>
-
-
-
-<li><a href="https://github.com/psf/fundable-packaging-improvements/commits?author=brettcannon">psf/fundable-packaging-improvements</a></li>
-
-
-
-<li><a href="https://github.com/devcontainers/images/commits?author=brettcannon">devcontainers/images</a></li>
-
-
-
-<li><a href="https://github.com/stellar/new-docs/commits?author=brettcannon">stellar/new-docs</a></li>
-
-
-
-<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
-
-
-
-<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
-
-
-
-<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
-
-
-
-<li><a href="https://github.com/Devid-Ba/Text-adventure/commits?author=brettcannon">Devid-Ba/Text-adventure</a></li>
-
-
-
-<li><a href="https://github.com/rocketreach/rocketreach_python/commits?author=brettcannon">rocketreach/rocketreach_python</a></li>
-
-
-
-<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-pylint/commits?author=brettcannon">microsoft/vscode-pylint</a></li>
-
-
-
-<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
-
-
-
-<li><a href="https://github.com/python/importlib_metadata/commits?author=brettcannon">python/importlib_metadata</a></li>
-
-
-
-<li><a href="https://github.com/casey/just/commits?author=brettcannon">casey/just</a></li>
-
-
-
-<li><a href="https://github.com/kushaldas/asaman/commits?author=brettcannon">kushaldas/asaman</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
-
-
-
-<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/python-poetry/tomlkit/commits?author=brettcannon">python-poetry/tomlkit</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/az-partner-center-cli/commits?author=brettcannon">microsoft/az-partner-center-cli</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/debugpy/commits?author=brettcannon">microsoft/debugpy</a></li>
-
-
-
-<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
-
-
-
-<li><a href="https://github.com/lustre-labs/ui/commits?author=brettcannon">lustre-labs/ui</a></li>
-
-
-
-<li><a href="https://github.com/devcontainers/features/commits?author=brettcannon">devcontainers/features</a></li>
-
-
-
-<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
-
-
-
-<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
-
-
-
-<li><a href="https://github.com/ansible/ansible/commits?author=brettcannon">ansible/ansible</a></li>
-
-
-
-<li><a href="https://github.com/clearlydefined/website/commits?author=brettcannon">clearlydefined/website</a></li>
-
-
-
-<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
-
-
-
-<li><a href="https://github.com/riverscuomo/new-albums/commits?author=brettcannon">riverscuomo/new-albums</a></li>
-
-
-
-<li><a href="https://github.com/pypa/build/commits?author=brettcannon">pypa/build</a></li>
-
-
-
-<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
-
-
-
-<li><a href="https://github.com/pyca/pyopenssl/commits?author=brettcannon">pyca/pyopenssl</a></li>
-
-
-
-<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs-contrib/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs-contrib</a></li>
-
-
-
-<li><a href="https://github.com/pypa/pipx/commits?author=brettcannon">pypa/pipx</a></li>
-
-
-
-<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
-
-
-
-<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
-
-
-
-<li><a href="https://github.com/bitbldr/sprocket_docs/commits?author=brettcannon">bitbldr/sprocket_docs</a></li>
-
-
-
-<li><a href="https://github.com/pypa/setuptools-scm/commits?author=brettcannon">pypa/setuptools-scm</a></li>
-
-
-
-<li><a href="https://github.com/11ty/11ty-website/commits?author=brettcannon">11ty/11ty-website</a></li>
-
-
-
-<li><a href="https://github.com/Enderchief/gleam-tools/commits?author=brettcannon">Enderchief/gleam-tools</a></li>
-
-
-
-<li><a href="https://github.com/VSCodeVim/Vim/commits?author=brettcannon">VSCodeVim/Vim</a></li>
-
-
-
-<li><a href="https://github.com/okken/pytest-srcpaths/commits?author=brettcannon">okken/pytest-srcpaths</a></li>
-
-
-
-<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
-
-
-
-<li><a href="https://github.com/psf/webassembly/commits?author=brettcannon">psf/webassembly</a></li>
-
-
-
-<li><a href="https://github.com/aurelia/documentation/commits?author=brettcannon">aurelia/documentation</a></li>
-
-
-
-<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
-
-
-
-<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
+<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
 
 
 
@@ -2794,11 +2364,63 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/microsoft/python-sample-vscode-django-tutorial/commits?author=brettcannon">microsoft/python-sample-vscode-django-tutorial</a></li>
+<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
 
 
 
-<li><a href="https://github.com/pypi/warehouse/commits?author=brettcannon">pypi/warehouse</a></li>
+<li><a href="https://github.com/Enderchief/gleam-tools/commits?author=brettcannon">Enderchief/gleam-tools</a></li>
+
+
+
+<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
+
+
+
+<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
+
+
+
+<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/asaman/commits?author=brettcannon">kushaldas/asaman</a></li>
+
+
+
+<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
+
+
+
+<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
+
+
+
+<li><a href="https://github.com/devcontainers/features/commits?author=brettcannon">devcontainers/features</a></li>
+
+
+
+<li><a href="https://github.com/Quansight-Labs/free-threaded-compatibility/commits?author=brettcannon">Quansight-Labs/free-threaded-compatibility</a></li>
+
+
+
+<li><a href="https://github.com/luabud/hello-vscodespaces/commits?author=brettcannon">luabud/hello-vscodespaces</a></li>
+
+
+
+<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
+
+
+
+<li><a href="https://github.com/gleam-lang/website/commits?author=brettcannon">gleam-lang/website</a></li>
+
+
+
+<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
 
 
 
@@ -2806,27 +2428,91 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
-<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
+<li><a href="https://github.com/python-poetry/tomlkit/commits?author=brettcannon">python-poetry/tomlkit</a></li>
 
 
 
-<li><a href="https://github.com/extism/extism/commits?author=brettcannon">extism/extism</a></li>
+<li><a href="https://github.com/GraphQLGuide/book/commits?author=brettcannon">GraphQLGuide/book</a></li>
 
 
 
-<li><a href="https://github.com/pypa/trove-classifiers/commits?author=brettcannon">pypa/trove-classifiers</a></li>
+<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
+<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
 
 
 
-<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
+<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
 
 
 
-<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
+<li><a href="https://github.com/gleam-lang/otp/commits?author=brettcannon">gleam-lang/otp</a></li>
+
+
+
+<li><a href="https://github.com/ericpalakovichcarr/pytest-pythonpath/commits?author=brettcannon">ericpalakovichcarr/pytest-pythonpath</a></li>
+
+
+
+<li><a href="https://github.com/python/importlib_metadata/commits?author=brettcannon">python/importlib_metadata</a></li>
+
+
+
+<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
+
+
+
+<li><a href="https://github.com/google/yapf/commits?author=brettcannon">google/yapf</a></li>
+
+
+
+<li><a href="https://github.com/psf/fundable-packaging-improvements/commits?author=brettcannon">psf/fundable-packaging-improvements</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
+
+
+
+<li><a href="https://github.com/aurelia/documentation/commits?author=brettcannon">aurelia/documentation</a></li>
+
+
+
+<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
+
+
+
+<li><a href="https://github.com/11ty/11ty-website/commits?author=brettcannon">11ty/11ty-website</a></li>
+
+
+
+<li><a href="https://github.com/clearlydefined/website/commits?author=brettcannon">clearlydefined/website</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/log/commits?author=brettcannon">rust-lang/log</a></li>
+
+
+
+<li><a href="https://github.com/riverscuomo/new-albums/commits?author=brettcannon">riverscuomo/new-albums</a></li>
+
+
+
+<li><a href="https://github.com/pypi/warehouse/commits?author=brettcannon">pypi/warehouse</a></li>
+
+
+
+<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
+
+
+
+<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
+
+
+
+<li><a href="https://github.com/syl20bnr/spacemacs/commits?author=brettcannon">syl20bnr/spacemacs</a></li>
 
 
 
@@ -2834,11 +2520,319 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 
 
+<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
+
+
+
+<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
+
+
+
+<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
+
+
+
+<li><a href="https://github.com/starship/starship/commits?author=brettcannon">starship/starship</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
+
+
+
+<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/debugpy/commits?author=brettcannon">microsoft/debugpy</a></li>
+
+
+
+<li><a href="https://github.com/bitbldr/sprocket_docs/commits?author=brettcannon">bitbldr/sprocket_docs</a></li>
+
+
+
+<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
+
+
+
+<li><a href="https://github.com/absurdia/absurdia-py/commits?author=brettcannon">absurdia/absurdia-py</a></li>
+
+
+
+<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
+
+
+
+<li><a href="https://github.com/Homebrew/brew/commits?author=brettcannon">Homebrew/brew</a></li>
+
+
+
+<li><a href="https://github.com/devcontainers/images/commits?author=brettcannon">devcontainers/images</a></li>
+
+
+
+<li><a href="https://github.com/lustre-labs/ui/commits?author=brettcannon">lustre-labs/ui</a></li>
+
+
+
+<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
+
+
+
+<li><a href="https://github.com/stellar-deprecated/docs/commits?author=brettcannon">stellar-deprecated/docs</a></li>
+
+
+
+<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
+
+
+
+<li><a href="https://github.com/mesonbuild/meson/commits?author=brettcannon">mesonbuild/meson</a></li>
+
+
+
+<li><a href="https://github.com/spotify/pedalboard/commits?author=brettcannon">spotify/pedalboard</a></li>
+
+
+
+<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
+
+
+
+<li><a href="https://github.com/okken/pytest-srcpaths/commits?author=brettcannon">okken/pytest-srcpaths</a></li>
+
+
+
+<li><a href="https://github.com/stellar/new-docs/commits?author=brettcannon">stellar/new-docs</a></li>
+
+
+
+<li><a href="https://github.com/stellar/awesome-stellar/commits?author=brettcannon">stellar/awesome-stellar</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
+
+
+
+<li><a href="https://github.com/cometkim/rescript-vitest/commits?author=brettcannon">cometkim/rescript-vitest</a></li>
+
+
+
+<li><a href="https://github.com/brettcannon/character-frequency/commits?author=brettcannon">brettcannon/character-frequency</a></li>
+
+
+
+<li><a href="https://github.com/w3c/ServiceWorker/commits?author=brettcannon">w3c/ServiceWorker</a></li>
+
+
+
+<li><a href="https://github.com/pyca/pyopenssl/commits?author=brettcannon">pyca/pyopenssl</a></li>
+
+
+
+<li><a href="https://github.com/gleam-lang/gleam/commits?author=brettcannon">gleam-lang/gleam</a></li>
+
+
+
+<li><a href="https://github.com/ansible/ansible/commits?author=brettcannon">ansible/ansible</a></li>
+
+
+
+<li><a href="https://github.com/score-spec/spec/commits?author=brettcannon">score-spec/spec</a></li>
+
+
+
+<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs-contrib/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs-contrib</a></li>
+
+
+
+<li><a href="https://github.com/lorenzofox3/zora/commits?author=brettcannon">lorenzofox3/zora</a></li>
+
+
+
+<li><a href="https://github.com/scikit-learn/scikit-learn/commits?author=brettcannon">scikit-learn/scikit-learn</a></li>
+
+
+
+<li><a href="https://github.com/Devid-Ba/Text-adventure/commits?author=brettcannon">Devid-Ba/Text-adventure</a></li>
+
+
+
 <li><a href="https://github.com/microsoft/PTVS/commits?author=brettcannon">microsoft/PTVS</a></li>
 
 
 
+<li><a href="https://github.com/wntrblm/nox/commits?author=brettcannon">wntrblm/nox</a></li>
+
+
+
+<li><a href="https://github.com/pypa/pipx/commits?author=brettcannon">pypa/pipx</a></li>
+
+
+
+<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
+
+
+
+<li><a href="https://github.com/huggingface/agents-course/commits?author=brettcannon">huggingface/agents-course</a></li>
+
+
+
+<li><a href="https://github.com/nayafia/nayafia/commits?author=brettcannon">nayafia/nayafia</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
+
+
+
+<li><a href="https://github.com/victor-o-silva/python-links-from-link-header/commits?author=brettcannon">victor-o-silva/python-links-from-link-header</a></li>
+
+
+
+<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
+
+
+
+<li><a href="https://github.com/extism/extism/commits?author=brettcannon">extism/extism</a></li>
+
+
+
+<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
+
+
+
+<li><a href="https://github.com/VSCodeVim/Vim/commits?author=brettcannon">VSCodeVim/Vim</a></li>
+
+
+
+<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
+
+
+
+<li><a href="https://github.com/zwaldowski/match-label-action/commits?author=brettcannon">zwaldowski/match-label-action</a></li>
+
+
+
+<li><a href="https://github.com/casey/just/commits?author=brettcannon">casey/just</a></li>
+
+
+
+<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
+
+
+
+<li><a href="https://github.com/hynek/build-and-inspect-python-package/commits?author=brettcannon">hynek/build-and-inspect-python-package</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/az-partner-center-cli/commits?author=brettcannon">microsoft/az-partner-center-cli</a></li>
+
+
+
+<li><a href="https://github.com/pypa/build/commits?author=brettcannon">pypa/build</a></li>
+
+
+
+<li><a href="https://github.com/dusty-phillips/macabre/commits?author=brettcannon">dusty-phillips/macabre</a></li>
+
+
+
+<li><a href="https://github.com/pdm-project/pdm/commits?author=brettcannon">pdm-project/pdm</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
+
+
+
+<li><a href="https://github.com/riscv-software-src/riscv-tests/commits?author=brettcannon">riscv-software-src/riscv-tests</a></li>
+
+
+
 <li><a href="https://github.com/mozilla-services/konfig/commits?author=brettcannon">mozilla-services/konfig</a></li>
+
+
+
+<li><a href="https://github.com/WebAssembly/component-model/commits?author=brettcannon">WebAssembly/component-model</a></li>
+
+
+
+<li><a href="https://github.com/ebkalderon/tower-lsp/commits?author=brettcannon">ebkalderon/tower-lsp</a></li>
+
+
+
+<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
+
+
+
+<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
+
+
+
+<li><a href="https://github.com/psf/webassembly/commits?author=brettcannon">psf/webassembly</a></li>
+
+
+
+<li><a href="https://github.com/rocketreach/rocketreach_python/commits?author=brettcannon">rocketreach/rocketreach_python</a></li>
+
+
+
+<li><a href="https://github.com/pypa/trove-classifiers/commits?author=brettcannon">pypa/trove-classifiers</a></li>
+
+
+
+<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
+
+
+
+<li><a href="https://github.com/pypa/setuptools-scm/commits?author=brettcannon">pypa/setuptools-scm</a></li>
+
+
+
+<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/python-sample-vscode-django-tutorial/commits?author=brettcannon">microsoft/python-sample-vscode-django-tutorial</a></li>
+
+
+
+<li><a href="https://github.com/jupyter-book/mystmd.org/commits?author=brettcannon">jupyter-book/mystmd.org</a></li>
+
+
+
+<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-pylint/commits?author=brettcannon">microsoft/vscode-pylint</a></li>
+
+
+
+<li><a href="https://github.com/pytest-dev/pytest/commits?author=brettcannon">pytest-dev/pytest</a></li>
+
+
+
+<li><a href="https://github.com/astral-sh/uv/commits?author=brettcannon">astral-sh/uv</a></li>
+
+
+
+<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
 
 
 
@@ -2871,8 +2865,10 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 ### [Python Enhancement Proposals](https://peps.python.org)
 
+<details></details>
+
 <details>
-<summary>I have (co-)authored 32 PEPs (5th most prolific).</summary>
+<summary>I have (co-)authored 32 PEPs.</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3120,698 +3116,701 @@ Over the past [21 years](https://github.com/python/cpython/commit/1e91d8eb030656
 
 </details>
 
-<!-- Complete, ranked list of PEP authors -->
-<!--
+<details>
+<summary>I'm the 5th most prolific PEP author.</summary>
 
-1. Alyssa Coghlan - 52
+<ol>
 
-2. Guido van Rossum - 49
+<li>Alyssa Coghlan (52)</li>
 
-3. Barry Warsaw - 41
+<li>Guido van Rossum (49)</li>
 
-4. Victor Stinner - 34
+<li>Barry Warsaw (41)</li>
 
-5. Brett Cannon - 32
+<li>Victor Stinner (34)</li>
 
-6. Donald Stufft - 21
+<li><b>Brett Cannon (32)</b></li>
 
-7. Petr Viktorin - 18
+<li>Donald Stufft (21)</li>
 
-8. Martin von Löwis - 17
+<li>Petr Viktorin (18)</li>
 
-9. Łukasz Langa - 15
+<li>Martin von Löwis (17)</li>
 
-10. Nathaniel J. Smith - 15
+<li>Łukasz Langa (15)</li>
 
-11. Steve Dower - 15
+<li>Nathaniel J. Smith (15)</li>
 
-12. Raymond Hettinger - 14
+<li>Steve Dower (15)</li>
 
-13. Antoine Pitrou - 13
+<li>Raymond Hettinger (14)</li>
 
-14. Mark Shannon - 12
+<li>Antoine Pitrou (13)</li>
 
-15. Eric Snow - 12
+<li>Mark Shannon (12)</li>
 
-16. Georg Brandl - 11
+<li>Eric Snow (12)</li>
 
-17. Tim Peters - 10
+<li>Georg Brandl (11)</li>
 
-18. A.M. Kuchling - 10
+<li>Tim Peters (10)</li>
 
-19. Marc-André Lemburg - 9
+<li>A.M. Kuchling (10)</li>
 
-20. Paul Moore - 9
+<li>Marc-André Lemburg (9)</li>
 
-21. Yury Selivanov - 8
+<li>Paul Moore (9)</li>
 
-22. Larry Hastings - 8
+<li>Yury Selivanov (8)</li>
 
-23. Christian Heimes - 8
+<li>Larry Hastings (8)</li>
 
-24. Ivan Levkivskyi - 8
+<li>Christian Heimes (8)</li>
 
-25. Pradyun Gedam - 8
+<li>Ivan Levkivskyi (8)</li>
 
-26. Jeremy Hylton - 7
+<li>Pradyun Gedam (8)</li>
 
-27. Thomas Wouters - 7
+<li>Jeremy Hylton (7)</li>
 
-28. Moshe Zadka - 7
+<li>Thomas Wouters (7)</li>
 
-29. Benjamin Peterson - 7
+<li>Moshe Zadka (7)</li>
 
-30. Dustin Ingram - 7
+<li>Benjamin Peterson (7)</li>
 
-31. Ee Durbin - 7
+<li>Dustin Ingram (7)</li>
 
-32. David Goodger - 6
+<li>Ee Durbin (7)</li>
 
-33. Ka-Ping Yee - 6
+<li>David Goodger (6)</li>
 
-34. Jim J. Jewett - 6
+<li>Ka-Ping Yee (6)</li>
 
-35. Phillip J. Eby - 6
+<li>Jim J. Jewett (6)</li>
 
-36. Daniel Holth - 6
+<li>Phillip J. Eby (6)</li>
 
-37. Chris Angelico - 6
+<li>Daniel Holth (6)</li>
 
-38. Inada Naoki - 6
+<li>Chris Angelico (6)</li>
 
-39. Pablo Galindo - 6
+<li>Inada Naoki (6)</li>
 
-40. Brandt Bucher - 6
+<li>Pablo Galindo (6)</li>
 
-41. Pablo Galindo Salgado - 6
+<li>Brandt Bucher (6)</li>
 
-42. Tzu-ping Chung - 6
+<li>Pablo Galindo Salgado (6)</li>
 
-43. Jelle Zijlstra - 6
+<li>Tzu-ping Chung (6)</li>
 
-44. William Woodruff - 6
+<li>Jelle Zijlstra (6)</li>
 
-45. Collin Winter - 6
+<li>William Woodruff (6)</li>
 
-46. Anthony Baxter - 5
+<li>Collin Winter (6)</li>
 
-47. Neil Schemenauer - 5
+<li>Anthony Baxter (5)</li>
 
-48. Skip Montanaro - 5
+<li>Neil Schemenauer (5)</li>
 
-49. Ethan Furman - 5
+<li>Skip Montanaro (5)</li>
 
-50. Talin - 5
+<li>Ethan Furman (5)</li>
 
-51. Eric Traut - 5
+<li>Talin (5)</li>
 
-52. Irit Katriel - 5
+<li>Eric Traut (5)</li>
 
-53. Paul Prescod - 4
+<li>Irit Katriel (5)</li>
 
-54. Gregory Ewing - 4
+<li>Paul Prescod (4)</li>
 
-55. Richard Jones - 4
+<li>Gregory Ewing (4)</li>
 
-56. Tarek Ziadé - 4
+<li>Richard Jones (4)</li>
 
-57. Carl Meyer - 4
+<li>Tarek Ziadé (4)</li>
 
-58. Jukka Lehtosalo - 4
+<li>Carl Meyer (4)</li>
 
-59. Thomas Kluyver - 4
+<li>Jukka Lehtosalo (4)</li>
 
-60. Emma Harper Smith - 4
+<li>Thomas Kluyver (4)</li>
 
-61. Jeroen Demeyer - 4
+<li>Emma Harper Smith (4)</li>
 
-62. Mariatta - 4
+<li>Jeroen Demeyer (4)</li>
 
-63. Lysandros Nikolaou - 4
+<li>Mariatta (4)</li>
 
-64. Ofek Lev - 4
+<li>Lysandros Nikolaou (4)</li>
 
-65. Pradeep Kumar Srinivasan - 4
+<li>Ofek Lev (4)</li>
 
-66. Travis Oliphant - 3
+<li>Pradeep Kumar Srinivasan (4)</li>
 
-67. Michel Pelletier - 3
+<li>Travis Oliphant (3)</li>
 
-68. Alex Martelli - 3
+<li>Michel Pelletier (3)</li>
 
-69. Michael Hudson - 3
+<li>Alex Martelli (3)</li>
 
-70. Neal Norwitz - 3
+<li>Michael Hudson (3)</li>
 
-71. Steven Bethard - 3
+<li>Neal Norwitz (3)</li>
 
-72. Armin Ronacher - 3
+<li>Steven Bethard (3)</li>
 
-73. Carol Willing - 3
+<li>Armin Ronacher (3)</li>
 
-74. Eli Bendersky - 3
+<li>Carol Willing (3)</li>
 
-75. Eric V. Smith - 3
+<li>Eli Bendersky (3)</li>
 
-76. Steven D'Aprano - 3
+<li>Eric V. Smith (3)</li>
 
-77. Jeffrey Yasskin - 3
+<li>Steven D'Aprano (3)</li>
 
-78. Batuhan Taskaya - 3
+<li>Jeffrey Yasskin (3)</li>
 
-79. Filipe Laíns - 3
+<li>Batuhan Taskaya (3)</li>
 
-80. Erlend Egeberg Aasland - 3
+<li>Filipe Laíns (3)</li>
 
-81. James Hilton-Balfe - 3
+<li>Erlend Egeberg Aasland (3)</li>
 
-82. Shantanu Jain - 3
+<li>James Hilton-Balfe (3)</li>
 
-83. Gregory P. Smith - 3
+<li>Shantanu Jain (3)</li>
 
-84. Ewa Jodlowska - 3
+<li>Gregory P. Smith (3)</li>
 
-85. Aahz - 2
+<li>Ewa Jodlowska (3)</li>
 
-86. Oleg Broytman - 2
+<li>Aahz (2)</li>
 
-87. Fred L. Drake - 2
+<li>Oleg Broytman (2)</li>
 
-88. Jr. - 2
+<li>Fred L. Drake (2)</li>
 
-89. David Ascher - 2
+<li>Jr. (2)</li>
 
-90. Greg Wilson - 2
+<li>David Ascher (2)</li>
 
-91. Gordon McMillan - 2
+<li>Greg Wilson (2)</li>
 
-92. Christopher A. Craig - 2
+<li>Gordon McMillan (2)</li>
 
-93. Clark C. Evans - 2
+<li>Christopher A. Craig (2)</li>
 
-94. Greg Stein - 2
+<li>Clark C. Evans (2)</li>
 
-95. Magnus Lie Hetland - 2
+<li>Greg Stein (2)</li>
 
-96. Jack Jansen - 2
+<li>Magnus Lie Hetland (2)</li>
 
-97. Vinay Sajip - 2
+<li>Jack Jansen (2)</li>
 
-98. Mark Hammond - 2
+<li>Vinay Sajip (2)</li>
 
-99. Josiah Carlson - 2
+<li>Mark Hammond (2)</li>
 
-100. Terry Reedy - 2
+<li>Josiah Carlson (2)</li>
 
-101. Facundo Batista - 2
+<li>Terry Reedy (2)</li>
 
-102. Ben Finney - 2
+<li>Facundo Batista (2)</li>
 
-103. Calvin Spealman - 2
+<li>Ben Finney (2)</li>
 
-104. Tim Delaney - 2
+<li>Calvin Spealman (2)</li>
 
-105. Jesse Noller - 2
+<li>Tim Delaney (2)</li>
 
-106. Stephen J. Turnbull - 2
+<li>Jesse Noller (2)</li>
 
-107. Dirkjan Ochtman - 2
+<li>Stephen J. Turnbull (2)</li>
 
-108. Miro Hrončok - 2
+<li>Dirkjan Ochtman (2)</li>
 
-109. Cameron Simpson - 2
+<li>Miro Hrončok (2)</li>
 
-110. Alex Gaynor - 2
+<li>Cameron Simpson (2)</li>
 
-111. Ronald Oussoren - 2
+<li>Alex Gaynor (2)</li>
 
-112. Trishank Karthik Kuppusamy - 2
+<li>Ronald Oussoren (2)</li>
 
-113. Vladimir Diaz - 2
+<li>Trishank Karthik Kuppusamy (2)</li>
 
-114. Marina Moore - 2
+<li>Vladimir Diaz (2)</li>
 
-115. Justin Cappos - 2
+<li>Marina Moore (2)</li>
 
-116. Stefano Borini - 2
+<li>Justin Cappos (2)</li>
 
-117. Stefan Behnel - 2
+<li>Stefano Borini (2)</li>
 
-118. Ned Deily - 2
+<li>Stefan Behnel (2)</li>
 
-119. Alexander Belopolsky - 2
+<li>Ned Deily (2)</li>
 
-120. Mark E. Haase - 2
+<li>Alexander Belopolsky (2)</li>
 
-121. Robert Collins - 2
+<li>Mark E. Haase (2)</li>
 
-122. Koos Zevenhoven - 2
+<li>Robert Collins (2)</li>
 
-123. Cory Benfield - 2
+<li>Koos Zevenhoven (2)</li>
 
-124. Marcel Plch - 2
+<li>Cory Benfield (2)</li>
 
-125. Mario Corchero - 2
+<li>Marcel Plch (2)</li>
 
-126. Geoffrey Thomas - 2
+<li>Mario Corchero (2)</li>
 
-127. Maggie Moss - 2
+<li>Geoffrey Thomas (2)</li>
 
-128. Stéphane Bidoul - 2
+<li>Maggie Moss (2)</li>
 
-129. Mark Mendoza - 2
+<li>Stéphane Bidoul (2)</li>
 
-130. Shannon Zhu - 2
+<li>Mark Mendoza (2)</li>
 
-131. Paul Ganssle - 2
+<li>Shannon Zhu (2)</li>
 
-132. Daniel F Moisset - 2
+<li>Paul Ganssle (2)</li>
 
-133. Tobias Kohn - 2
+<li>Daniel F Moisset (2)</li>
 
-134. David Foster - 2
+<li>Tobias Kohn (2)</li>
 
-135. Tal Einat - 2
+<li>David Foster (2)</li>
 
-136. Steven Troxler - 2
+<li>Tal Einat (2)</li>
 
-137. Zac Hatfield-Dodds - 2
+<li>Steven Troxler (2)</li>
 
-138. Erik De Bonte - 2
+<li>Zac Hatfield-Dodds (2)</li>
 
-139. Sam Gross - 2
+<li>Erik De Bonte (2)</li>
 
-140. Ralf Gommers - 2
+<li>Sam Gross (2)</li>
 
-141. Sergey B Kirpichev - 2
+<li>Ralf Gommers (2)</li>
 
-142. Facundo Tuesca - 2
+<li>Sergey B Kirpichev (2)</li>
 
-143. Savannah Ostrowski - 2
+<li>Facundo Tuesca (2)</li>
 
-144. Hugo van Kemenade - 2
+<li>Savannah Ostrowski (2)</li>
 
-145. Hood Chatham - 2
+<li>Hugo van Kemenade (2)</li>
 
-146. Daniel Stutzbach - 2
+<li>Hood Chatham (2)</li>
 
-147. Joe Carey - 2
+<li>Daniel Stutzbach (2)</li>
 
-148. Martijn Faassen - 1
+<li>Joe Carey (2)</li>
 
-149. The Python core team and community - 1
+<li>Martijn Faassen (1)</li>
 
-150. Paul Barrett - 1
+<li>The Python core team and community (1)</li>
 
-151. Peter Schneider-Kamp - 1
+<li>Paul Barrett (1)</li>
 
-152. Huaiyu Zhu - 1
+<li>Peter Schneider-Kamp (1)</li>
 
-153. Gregory Lielens - 1
+<li>Huaiyu Zhu (1)</li>
 
-154. Paul F. Dubois - 1
+<li>Gregory Lielens (1)</li>
 
-155. Sean Reifschneider - 1
+<li>Paul F. Dubois (1)</li>
 
-156. Grant Griffin - 1
+<li>Sean Reifschneider (1)</li>
 
-157. Jonathan Riehl - 1
+<li>Grant Griffin (1)</li>
 
-158. Jason Petrone - 1
+<li>Jonathan Riehl (1)</li>
 
-159. Frédéric B. Giacometti - 1
+<li>Jason Petrone (1)</li>
 
-160. James C. Ahlstrom - 1
+<li>Frédéric B. Giacometti (1)</li>
 
-161. Jim Althoff - 1
+<li>James C. Ahlstrom (1)</li>
 
-162. Neil Hodgson - 1
+<li>Jim Althoff (1)</li>
 
-163. Trent Mick - 1
+<li>Neil Hodgson (1)</li>
 
-164. David Eppstein - 1
+<li>Trent Mick (1)</li>
 
-165. Walter Dörwald - 1
+<li>David Eppstein (1)</li>
 
-166. Oren Tirosh - 1
+<li>Walter Dörwald (1)</li>
 
-167. Stepan Koltsov - 1
+<li>Oren Tirosh (1)</li>
 
-168. Scott Gilbert - 1
+<li>Stepan Koltsov (1)</li>
 
-169. Thomas Heller - 1
+<li>Scott Gilbert (1)</li>
 
-170. Jeff Epler - 1
+<li>Thomas Heller (1)</li>
 
-171. Just van Rossum - 1
+<li>Jeff Epler (1)</li>
 
-172. Thomas Bellman - 1
+<li>Just van Rossum (1)</li>
 
-173. Kevin Altis - 1
+<li>Thomas Bellman (1)</li>
 
-174. Dave Cole - 1
+<li>Kevin Altis (1)</li>
 
-175. Andrew McNamara - 1
+<li>Dave Cole (1)</li>
 
-176. Cliff Wells - 1
+<li>Andrew McNamara (1)</li>
 
-177. Jack Diederich - 1
+<li>Cliff Wells (1)</li>
 
-178. Peter Harris - 1
+<li>Jack Diederich (1)</li>
 
-179. Roman Suzi - 1
+<li>Peter Harris (1)</li>
 
-180. Mike Meyer - 1
+<li>Roman Suzi (1)</li>
 
-181. W Isaac Carroll - 1
+<li>Mike Meyer (1)</li>
 
-182. Terence Way - 1
+<li>W Isaac Carroll (1)</li>
 
-183. Steven Taschuk - 1
+<li>Terence Way (1)</li>
 
-184. Kevin D. Smith - 1
+<li>Steven Taschuk (1)</li>
 
-185. Peter Astrand - 1
+<li>Kevin D. Smith (1)</li>
 
-186. Samuele Pedroni - 1
+<li>Peter Astrand (1)</li>
 
-187. Christian R. Reis - 1
+<li>Samuele Pedroni (1)</li>
 
-188. Andrew McClelland - 1
+<li>Christian R. Reis (1)</li>
 
-189. Michael P. Dubner - 1
+<li>Andrew McClelland (1)</li>
 
-190. Micah Elliott - 1
+<li>Michael P. Dubner (1)</li>
 
-191. Björn Lindqvist - 1
+<li>Micah Elliott (1)</li>
 
-192. Jiwon Seo - 1
+<li>Björn Lindqvist (1)</li>
 
-193. Ben North - 1
+<li>Jiwon Seo (1)</li>
 
-194. Lino Mastrodomenico - 1
+<li>Ben North (1)</li>
 
-195. Richard Oudkerk - 1
+<li>Lino Mastrodomenico (1)</li>
 
-196. Alexandre Vassalotti - 1
+<li>Richard Oudkerk (1)</li>
 
-197. Jervis Whitley - 1
+<li>Alexandre Vassalotti (1)</li>
 
-198. Kerrick Staley - 1
+<li>Jervis Whitley (1)</li>
 
-199. Greg Slodkowicz - 1
+<li>Kerrick Staley (1)</li>
 
-200. Michael Foord - 1
+<li>Greg Slodkowicz (1)</li>
 
-201. Paul Colomiets - 1
+<li>Michael Foord (1)</li>
 
-202. Daniel Urban - 1
+<li>Paul Colomiets (1)</li>
 
-203. Benoit Bryon - 1
+<li>Daniel Urban (1)</li>
 
-204. Lennart Regebro - 1
+<li>Benoit Bryon (1)</li>
 
-205. Todd Rovito - 1
+<li>Lennart Regebro (1)</li>
 
-206. Stefan Krah - 1
+<li>Todd Rovito (1)</li>
 
-207. Holger Krekel - 1
+<li>Stefan Krah (1)</li>
 
-208. Chris McDonough - 1
+<li>Holger Krekel (1)</li>
 
-209. Joshua Landau - 1
+<li>Chris McDonough (1)</li>
 
-210. Lukas Puehringer - 1
+<li>Joshua Landau (1)</li>
 
-211. Joshua Lock - 1
+<li>Lukas Puehringer (1)</li>
 
-212. Lois Anne DeLong - 1
+<li>Joshua Lock (1)</li>
 
-213. Ben Hoyt - 1
+<li>Lois Anne DeLong (1)</li>
 
-214. Joseph Martinot-Lagarde - 1
+<li>Ben Hoyt (1)</li>
 
-215. Sebastian Kreft - 1
+<li>Joseph Martinot-Lagarde (1)</li>
 
-216. Charles-François Natali - 1
+<li>Sebastian Kreft (1)</li>
 
-217. Christopher Barker - 1
+<li>Charles-François Natali (1)</li>
 
-218. Martin Teichmann - 1
+<li>Christopher Barker (1)</li>
 
-219. Robert Kuska - 1
+<li>Martin Teichmann (1)</li>
 
-220. James Polley - 1
+<li>Robert Kuska (1)</li>
 
-221. Ed Schofield - 1
+<li>James Polley (1)</li>
 
-222. Joseph Jevnik - 1
+<li>Ed Schofield (1)</li>
 
-223. Nick Humrich - 1
+<li>Joseph Jevnik (1)</li>
 
-224. Mike G. Miller - 1
+<li>Nick Humrich (1)</li>
 
-225. Robert T. McGibbon - 1
+<li>Mike G. Miller (1)</li>
 
-226. Serhiy Storchaka - 1
+<li>Robert T. McGibbon (1)</li>
 
-227. Dino Viehland - 1
+<li>Serhiy Storchaka (1)</li>
 
-228. Ryan Gonzalez - 1
+<li>Dino Viehland (1)</li>
 
-229. Philip House - 1
+<li>Ryan Gonzalez (1)</li>
 
-230. Lisa Roach - 1
+<li>Philip House (1)</li>
 
-231. Tomáš Orsava - 1
+<li>Lisa Roach (1)</li>
 
-232. Philipp Angerer - 1
+<li>Tomáš Orsava (1)</li>
 
-233. Erik M. Bray - 1
+<li>Philipp Angerer (1)</li>
 
-234. Masayuki Yamamoto - 1
+<li>Erik M. Bray (1)</li>
 
-235. Markus Meskanen - 1
+<li>Masayuki Yamamoto (1)</li>
 
-236. Julien Palard - 1
+<li>Markus Meskanen (1)</li>
 
-237. R David Murray - 1
+<li>Julien Palard (1)</li>
 
-238. Elvis Pranskevichus - 1
+<li>R David Murray (1)</li>
 
-239. Eric N. Vander Weele - 1
+<li>Elvis Pranskevichus (1)</li>
 
-240. Mark  Williams - 1
+<li>Eric N. Vander Weele (1)</li>
 
-241. Kushal Das - 1
+<li>Mark  Williams (1)</li>
 
-242. Michael Lee - 1
+<li>Kushal Das (1)</li>
 
-243. Michael J. Sullivan - 1
+<li>Michael Lee (1)</li>
 
-244. Till Varoquaux - 1
+<li>Michael J. Sullivan (1)</li>
 
-245. Konstantin Kashin - 1
+<li>Till Varoquaux (1)</li>
 
-246. Ezio Melotti - 1
+<li>Konstantin Kashin (1)</li>
 
-247. Berker Peksag - 1
+<li>Ezio Melotti (1)</li>
 
-248. Damien George - 1
+<li>Berker Peksag (1)</li>
 
-249. Philippe PRADOS - 1
+<li>Damien George (1)</li>
 
-250. Sumana Harihareswara - 1
+<li>Philippe PRADOS (1)</li>
 
-251. Chris Jerdonek - 1
+<li>Sumana Harihareswara (1)</li>
 
-252. Dennis Sweeney - 1
+<li>Chris Jerdonek (1)</li>
 
-253. Sébastien Eustace - 1
+<li>Dennis Sweeney (1)</li>
 
-254. Laurie Opperman - 1
+<li>Sébastien Eustace (1)</li>
 
-255. Arun Babu Neelicattu - 1
+<li>Laurie Opperman (1)</li>
 
-256. Philippe Ombredanne - 1
+<li>Arun Babu Neelicattu (1)</li>
 
-257. C.A.M. Gerlach - 1
+<li>Philippe Ombredanne (1)</li>
 
-258. Karolina Surma - 1
+<li>C.A.M. Gerlach (1)</li>
 
-259. Matthew Rahtz - 1
+<li>Karolina Surma (1)</li>
 
-260. Vincent Siles - 1
+<li>Matthew Rahtz (1)</li>
 
-261. Vikram Jayanthi - 1
+<li>Vincent Siles (1)</li>
 
-262. Ammar Askar - 1
+<li>Vikram Jayanthi (1)</li>
 
-263. Bernát Gábor - 1
+<li>Ammar Askar (1)</li>
 
-264. Laura Creighton - 1
+<li>Bernát Gábor (1)</li>
 
-265. Tian Gao - 1
+<li>Laura Creighton (1)</li>
 
-266. Matthias Klose - 1
+<li>Tian Gao (1)</li>
 
-267. Stefano Rivera - 1
+<li>Matthias Klose (1)</li>
 
-268. Elana Hashman - 1
+<li>Stefano Rivera (1)</li>
 
-269. Graham Bleaney - 1
+<li>Elana Hashman (1)</li>
 
-270. Adam Turner - 1
+<li>Graham Bleaney (1)</li>
 
-271. Taneli Hukkinen - 1
+<li>Adam Turner (1)</li>
 
-272. John Belmonte - 1
+<li>Taneli Hukkinen (1)</li>
 
-273. Eddie Elizondo - 1
+<li>John Belmonte (1)</li>
 
-274. Germán Méndez Bravo - 1
+<li>Eddie Elizondo (1)</li>
 
-275. Cooper Lees - 1
+<li>Germán Méndez Bravo (1)</li>
 
-276. Franek Magiera - 1
+<li>Cooper Lees (1)</li>
 
-277. Joshua Xu - 1
+<li>Franek Magiera (1)</li>
 
-278. Ken Jin - 1
+<li>Joshua Xu (1)</li>
 
-279. Marta Gómez Macías - 1
+<li>Ken Jin (1)</li>
 
-280. Alice Purcell - 1
+<li>Marta Gómez Macías (1)</li>
 
-281. Fridolín Pokorný - 1
+<li>Alice Purcell (1)</li>
 
-282. Joshua Cannon - 1
+<li>Fridolín Pokorný (1)</li>
 
-283. Amethyst Reese - 1
+<li>Joshua Cannon (1)</li>
 
-284. Rich Chiodo - 1
+<li>Amethyst Reese (1)</li>
 
-285. Sebastián Ramírez - 1
+<li>Rich Chiodo (1)</li>
 
-286. Zixuan James Li - 1
+<li>Sebastián Ramírez (1)</li>
 
-287. Russell Keith-Magee - 1
+<li>Zixuan James Li (1)</li>
 
-288. Joanna Jablonski - 1
+<li>Russell Keith-Magee (1)</li>
 
-289. Domenico Andreoli - 1
+<li>Joanna Jablonski (1)</li>
 
-290. Carl Friedrich Bolz-Tereick - 1
+<li>Domenico Andreoli (1)</li>
 
-291. Simon Cross - 1
+<li>Carl Friedrich Bolz-Tereick (1)</li>
 
-292. Tim Felgentreff - 1
+<li>Simon Cross (1)</li>
 
-293. David Hewitt - 1
+<li>Tim Felgentreff (1)</li>
 
-294. Wenzel Jakob - 1
+<li>David Hewitt (1)</li>
 
-295. Marc-Andre Lemburg - 1
+<li>Wenzel Jakob (1)</li>
 
-296. Donghee Na - 1
+<li>Marc-Andre Lemburg (1)</li>
 
-297. Karl Nelson - 1
+<li>Donghee Na (1)</li>
 
-298. Stepan Sindelar - 1
+<li>Karl Nelson (1)</li>
 
-299. David Woods - 1
+<li>Stepan Sindelar (1)</li>
 
-300. Stephen Rosen - 1
+<li>David Woods (1)</li>
 
-301. Joshua Bambrick - 1
+<li>Stephen Rosen (1)</li>
 
-302. Malcolm Smith - 1
+<li>Joshua Bambrick (1)</li>
 
-303. Adrian Garcia Badaracco - 1
+<li>Malcolm Smith (1)</li>
 
-304. Joop van de Pol - 1
+<li>Adrian Garcia Badaracco (1)</li>
 
-305. Jim Baker - 1
+<li>Joop van de Pol (1)</li>
 
-306. Paul Everitt - 1
+<li>Jim Baker (1)</li>
 
-307. Koudai Aono - 1
+<li>Paul Everitt (1)</li>
 
-308. Dave Peck - 1
+<li>Koudai Aono (1)</li>
 
-309. Jarek Potiuk - 1
+<li>Dave Peck (1)</li>
 
-310. Gregory R. Warnes - 1
+<li>Jarek Potiuk (1)</li>
 
-311. Seth Michael Larson - 1
+<li>Gregory R. Warnes (1)</li>
 
-312. Emily Morehouse-Valcarcel - 1
+<li>Seth Michael Larson (1)</li>
 
-313. Alexis Challande - 1
+<li>Emily Morehouse-Valcarcel (1)</li>
 
-314. Victorien Plot - 1
+<li>Alexis Challande (1)</li>
 
-315. Michael Sarahan - 1
+<li>Victorien Plot (1)</li>
 
-316. Eneg - 1
+<li>Michael Sarahan (1)</li>
 
-317. Matt Wozniski - 1
+<li>Eneg (1)</li>
 
-318. Ivona Stojanovic - 1
+<li>Matt Wozniski (1)</li>
 
-319. Seth Larson - 1
+<li>Ivona Stojanovic (1)</li>
 
-320. Thomas Robitaille - 1
+<li>Seth Larson (1)</li>
 
-321. Jonathan Dekhtiar - 1
+<li>Thomas Robitaille (1)</li>
 
-322. Deb Nicholson - 1
+<li>Jonathan Dekhtiar (1)</li>
 
-323. Stan Ulbrych - 1
+<li>Deb Nicholson (1)</li>
 
-324. Matt Page - 1
+<li>Stan Ulbrych (1)</li>
 
-325. Klaus Zimmermann - 1
+<li>Matt Page (1)</li>
 
-326. Tony Lownds - 1
+<li>Klaus Zimmermann (1)</li>
 
-327. Andre Roberge - 1
+<li>Tony Lownds (1)</li>
 
-328. Jason Orendorff - 1
+<li>Andre Roberge (1)</li>
 
-329. Mike Verdone - 1
+<li>Jason Orendorff (1)</li>
 
-330. Carl Banks - 1
+<li>Mike Verdone (1)</li>
 
-331. Patrick Maupin - 1
+<li>Carl Banks (1)</li>
 
-332. Lie Ryan - 1
+<li>Patrick Maupin (1)</li>
 
-333. Matt Chisholm - 1
+<li>Lie Ryan (1)</li>
 
-334. Atsuo Ishimoto - 1
+<li>Matt Chisholm (1)</li>
 
-335. Gerald Britton - 1
+<li>Atsuo Ishimoto (1)</li>
 
-336. Peter Moody - 1
+<li>Gerald Britton (1)</li>
 
-337. Eric Pruitt - 1
+<li>Peter Moody (1)</li>
 
-338. Charles R. McCreary - 1
+<li>Eric Pruitt (1)</li>
 
-339. Reid Kleckner - 1
+<li>Charles R. McCreary (1)</li>
 
-340. Brian Quinlan - 1
+<li>Reid Kleckner (1)</li>
 
-341. Laurens Van Houtven - 1
+<li>Brian Quinlan (1)</li>
 
-342. Zachary Ware - 1
+<li>Laurens Van Houtven (1)</li>
 
-343. Doug Hellmann - 1
+<li>Zachary Ware (1)</li>
 
-344. The PEP Editors - 1
+<li>Doug Hellmann (1)</li>
 
--->
+<li>The PEP Editors (1)</li>
+
+
+</details>
 
 ## Planets My Code has Visited
 
