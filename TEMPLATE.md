@@ -32,8 +32,6 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 ### [Python Enhancement Proposals](https://peps.python.org)
 
-<details></details>
-
 <details>
 <summary>I have (co-)authored {{pep_count}} PEPs.</summary>
 
