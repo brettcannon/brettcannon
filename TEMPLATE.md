@@ -25,7 +25,6 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 </ol>
 
 </details>
-
 {% endfor %}
 
 ## [Python](https://python.org)
