@@ -13,10 +13,7 @@
 Over the past [{{ years_contributing }} years](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610), I have made _some_ commit to {{ contributions|length }} projects (some of which are my own).
 
 <small>(Grouped by commit count.)</small>
-
-
 {% for exponent in range (3, -1, -1) %}
-
 <details><summary>&ge; 10<sup>{{ exponent }}</sup></summary>
 
 <ol>
@@ -28,7 +25,6 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 </ol>
 
 </details>
-
 {% endfor %}
 
 ## [Python](https://python.org)
@@ -36,7 +32,7 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored {{pep_count}} PEPs ({{pep_author_ranking|nth}} most prolific).</summary>
+<summary>I have (co-)authored {{pep_count}} PEPs.</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -67,12 +63,15 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 </details>
 
-<!-- Complete, ranked list of PEP authors -->
-<!--
+<details>
+<summary>I'm the {{pep_author_ranking|nth}} most prolific PEP author.</summary>
+
+<ol>
 {% for author in author_rankings %}
-{{ loop.index }}. {{ author }} - {{ author_count[author] }}
+<li>{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
 {% endfor %}
--->
+
+</details>
 
 ## Planets My Code has Visited
 
