@@ -10,7 +10,7 @@
 
 ## Contributions
 
-Over the past [{{ years_contributing }} years](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610), I have made _some_ commit to {{ contributions|length }} projects (some of which are my own).
+I have made _some_ commit to {{ contributions|length }} projects (some of which are my own).
 
 <small>(Grouped by commit count.)</small>
 {% for exponent in range (3, -1, -1) %}
@@ -31,7 +31,9 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 ### [Core Development](https://github.com/python/cpython)
 
-I am the {{cpython_contributor_ranking|nth}} most prolific [contributor to CPython](https://github.com/python/cpython/graphs/contributors).
+I have had commit rights for over {{ cpython_contributor_years }} years ([since 2003-04-18](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610)).
+
+In that time I have become the {{ cpython_contributor_ranking|nth }} most prolific [contributor to CPython](https://github.com/python/cpython/graphs/contributors).
 
 
 ### [Python Enhancement Proposals](https://peps.python.org)
