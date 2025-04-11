@@ -371,13 +371,11 @@ def generate_readme(post_date, contributions, start_date, **details):
     sorted_contributions = sorted(
         contributions, key=operator.attrgetter("commits"), reverse=True
     )
+    
     today = datetime.date.today()
-    years_contributing = today.year - start_date.year
-
+    cpython_contributor_years = today.year - start_date.year
     if (today.month, today.day) < (start_date.month, start_date.day):
-        cpython_contributor_years = years_contributing - 1
-    else:
-        cpython_contributor_years = years_contributing
+        cpython_contributor_years -= 1
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(["."]))
     env.filters["status_emoji"] = status_emojis.__getitem__
@@ -386,7 +384,6 @@ def generate_readme(post_date, contributions, start_date, **details):
     return template.render(
         # New data
         today=today.isoformat(),
-        years_contributing=years_contributing,
         cpython_contributor_years=cpython_contributor_years,
         # Changed data
         post_date=post_date.date(),
