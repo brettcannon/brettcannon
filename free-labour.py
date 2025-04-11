@@ -11,6 +11,7 @@ from __future__ import annotations
 # ]
 # requires-python = ">=3.13"
 # ///
+import collections
 import dataclasses
 import datetime
 import http
@@ -290,14 +291,14 @@ async def pep_details(details, client):
     details["my_name"] = author_name = "Brett Cannon"
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
-    author_count = {}
+    author_count = collections.defaultdict(int)
     my_peps = []
     for pep in data.values():
         authors = pep["authors"].split(", ")
         for author in authors:
             if author == author_name:
                 my_peps.append(pep)
-            author_count[author] = author_count.get(author, 0) + 1
+            author_count[author] += 1
     details["pep_count"] = author_count[author_name]
 
     author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
