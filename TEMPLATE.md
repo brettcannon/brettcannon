@@ -29,6 +29,11 @@ Over the past [{{ years_contributing }} years](https://github.com/python/cpython
 
 ## [Python](https://python.org)
 
+### [Core Development](https://github.com/python/cpython)
+
+I am the {{cpython_contributor_ranking|nth}} most prolific [contributor to CPython](https://github.com/python/cpython/graphs/contributors).
+
+
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>

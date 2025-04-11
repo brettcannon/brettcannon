@@ -202,7 +202,7 @@ def gh_overrides_repos(
 
 async def contribution_details(details, client):
     """Gather relevant contribution details."""
-    details["username"] = username = "brettcannon"
+    username = details["github_username"]
     if not (token := os.environ.get("GITHUB_TOKEN")):
         details.update(
             {
@@ -277,6 +277,21 @@ async def fetch_bluesky_follower_count(details, client):
     url = f"https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={profile}"
     data = await fetch_json(url, client)
     details["bluesky_follower_count"] = data["followersCount"]
+
+
+async def fetch_cpython_contributors(details, client):
+    username = details["github_username"]
+    if not (token := os.environ.get("GITHUB_TOKEN")):
+        details["cpython_contributor_ranking"] = 0
+        return
+    gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
+    contributors = await gh.getitem("/repos/{owner}/{repo}/contributors", {"owner": "python", "repo": "cpython"}, accept="application/vnd.github+json", extra_headers={"X-GitHub-Api-Version": "2022-11-28"})
+    for ranking, contributor in enumerate(contributors, start=1):
+        if contributor["login"] == username:
+            details["cpython_contributor_ranking"] = ranking
+            break
+    else:
+        details["cpython_contributor_ranking"] = 0
 
 
 @dataclasses.dataclass
@@ -376,7 +391,7 @@ def generate_readme(post_date, contributions, start_date, **details):
 
 
 async def main():
-    details = {}
+    details = {"github_username": "brettcannon"}
     async with httpx.AsyncClient(timeout=10.0) as client:
         async with trio.open_nursery() as nursery:
             for func in (
@@ -384,6 +399,7 @@ async def main():
                 latest_blog_post,
                 fetch_mastodon_follower_count,
                 fetch_bluesky_follower_count,
+                fetch_cpython_contributors,
                 pep_details,
             ):
                 nursery.start_soon(func, details, client)
