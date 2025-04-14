@@ -11,12 +11,15 @@ from __future__ import annotations
 # ]
 # requires-python = ">=3.13"
 # ///
+import argparse
 import collections
 import dataclasses
 import datetime
 import http
+import json
 import operator
 import os
+import pathlib
 import typing
 
 import feedparser
@@ -401,7 +404,21 @@ def generate_readme(post_date, contributions, start_date, **details):
     )
 
 
+def json_serializer(obj):
+    if isinstance(obj, datetime.datetime):
+        return obj.isoformat()
+    elif dataclasses.is_dataclass(obj):
+        return dataclasses.asdict(obj)
+    else:
+        raise TypeError(f"Type {type(obj)} not serializable")
+
+
+
 async def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--log", type=pathlib.Path, help="Log of data, written as JSONL")
+    args = parser.parse_args()
+
     details = {"github_username": "brettcannon"}
     async with httpx.AsyncClient(timeout=10.0) as client:
         async with trio.open_nursery() as nursery:
@@ -416,6 +433,12 @@ async def main():
                 nursery.start_soon(func, details, client)
 
     print(generate_readme(**details))
+
+    if args.log:
+        log_path = args.log
+        with log_path.open("a", encoding="utf-8", newline="\n") as file:
+            json.dump(details, file, default=json_serializer) 
+            file.write("\n")
 
 
 if __name__ == "__main__":
