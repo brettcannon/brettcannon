@@ -41,6 +41,7 @@ class Contribution(typing.Protocol):
     repo_name: str
     contributions_url: str
     commits: int
+    started: bool
 
 
 @dataclasses.dataclass
@@ -48,6 +49,7 @@ class RecordedContribution(Contribution):
     repo_name: str
     contributions_url: str
     commits: int
+    started: bool = False
 
 
 @dataclasses.dataclass
@@ -60,6 +62,7 @@ class GitHubProject(Contribution):
     stars: int = 0
     commits: int = 0
     contributors: int = 0
+    started: bool = False
 
     @property
     def repo_name(self):
@@ -224,16 +227,21 @@ async def contribution_details(details, client):
         for repo in manual_overrides["github"]["repos"]
     ]
     gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
-    start_date, projects = await contribution_counts(gh, username)
+    start_date, gh_projects = await contribution_counts(gh, username)
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
-        projects.remove(GitHubProject(owner, name))
+        gh_projects.remove(GitHubProject(owner, name))
     for remove in manual_overrides["github"]["repos"]:
         try:
-            projects.remove(GitHubProject(remove["owner"], remove["name"]))
+            gh_projects.remove(GitHubProject(remove["owner"], remove["name"]))
         except KeyError:
             pass
-    contributions_list = list(projects)
+    contributions_list = list(gh_projects)
+    started_orgs = {proj.partition("/")[0] for proj in manual_overrides["github"]["started"]}
+    started_orgs.add(details["github_username"])
+    for project in contributions_list:
+        if project.owner in started_orgs:
+            project.started = True
     contributions_list.extend(contribution_overrides)
     for project in manual_overrides["contributions"]:
         name = project["name"]

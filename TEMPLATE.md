@@ -10,7 +10,7 @@
 
 ## Contributions
 
-I have made _some_ commit to {{ contributions|length }} projects (some of which are my own).
+I have made _some_ commit to {{ contributions|length }} projects (some of which I started and are denoted with *italics*).
 
 <small>(Grouped by commit count.)</small>
 {% for exponent in range (3, -1, -1) %}
@@ -19,7 +19,7 @@ I have made _some_ commit to {{ contributions|length }} projects (some of which 
 <ol>
 {% for project in contributions %}
 {% if 10**(exponent + 1) > project.commits >= 10**exponent %}
-<li><a href="{{ project.contributions_url }}">{{ project.repo_name }}</a></li>
+<li>{% if project.started %}<i>{% endif %}<a href="{{ project.contributions_url }}">{{ project.repo_name }}</a>{% if project.started %}</i>{% endif %}</li>
 {% endif %}
 {% endfor %}
 </ol>
