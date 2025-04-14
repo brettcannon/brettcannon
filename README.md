@@ -1308,9 +1308,11 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 <li><i><a href="https://github.com/brettcannon/sans-io/commits?author=brettcannon">brettcannon/sans-io</a></i></li>
+<li><i><a href="https://github.com/brettcannon/sans-io/commits?author=brettcannon">brettcannon/sans-io</a></i></li>
 
 
 
+<li><a href="https://github.com/microsoft/vscode-docs/commits?author=brettcannon">microsoft/vscode-docs</a></li>
 <li><a href="https://github.com/microsoft/vscode-docs/commits?author=brettcannon">microsoft/vscode-docs</a></li>
 
 
@@ -1339,6 +1341,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
+<li><i><a href="https://github.com/brettcannon/riscv-harmony/commits?author=brettcannon">brettcannon/riscv-harmony</a></i></li>
 <li><i><a href="https://github.com/brettcannon/riscv-harmony/commits?author=brettcannon">brettcannon/riscv-harmony</a></i></li>
 
 
@@ -2025,7 +2028,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python/steering-council/commits?author=brettcannon">python/steering-council</a></li>
+<li><a href="https://github.com/JuliaLang/julia/commits?author=brettcannon">JuliaLang/julia</a></li>
 
 
 
@@ -2049,7 +2052,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/lustre-labs/lustre/commits?author=brettcannon">lustre-labs/lustre</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-lang.org/commits?author=brettcannon">rescript-lang/rescript-lang.org</a></li>
 
 
 
@@ -2057,7 +2060,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python/cherry-picker/commits?author=brettcannon">python/cherry-picker</a></li>
+<li><i><a href="https://github.com/brettcannon/porting-to-python-3-notebook/commits?author=brettcannon">brettcannon/porting-to-python-3-notebook</a></i></li>
 
 
 
@@ -2085,7 +2088,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python/typeshed/commits?author=brettcannon">python/typeshed</a></li>
+<li><a href="https://github.com/python/planet/commits?author=brettcannon">python/planet</a></li>
 
 
 
@@ -2121,7 +2124,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/WebAssembly/design/commits?author=brettcannon">WebAssembly/design</a></li>
+<li><a href="https://github.com/aosabook/500lines/commits?author=brettcannon">aosabook/500lines</a></li>
 
 
 
@@ -2149,10 +2152,11 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/cpython-wasi-buildbot/commits?author=brettcannon">brettcannon/cpython-wasi-buildbot</a></i></li>
+<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
 
 
 
+<li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
 <li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
 
 
@@ -2170,10 +2174,11 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 <li><a href="https://github.com/inko-lang/inko/commits?author=brettcannon">inko-lang/inko</a></li>
+<li><a href="https://github.com/inko-lang/inko/commits?author=brettcannon">inko-lang/inko</a></li>
 
 
 
-<li><a href="https://github.com/dotnet/docs/commits?author=brettcannon">dotnet/docs</a></li>
+<li><a href="https://github.com/thechangelog/show-notes/commits?author=brettcannon">thechangelog/show-notes</a></li>
 
 
 
@@ -2277,7 +2282,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/progit/progit2/commits?author=brettcannon">progit/progit2</a></li>
+<li><a href="https://github.com/kushaldas/pep582/commits?author=brettcannon">kushaldas/pep582</a></li>
 
 
 
@@ -2285,7 +2290,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python/typing/commits?author=brettcannon">python/typing</a></li>
+<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
 
 
 
@@ -2301,7 +2306,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
+<li><a href="https://github.com/sarugaku/resolvelib/commits?author=brettcannon">sarugaku/resolvelib</a></li>
 
 
 
@@ -2433,7 +2438,7 @@ I have made _some_ commit to 281 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
+<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
 
 
 
