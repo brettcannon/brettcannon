@@ -1,0 +1,70 @@
+name: PR Review
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get source
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3  # v3.5.0
+
+      - name: Get Python
+        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1  # v4.7.0
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86  # v5.4.2
+        with:
+          enable-cache: true
+          cache-dependency-glob: "free-labour.py"
+
+      - name: Run free-labour.py
+        run: |
+          uv run free-labour.py --log log.json > output.txt
+        env:
+          UV_SYSTEM_PYTHON: 1
+
+      - name: Find existing comment
+        id: find_comment
+        run: |
+          # Check if the free-labour comment exists
+          comment_id=$(gh api repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
+            --jq '.[] | select(.body | startswith("<!-- free-labour-analysis -->")) | .id')
+
+          # Save the comment ID as output
+          echo "comment_id=$comment_id" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create combined comment content
+        id: create_comment
+        run: |
+          # Create the content with markdown for the combined comment
+          echo 'comment_body<<ENDOFCOMMENT' >> $GITHUB_OUTPUT
+          echo '<!-- free-labour-analysis -->' >> $GITHUB_OUTPUT
+          echo '' >> $GITHUB_OUTPUT
+          cat output.txt >> $GITHUB_OUTPUT
+          echo '' >> $GITHUB_OUTPUT
+          echo '```json' >> $GITHUB_OUTPUT
+          cat log.json >> $GITHUB_OUTPUT
+          echo '```' >> $GITHUB_OUTPUT
+          echo 'ENDOFCOMMENT' >> $GITHUB_OUTPUT
+
+      - name: Post or update PR comment
+        run: |
+          if [ -n "${{ steps.find_comment.outputs.comment_id }}" ]; then
+            # Update existing comment
+            gh api --method PATCH repos/${{ github.repository }}/issues/comments/${{ steps.find_comment.outputs.comment_id }} \
+              -f body="${{ steps.create_comment.outputs.comment_body }}"
+          else
+            # Create new comment
+            gh pr comment ${{ github.event.pull_request.number }} --body "${{ steps.create_comment.outputs.comment_body }}"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
