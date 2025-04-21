@@ -27,6 +27,7 @@ jobs:
       - name: Run free-labour.py
         run: |
           uv run free-labour.py --log log.json > output.txt
+          cat log.json
         env:
           UV_SYSTEM_PYTHON: 1
 
@@ -50,7 +51,6 @@ jobs:
           echo '' >> comment.md
           cat output.txt >> comment.md
           echo '' >> comment.md
-          echo '### JSON Log' >> comment.md
           echo '```json' >> comment.md
           cat log.json >> comment.md
           echo '```' >> comment.md
