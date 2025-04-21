@@ -1,0 +1,57 @@
+name: PR Review
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get source
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3  # v3.5.0
+
+      - name: Get Python
+        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1  # v4.7.0
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86  # v5.4.2
+        with:
+          enable-cache: true
+          cache-dependency-glob: "free-labour.py"
+
+      - name: Run free-labour.py
+        run: |
+          uv run free-labour.py --log log.json > output.txt
+
+        env:
+          UV_SYSTEM_PYTHON: 1
+
+      - name: Create comment file
+        run: |
+          # Create a comment file with complete content
+          echo '<!-- free-labour-analysis -->' > comment.md
+          echo '' >> comment.md
+          cat output.txt >> comment.md
+          echo '' >> comment.md
+          echo '---' >> comment.md
+          #echo '<details>' >> comment.md
+          echo '' >> comment.md
+          #echo '<summary>Log</summary>' >> comment.md
+          #echo '' >> comment.md
+          echo '```json' >> comment.md
+          cat log.json >> comment.md
+          echo '```' >> comment.md
+          #echo '</details>' >> comment.md
+
+      - name: Post PR comment
+        run: |
+          # The --edit-last flag will edit the last comment made by the same author (GitHub Actions)
+          # --create-if-none will create a new comment if no previous comments exist
+          gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md --edit-last --create-if-none
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
