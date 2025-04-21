@@ -51,8 +51,9 @@ jobs:
           echo '' >> $GITHUB_OUTPUT
           cat output.txt >> $GITHUB_OUTPUT
           echo '' >> $GITHUB_OUTPUT
+          echo '### JSON Log' >> $GITHUB_OUTPUT
           echo '```json' >> $GITHUB_OUTPUT
-          cat log.json >> $GITHUB_OUTPUT
+          cat log.json | sed 's/\\/\\\\/g' >> $GITHUB_OUTPUT
           echo '```' >> $GITHUB_OUTPUT
           echo 'ENDOFCOMMENT' >> $GITHUB_OUTPUT
 
