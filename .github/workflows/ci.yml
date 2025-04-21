@@ -37,8 +37,10 @@ jobs:
           echo '<!-- free-labour-analysis -->' > comment.md
           echo '' >> comment.md
           cat output.txt >> comment.md
+          echo '' >> comment.md
           echo '---' >> comment.md
           #echo '<details>' >> comment.md
+          echo '' >> comment.md
           #echo '<summary>Log</summary>' >> comment.md
           #echo '' >> comment.md
           echo '```json' >> comment.md
