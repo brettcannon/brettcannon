@@ -31,18 +31,6 @@ jobs:
         env:
           UV_SYSTEM_PYTHON: 1
 
-      - name: Find existing comment
-        id: find_comment
-        run: |
-          # Check if the free-labour comment exists
-          comment_id=$(gh api repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
-            --jq '.[] | select(.body | startswith("<!-- free-labour-analysis -->")) | .id')
-
-          # Save the comment ID as output
-          echo "comment_id=$comment_id" >> $GITHUB_OUTPUT
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create comment file
         run: |
           # Create a comment file with complete content
@@ -58,15 +46,10 @@ jobs:
           echo '</pre>' >> comment.md
           echo '</details>' >> comment.md
 
-      - name: Post or update PR comment
+      - name: Post PR comment
         run: |
-          if [ -n "${{ steps.find_comment.outputs.comment_id }}" ]; then
-            # Update existing comment using the file
-            gh api --method PATCH repos/${{ github.repository }}/issues/comments/${{ steps.find_comment.outputs.comment_id }} \
-              --input comment.md --field "body=@comment.md"
-          else
-            # Create new comment using the file
-            gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md
-          fi
+          # The --edit-last flag will edit the last comment made by the same author (GitHub Actions)
+          # --create-if-none will create a new comment if no previous comments exist
+          gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md --edit-last --create-if-none
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
