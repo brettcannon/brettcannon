@@ -43,10 +43,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create combined comment content
-        id: create_comment
+      - name: Create comment file
         run: |
-          # Create a temporary file with the complete comment content
+          # Create a comment file with complete content
           echo '<!-- free-labour-analysis -->' > comment.md
           echo '' >> comment.md
           cat output.txt >> comment.md
@@ -59,20 +58,15 @@ jobs:
           echo '</pre>' >> comment.md
           echo '</details>' >> comment.md
 
-          # Use GitHub's multiline output syntax
-          echo 'comment_body<<ENDOFCOMMENT' >> $GITHUB_OUTPUT
-          cat comment.md >> $GITHUB_OUTPUT
-          echo 'ENDOFCOMMENT' >> $GITHUB_OUTPUT
-
       - name: Post or update PR comment
         run: |
           if [ -n "${{ steps.find_comment.outputs.comment_id }}" ]; then
-            # Update existing comment
+            # Update existing comment using the file
             gh api --method PATCH repos/${{ github.repository }}/issues/comments/${{ steps.find_comment.outputs.comment_id }} \
-              -f body="${{ steps.create_comment.outputs.comment_body }}"
+              --input comment.md --field "body=@comment.md"
           else
-            # Create new comment
-            gh pr comment ${{ github.event.pull_request.number }} --body "${{ steps.create_comment.outputs.comment_body }}"
+            # Create new comment using the file
+            gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
