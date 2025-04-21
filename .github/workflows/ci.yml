@@ -7,7 +7,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  comment:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get source
@@ -27,7 +27,7 @@ jobs:
       - name: Run free-labour.py
         run: |
           uv run free-labour.py --log log.json > output.txt
-          cat log.json
+
         env:
           UV_SYSTEM_PYTHON: 1
 
@@ -51,9 +51,13 @@ jobs:
           echo '' >> comment.md
           cat output.txt >> comment.md
           echo '' >> comment.md
-          echo '```json' >> comment.md
+          echo '<details>' >> comment.md
+          echo '<summary>Log</summary>' >> comment.md
+          echo '' >> comment.md
+          echo '<pre>' >> comment.md
           cat log.json >> comment.md
-          echo '```' >> comment.md
+          echo '</pre>' >> comment.md
+          echo '</details>' >> comment.md
 
           # Use GitHub's multiline output syntax
           echo 'comment_body<<ENDOFCOMMENT' >> $GITHUB_OUTPUT
