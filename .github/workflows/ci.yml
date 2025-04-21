@@ -37,14 +37,14 @@ jobs:
           echo '<!-- free-labour-analysis -->' > comment.md
           echo '' >> comment.md
           cat output.txt >> comment.md
-          echo '' >> comment.md
-          echo '<details>' >> comment.md
-          echo '<summary>Log</summary>' >> comment.md
-          echo '' >> comment.md
-          echo '<pre>' >> comment.md
+          echo '---' >> comment.md
+          #echo '<details>' >> comment.md
+          #echo '<summary>Log</summary>' >> comment.md
+          #echo '' >> comment.md
+          echo '```json' >> comment.md
           cat log.json >> comment.md
-          echo '</pre>' >> comment.md
-          echo '</details>' >> comment.md
+          echo '```' >> comment.md
+          #echo '</details>' >> comment.md
 
       - name: Post PR comment
         run: |
