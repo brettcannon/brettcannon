@@ -45,16 +45,19 @@ jobs:
       - name: Create combined comment content
         id: create_comment
         run: |
-          # Create the content with markdown for the combined comment
+          # Create a temporary file with the complete comment content
+          echo '<!-- free-labour-analysis -->' > comment.md
+          echo '' >> comment.md
+          cat output.txt >> comment.md
+          echo '' >> comment.md
+          echo '### JSON Log' >> comment.md
+          echo '```json' >> comment.md
+          cat log.json >> comment.md
+          echo '```' >> comment.md
+
+          # Use GitHub's multiline output syntax
           echo 'comment_body<<ENDOFCOMMENT' >> $GITHUB_OUTPUT
-          echo '<!-- free-labour-analysis -->' >> $GITHUB_OUTPUT
-          echo '' >> $GITHUB_OUTPUT
-          cat output.txt >> $GITHUB_OUTPUT
-          echo '' >> $GITHUB_OUTPUT
-          echo '### JSON Log' >> $GITHUB_OUTPUT
-          echo '```json' >> $GITHUB_OUTPUT
-          cat log.json | sed 's/\\/\\\\/g' >> $GITHUB_OUTPUT
-          echo '```' >> $GITHUB_OUTPUT
+          cat comment.md >> $GITHUB_OUTPUT
           echo 'ENDOFCOMMENT' >> $GITHUB_OUTPUT
 
       - name: Post or update PR comment
