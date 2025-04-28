@@ -240,7 +240,9 @@ async def contribution_details(details, client):
         except KeyError:
             pass
     contributions_list = list(gh_projects)
-    started_orgs = {proj.partition("/")[0] for proj in manual_overrides["github"]["started"]}
+    started_orgs = {
+        proj.partition("/")[0] for proj in manual_overrides["github"]["started"]
+    }
     started_orgs.add(details["github_username"])
     for project in contributions_list:
         if project.owner in started_orgs:
@@ -296,7 +298,12 @@ async def fetch_cpython_contributors(details, client):
         details["cpython_contributor_ranking"] = 0
         return
     gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
-    contributors = await gh.getitem("/repos/{owner}/{repo}/contributors", {"owner": "python", "repo": "cpython"}, accept="application/vnd.github+json", extra_headers={"X-GitHub-Api-Version": "2022-11-28"})
+    contributors = await gh.getitem(
+        "/repos/{owner}/{repo}/contributors",
+        {"owner": "python", "repo": "cpython"},
+        accept="application/vnd.github+json",
+        extra_headers={"X-GitHub-Api-Version": "2022-11-28"},
+    )
     for ranking, contributor in enumerate(contributors, start=1):
         if contributor["login"] == username:
             details["cpython_contributor_ranking"] = ranking
@@ -382,11 +389,22 @@ def generate_readme(post_date, contributions, start_date, **details):
     sorted_contributions = sorted(
         contributions, key=operator.attrgetter("commits"), reverse=True
     )
-    
+
     today = datetime.date.today()
-    cpython_contributor_years = today.year - start_date.year
-    if (today.month, today.day) < (start_date.month, start_date.day):
-        cpython_contributor_years -= 1
+    # Calculate years since contribution start date using Julian days for more precision.
+
+    # Get the day of year (Julian day) for both dates.
+    today_julian = today.timetuple().tm_yday
+    start_julian = start_date.timetuple().tm_yday
+
+    # Calculate the difference in years.
+    year_diff = today.year - start_date.year
+
+    # Adjust the year difference if we haven't reached the anniversary yet this year.
+    if today_julian < start_julian:
+        year_diff -= 1
+
+    cpython_contributor_years = year_diff
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(["."]))
     env.filters["status_emoji"] = status_emojis.__getitem__
@@ -413,10 +431,11 @@ def json_serializer(obj):
         raise TypeError(f"Type {type(obj)} not serializable")
 
 
-
 async def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--log", type=pathlib.Path, help="Log of data, written as JSONL")
+    parser.add_argument(
+        "--log", type=pathlib.Path, help="Log of data, written as JSONL"
+    )
     args = parser.parse_args()
 
     details = {"github_username": "brettcannon"}
@@ -437,7 +456,7 @@ async def main():
     if args.log:
         log_path = args.log
         with log_path.open("a", encoding="utf-8", newline="\n") as file:
-            json.dump(details, file, default=json_serializer) 
+            json.dump(details, file, default=json_serializer)
             file.write("\n")
 
 
