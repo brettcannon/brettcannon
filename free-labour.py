@@ -5,7 +5,6 @@ from __future__ import annotations
 #   "feedparser",
 #   "gidgethub",
 #   "httpx",
-#   "iso8601",
 #   "jinja2",
 #   "trio",
 # ]
@@ -26,7 +25,6 @@ import feedparser
 import gidgethub.abc
 import gidgethub.httpx
 import httpx
-import iso8601
 import jinja2
 import tomllib
 import trio
@@ -107,7 +105,6 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
     contributions = {}
     activity_in_the_past = True
     contributions_up_to = None
-    contributions_from = None
     while activity_in_the_past:
         query_result = await gh.graphql(
             query, username=username, endDate=contributions_up_to
@@ -115,7 +112,6 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
         data = query_result["user"]["contributionsCollection"]
         activity_in_the_past = data["hasActivityInThePast"]
         contributions_up_to = data["startedAt"]
-        contributions_from = data["endedAt"]
         for contribution in data["commitContributionsByRepository"]:
             repo = contribution["repository"]
             # Don't care about forks as those are not contributions to upstream.
@@ -130,7 +126,7 @@ async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
             )
             project.stars = repo["stargazers"]["totalCount"]
             project.commits += contribution["contributions"]["totalCount"]
-    return iso8601.parse_date(contributions_from), set(contributions.values())
+    return set(contributions.values())
 
 
 async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
@@ -213,8 +209,6 @@ async def contribution_details(details, client):
         details.update(
             {
                 "contributions": [],
-                # 2003-04-18 21:00 PDT
-                "start_date": datetime.datetime(2003, 4, 19, 4, tzinfo=datetime.UTC),
             }
         )
         return
@@ -230,7 +224,7 @@ async def contribution_details(details, client):
         for repo in manual_overrides["github"]["repos"]
     ]
     gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
-    start_date, gh_projects = await contribution_counts(gh, username)
+    gh_projects = await contribution_counts(gh, username)
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
         gh_projects.remove(GitHubProject(owner, name))
@@ -260,7 +254,6 @@ async def contribution_details(details, client):
     details.update(
         {
             "contributions": contributions_list,
-            "start_date": start_date,
         }
     )
 
@@ -438,7 +431,12 @@ async def main():
     )
     args = parser.parse_args()
 
-    details = {"github_username": "brettcannon"}
+    details = {
+        "github_username": "brettcannon",
+        # First CPython contrbution: 2003-04-18 21:00 PDT
+        # Hard-coding as it tends to drift based on GitHub API responses.
+        "start_date": datetime.datetime(2003, 4, 19, 4, 00, tzinfo=datetime.UTC),
+    }
     async with httpx.AsyncClient(timeout=10.0) as client:
         async with trio.open_nursery() as nursery:
             for func in (

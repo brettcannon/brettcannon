@@ -31,7 +31,7 @@ I have made _some_ commit to {{ contributions|length }} projects (some of which 
 
 ### [Core Development](https://github.com/python/cpython)
 
-I have had commit rights for over {{ cpython_contributor_years }} years ([since 2003-04-18](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610)).
+I have had commit rights for over {{ cpython_contributor_years }} years ([since 2003-04-18 PDT](https://github.com/python/cpython/commit/1e91d8eb030656386ef3a07e8a516683bea85610)).
 
 In that time I have become the {{ cpython_contributor_ranking|nth }} most prolific [contributor to CPython](https://github.com/python/cpython/graphs/contributors).
 
