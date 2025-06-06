@@ -271,8 +271,9 @@ async def latest_blog_post(details, client):
 
 
 async def fetch_mastodon_follower_count(details, client):
-    server = "https://fosstodon.org"
-    user_id = "108285802173994961"
+    server = "https://mastodon.social"
+    # https://INSTANCE/api/v1/accounts/lookup?acct=USERNAME
+    user_id = "114633944987767035"
     url = f"{server}/api/v1/accounts/{user_id}"
     data = await fetch_json(url, client)
     details["mastodon_follower_count"] = data["followers_count"]
