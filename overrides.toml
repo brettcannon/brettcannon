@@ -50,3 +50,8 @@ commits = ["c81e5e79a0f2f5c2ac1896fa51cbe47e2e2a8d97"]
 name = "smol"
 url = "https://gitlab.com/arkandos/smol/-/commit/13576dca5a88d0a8c6d957285e421cce6a4e664d"
 commits = ["13576dca5a88d0a8c6d957285e421cce6a4e664d"]
+
+[[contributions]]
+name = "world"
+url = "https://gitlab.com/warsaw/world/-/commit/e4ae4bdf91050c52950defde09c1243d16096444"
+commits = ["e4ae4bdf91050c52950defde09c1243d16096444"]
