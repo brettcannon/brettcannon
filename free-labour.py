@@ -321,7 +321,7 @@ async def pep_details(details, client):
     author_count = collections.defaultdict(int)
     my_peps = []
     for pep in data.values():
-        authors = pep["authors"].split(", ")
+        authors = pep["author_names"]
         for author in authors:
             if author == author_name:
                 my_peps.append(pep)
@@ -334,7 +334,7 @@ async def pep_details(details, client):
     pep_details = []
     for pep in my_peps:
         co_authors = [
-            name for name in pep["authors"].split(", ") if name != author_name
+            name for name in pep["author_names"] if name != author_name
         ]
         pep_details.append(
             PEP(
