@@ -333,9 +333,10 @@ async def pep_details(details, client):
     # Authors with same PEP count get same rank, and subsequent ranks skip appropriately
     author_rank_map = {}
     current_rank = 1
-    for i, author in enumerate(author_rankings):
-        if i > 0 and author_count[author] < author_count[author_rankings[i - 1]]:
-            current_rank = i + 1
+    for position, author in enumerate(author_rankings):
+        # Skip to next rank when PEP count decreases (i.e., not a tie with previous author)
+        if position > 0 and author_count[author] < author_count[author_rankings[position - 1]]:
+            current_rank = position + 1
         author_rank_map[author] = current_rank
     
     details["pep_author_ranking"] = author_rank_map[author_name]
