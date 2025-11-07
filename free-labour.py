@@ -328,7 +328,17 @@ async def pep_details(details, client):
     details["pep_count"] = author_count[author_name]
 
     author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
-    details["pep_author_ranking"] = author_rankings.index(author_name) + 1
+    
+    # Calculate ranking with ties
+    # Authors with same PEP count get same rank, and subsequent ranks skip appropriately
+    author_rank_map = {}
+    current_rank = 1
+    for i, author in enumerate(author_rankings):
+        if i > 0 and author_count[author] < author_count[author_rankings[i - 1]]:
+            current_rank = i + 1
+        author_rank_map[author] = current_rank
+    
+    details["pep_author_ranking"] = author_rank_map[author_name]
 
     pep_details = []
     for pep in my_peps:
@@ -352,6 +362,7 @@ async def pep_details(details, client):
     details["pep_details"] = pep_details
     details["author_count"] = author_count
     details["author_rankings"] = author_rankings
+    details["author_rank_map"] = author_rank_map
 
 
 def nth(number):

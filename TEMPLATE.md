@@ -75,7 +75,7 @@ In that time I have become the {{ cpython_contributor_ranking|nth }} most prolif
 
 <ol>
 {% for author in author_rankings %}
-<li>{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
+<li value="{{ author_rank_map[author] }}">{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
 {% endfor %}
 
 </details>
