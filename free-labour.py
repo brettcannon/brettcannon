@@ -335,9 +335,9 @@ async def pep_details(details, client):
     adjusted_rank = 1
     current_count, author = next(author_rankings_iter)
     adjusted_author_rankings = [(adjusted_rank, author)]
-    for count, author in author_rankings_iter:
+    for absolute_rank, (count, author) in enumerate(author_rankings_iter, start=2):
         if count < current_count:
-            adjusted_rank += 1
+            adjusted_rank += absolute_rank
             current_count = count
         if author == author_name:
             details["pep_author_ranking"] = adjusted_rank
