@@ -327,14 +327,25 @@ async def pep_details(details, client):
             author_count[author] += 1
     details["pep_count"] = author_count[author_name]
 
-    author_rankings = sorted(author_count, key=author_count.__getitem__, reverse=True)
-    details["pep_author_ranking"] = author_rankings.index(author_name) + 1
+    absolute_author_rankings = sorted(
+        ((count, author) for author, count in author_count.items()), reverse=True
+    )
+
+    author_rankings_iter = iter(absolute_author_rankings)
+    adjusted_rank = 1
+    current_count, author = next(author_rankings_iter)
+    adjusted_author_rankings = [(adjusted_rank, author)]
+    for count, author in author_rankings_iter:
+        if count < current_count:
+            adjusted_rank += 1
+            current_count = count
+        if author == author_name:
+            details["pep_author_ranking"] = adjusted_rank
+        adjusted_author_rankings.append((adjusted_rank, author))
 
     pep_details = []
     for pep in my_peps:
-        co_authors = [
-            name for name in pep["author_names"] if name != author_name
-        ]
+        co_authors = [name for name in pep["author_names"] if name != author_name]
         pep_details.append(
             PEP(
                 pep["number"],
@@ -351,7 +362,7 @@ async def pep_details(details, client):
 
     details["pep_details"] = pep_details
     details["author_count"] = author_count
-    details["author_rankings"] = author_rankings
+    details["author_rankings"] = adjusted_author_rankings
 
 
 def nth(number):
