@@ -74,8 +74,8 @@ In that time I have become the {{ cpython_contributor_ranking|nth }} most prolif
 <summary>I'm the {{pep_author_ranking|nth}} most prolific PEP author.</summary>
 
 <ol>
-{% for author in author_rankings %}
-<li value="{{ author_rank_map[author] }}">{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
+{% for author in sorted_authors %}
+<li value="{{ author_rankings[author] }}">{% if author == my_name %}<b><i>{% endif %}{{ author }} ({{ author_count[author] }}){% if author == my_name %}</i></b>{% endif %}</li>
 {% endfor %}
 
 </details>
