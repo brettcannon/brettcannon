@@ -24,13 +24,15 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: "free-labour.py"
+      - name: Get the current year
+        run: echo "YEAR=$(date +%Y)" >> $GITHUB_ENV
       - name: Update README.md
-        run: uv run free-labour.py --log history.jsonl > README.md
+        run: uv run free-labour.py --log ${{ env.YEAR }}.jsonl > README.md
         env:
           UV_SYSTEM_PYTHON: 1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79  # v5.1.0
         with:
-          commit_message: Update README.md and history.jsonl
-          file_pattern: README.md history.jsonl
+          commit_message: Update README.md and ${{ env.YEAR }}.jsonl
+          file_pattern: README.md ${{ env.YEAR }}.jsonl
