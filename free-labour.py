@@ -218,16 +218,19 @@ async def contribution_details(details, client):
     contribution_overrides = [
         RecordedContribution(
             f"{repo['owner']}/{repo['name']}",
-            f"https://github.com/{repo['owner']}/{repo['name']}/commits?author=brettcannon",
+            f"https://github.com/{repo['owner']}/{repo['name']}/commits?author={username}",
             repo["commits"],
         )
         for repo in manual_overrides["github"]["repos"]
     ]
-    gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
+    gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
     gh_projects = await contribution_counts(gh, username)
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
-        gh_projects.remove(GitHubProject(owner, name))
+        try:
+            gh_projects.remove(GitHubProject(owner, name))
+        except KeyError:
+            pass
     for remove in manual_overrides["github"]["repos"]:
         try:
             gh_projects.remove(GitHubProject(remove["owner"], remove["name"]))
@@ -260,7 +263,7 @@ async def contribution_details(details, client):
 
 async def latest_blog_post(details, client):
     """Find the latest blog post's URL and publication date."""
-    feed = "https://snarky.ca/rss/"
+    feed = details["feed"]
     rss_xml = await client.get(feed)
     rss_xml.raise_for_status()
     rss_feed = feedparser.parse(rss_xml)
@@ -271,16 +274,16 @@ async def latest_blog_post(details, client):
 
 
 async def fetch_mastodon_follower_count(details, client):
-    server = "https://mastodon.social"
+    server = details["mastodon_server"]
     # https://INSTANCE/api/v1/accounts/lookup?acct=USERNAME
-    user_id = "114633944987767035"
+    user_id = details["mastodon_id"]
     url = f"{server}/api/v1/accounts/{user_id}"
     data = await fetch_json(url, client)
     details["mastodon_follower_count"] = data["followers_count"]
 
 
 async def fetch_bluesky_follower_count(details, client):
-    profile = "snarky.ca"
+    profile = details["bluesky"]
     url = f"https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={profile}"
     data = await fetch_json(url, client)
     details["bluesky_follower_count"] = data["followersCount"]
@@ -291,7 +294,7 @@ async def fetch_cpython_contributors(details, client):
     if not (token := os.environ.get("GITHUB_TOKEN")):
         details["cpython_contributor_ranking"] = 0
         return
-    gh = gidgethub.httpx.GitHubAPI(client, "brettcannon/brettcannon", oauth_token=token)
+    gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
     contributors = await gh.getitem(
         "/repos/{owner}/{repo}/contributors",
         {"owner": "python", "repo": "cpython"},
@@ -315,7 +318,7 @@ class PEP:
 
 
 async def pep_details(details, client):
-    details["my_name"] = author_name = "Brett Cannon"
+    author_name = details["my_name"]
     url = "https://peps.python.org/api/peps.json"
     data = await fetch_json(url, client)
     author_count = collections.defaultdict(int)
@@ -438,13 +441,35 @@ def json_serializer(obj):
 async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        "-u", "--username", default="brettcannon", help="GitHub username"
+    )
+    parser.add_argument(
+        "-f", "--feed", default="https://snarky.ca/rss/", help="Blog feed"
+    )
+    parser.add_argument("-n", "--name", default="Brett Cannon", help="PEP author name")
+    parser.add_argument(
+        "--mastodon-server", default="https://mastodon.social", help="Mastodon instance"
+    )
+    parser.add_argument(
+        "-m",
+        "--mastodon-id",
+        default="114633944987767035",
+        help="Mastodon user ID (https://INSTANCE/api/v1/accounts/lookup?acct=USERNAME)",
+    )
+    parser.add_argument("-b", "--bluesky", default="snarky.ca", help="Bluesky profile")
+    parser.add_argument(
         "--log", type=pathlib.Path, help="Log of data, written as JSONL"
     )
     args = parser.parse_args()
 
     details = {
-        "github_username": "brettcannon",
-        # First CPython contrbution: 2003-04-18 21:00 PDT
+        "github_username": args.username,
+        "my_name": args.name,
+        "feed": args.feed,
+        "mastodon_server": args.mastodon_server,
+        "mastodon_id": args.mastodon_id,
+        "bluesky": args.bluesky,
+        # First CPython contribution: 2003-04-18 21:00 PDT
         # Hard-coding as it tends to drift based on GitHub API responses.
         "start_date": datetime.datetime(2003, 4, 19, 4, 00, tzinfo=datetime.UTC),
     }
