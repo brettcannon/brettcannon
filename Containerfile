@@ -10,6 +10,10 @@ RUN mkdir -p /buildarea && \
 # Install buildbot-worker
 RUN pip install --no-cache-dir buildbot-worker
 
+# Copy entrypoint script
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # Set working directory
 WORKDIR /buildarea
 
@@ -19,5 +23,8 @@ USER buildbot
 # Set home directory environment variable
 ENV HOME=/home/buildbot
 
-# Default command
-CMD ["buildbot-worker", "--version"]
+# Use entrypoint script
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+# Default command - can be overridden
+CMD []

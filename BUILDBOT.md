@@ -12,11 +12,17 @@ podman build -t buildbot-worker -f Containerfile .
 
 ## Running the Container
 
-To run the buildbot-worker:
+The container includes a helpful entrypoint script. Running without arguments shows usage:
+
+```bash
+podman run -it --rm buildbot-worker
+```
+
+To start a buildbot-worker:
 
 ```bash
 podman run -it --rm \
-  -v /path/to/worker/config:/home/buildbot/.buildbot \
+  -v ./worker:/buildarea \
   buildbot-worker buildbot-worker start /buildarea
 ```
 
@@ -49,4 +55,13 @@ podman run -it --rm \
 
 ## Security Note
 
-The `/buildarea` directory is set with 0777 permissions to avoid permission-related issues when running builds. This is acceptable in a container context where the buildbot user is isolated within the container.
+The `/buildarea` directory is intentionally set with 0777 permissions to avoid permission-related issues when running builds. This allows any user to read and write to this directory.
+
+**Important Considerations:**
+- This configuration prioritizes ease of use over strict security for the build area
+- The 0777 permissions mean the directory is world-readable and world-writable within the container
+- If the container is compromised, this could be exploited
+- When mounting volumes from the host, ensure the host system's security policies are appropriate
+- For production use, consider if more restrictive permissions with proper user/group mapping would be suitable for your threat model
+
+This configuration is designed for development and CI/CD environments where ease of configuration is prioritized.

@@ -64,3 +64,7 @@ TEMPLATE.md
 free-labour.py
 brettcannon_2019-2023.stl
 overrides.toml
+
+# Include these files needed for container build
+!entrypoint.sh
+!Containerfile
