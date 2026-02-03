@@ -329,6 +329,7 @@ async def pep_details(details, client):
                 my_peps.append(pep)
             author_count[author] += 1
     details["pep_count"] = author_count[author_name]
+    details["total_pep_count"] = len(data)
 
     absolute_author_rankings = sorted(
         ((count, author) for author, count in author_count.items()), reverse=True
