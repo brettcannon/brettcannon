@@ -39,7 +39,7 @@ In that time I have become the {{ cpython_contributor_ranking|nth }} most prolif
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored {{pep_count}}/{{total_pep_count}} PEPs ({{pep_percentage}}%).</summary>
+<summary>I have (co-)authored {{pep_count}}/{{total_pep_count}} PEPs ({{(pep_count / total_pep_count * 100) | round(1)}}%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 

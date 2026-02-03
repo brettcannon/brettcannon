@@ -330,9 +330,6 @@ async def pep_details(details, client):
             author_count[author] += 1
     details["pep_count"] = author_count[author_name]
     details["total_pep_count"] = len(data)
-    details["pep_percentage"] = round(
-        (author_count[author_name] / len(data)) * 100, 1
-    )
 
     absolute_author_rankings = sorted(
         ((count, author) for author, count in author_count.items()), reverse=True
