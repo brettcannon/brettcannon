@@ -42,5 +42,5 @@ jobs:
         with:
           commit_message: Update README.md and ${YEAR}.jsonl
           file_pattern: README.md ${YEAR}.jsonl
-          env:
+        env:
             YEAR: ${{ env.YEAR }}
