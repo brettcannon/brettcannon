@@ -34,10 +34,9 @@ jobs:
       - name: Update README.md
         run: uv run free-labour.py --log ${YEAR}.jsonl > README.md
         env:
-          YEAR: ${{ env.YEAR }}
-        env:
           UV_SYSTEM_PYTHON: 1
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
+          YEAR: ${{ env.YEAR }}
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79  # v5.1.0
         with:
