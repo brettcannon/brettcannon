@@ -9,14 +9,19 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Get source
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Get Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # 6.2.0
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.13"
       - name: Install uv
@@ -27,12 +32,16 @@ jobs:
       - name: Get the current year
         run: echo "YEAR=$(date +%Y)" >> $GITHUB_ENV
       - name: Update README.md
-        run: uv run free-labour.py --log ${{ env.YEAR }}.jsonl > README.md
+        run: uv run free-labour.py --log ${YEAR}.jsonl > README.md
+        env:
+          YEAR: ${{ env.YEAR }}
         env:
           UV_SYSTEM_PYTHON: 1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79  # v5.1.0
         with:
-          commit_message: Update README.md and ${{ env.YEAR }}.jsonl
-          file_pattern: README.md ${{ env.YEAR }}.jsonl
+          commit_message: Update README.md and ${YEAR}.jsonl
+          file_pattern: README.md ${YEAR}.jsonl
+          env:
+            YEAR: ${{ env.YEAR }}
