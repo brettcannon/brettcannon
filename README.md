@@ -2,11 +2,11 @@
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/how-to-publish-to-pypi-using-github-actions-securely/) published on 2026-07-07)
 - [Mastodon](https://mastodon.social/@brettcannon) (with 3,554 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,066 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,067 followers)
 
 # Open Source
 
-<small>Last updated 2026-07-17.</small>
+<small>Last updated 2026-07-20.</small>
 
 ## Contributions
 
@@ -1375,11 +1375,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><i><a href="https://github.com/brettcannon/py-pip/commits?author=brettcannon">brettcannon/py-pip</a></i></li>
+
+
+
 <li><i><a href="https://github.com/brettcannon/trips-history/commits?author=brettcannon">brettcannon/trips-history</a></i></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/pep425/commits?author=brettcannon">brettcannon/pep425</a></i></li>
 
 
 
@@ -1387,7 +1387,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/py-pip/commits?author=brettcannon">brettcannon/py-pip</a></i></li>
+<li><i><a href="https://github.com/brettcannon/pep425/commits?author=brettcannon">brettcannon/pep425</a></i></li>
 
 
 
@@ -1411,11 +1411,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/sans-io/commits?author=brettcannon">brettcannon/sans-io</a></i></li>
-
-
-
 <li><a href="https://github.com/microsoft/vscode-docs/commits?author=brettcannon">microsoft/vscode-docs</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/sans-io/commits?author=brettcannon">brettcannon/sans-io</a></i></li>
 
 
 
@@ -1427,11 +1427,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><i><a href="https://github.com/brettcannon/riscv-harmony/commits?author=brettcannon">brettcannon/riscv-harmony</a></i></li>
+
+
+
 <li><i><a href="https://github.com/brettcannon/flatten_filenames/commits?author=brettcannon">brettcannon/flatten_filenames</a></i></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/find-duplicate-files/commits?author=brettcannon">brettcannon/find-duplicate-files</a></i></li>
 
 
 
@@ -1439,15 +1439,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/riscv-harmony/commits?author=brettcannon">brettcannon/riscv-harmony</a></i></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/basicenum/commits?author=brettcannon">brettcannon/basicenum</a></i></li>
+<li><i><a href="https://github.com/brettcannon/find-duplicate-files/commits?author=brettcannon">brettcannon/find-duplicate-files</a></i></li>
 
 
 
 <li><i><a href="https://github.com/brettcannon/wasi-buildbot/commits?author=brettcannon">brettcannon/wasi-buildbot</a></i></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/basicenum/commits?author=brettcannon">brettcannon/basicenum</a></i></li>
 
 
 
@@ -1471,10 +1471,6 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/dusty-phillips/rescript-zora/commits?author=brettcannon">dusty-phillips/rescript-zora</a></li>
-
-
-
 <li><a href="https://github.com/python/core-workflow/commits?author=brettcannon">python/core-workflow</a></li>
 
 
@@ -1483,7 +1479,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/Azure-Samples/Azure-MachineLearning-DataScience/commits?author=brettcannon">Azure-Samples/Azure-MachineLearning-DataScience</a></li>
+<li><a href="https://github.com/dusty-phillips/rescript-zora/commits?author=brettcannon">dusty-phillips/rescript-zora</a></li>
 
 
 
@@ -1491,11 +1487,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><a href="https://github.com/Azure-Samples/Azure-MachineLearning-DataScience/commits?author=brettcannon">Azure-Samples/Azure-MachineLearning-DataScience</a></li>
+
+
+
 <li><i><a href="https://github.com/brettcannon/defy-layout-scorer/commits?author=brettcannon">brettcannon/defy-layout-scorer</a></i></li>
-
-
-
-<li><a href="https://github.com/github/copilot-sdk/commits?author=brettcannon">github/copilot-sdk</a></li>
 
 
 
@@ -1503,11 +1499,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/pip-secure-install/commits?author=brettcannon">brettcannon/pip-secure-install</a></i></li>
+<li><a href="https://github.com/github/copilot-sdk/commits?author=brettcannon">github/copilot-sdk</a></li>
 
 
 
 <li><a href="https://github.com/Azure/msrest-for-python/commits?author=brettcannon">Azure/msrest-for-python</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/pip-secure-install/commits?author=brettcannon">brettcannon/pip-secure-install</a></i></li>
 
 
 
@@ -1519,15 +1519,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python-hyper/uritemplate/commits?author=brettcannon">python-hyper/uritemplate</a></li>
-
-
-
 <li><a href="https://github.com/pypa/distutils/commits?author=brettcannon">pypa/distutils</a></li>
-
-
-
-<li><a href="https://github.com/emmatyping/python-wasm/commits?author=brettcannon">emmatyping/python-wasm</a></li>
 
 
 
@@ -1535,7 +1527,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/orsenthil/cpython-hg-to-git/commits?author=brettcannon">orsenthil/cpython-hg-to-git</a></li>
+<li><a href="https://github.com/emmatyping/python-wasm/commits?author=brettcannon">emmatyping/python-wasm</a></li>
+
+
+
+<li><a href="https://github.com/python-hyper/uritemplate/commits?author=brettcannon">python-hyper/uritemplate</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/feedbin-deduplication/commits?author=brettcannon">brettcannon/feedbin-deduplication</a></i></li>
 
 
 
@@ -1543,7 +1543,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/feedbin-deduplication/commits?author=brettcannon">brettcannon/feedbin-deduplication</a></i></li>
+<li><a href="https://github.com/orsenthil/cpython-hg-to-git/commits?author=brettcannon">orsenthil/cpython-hg-to-git</a></li>
 
 
 
@@ -2181,19 +2181,19 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/beeware/toga/commits?author=brettcannon">beeware/toga</a></li>
-
-
-
-<li><a href="https://github.com/dusty-phillips/match-variant/commits?author=brettcannon">dusty-phillips/match-variant</a></li>
-
-
-
 <li><a href="https://github.com/JuliaLang/julia/commits?author=brettcannon">JuliaLang/julia</a></li>
 
 
 
 <li><i><a href="https://github.com/brettcannon/choose-a-font.dev/commits?author=brettcannon">brettcannon/choose-a-font.dev</a></i></li>
+
+
+
+<li><a href="https://github.com/beeware/toga/commits?author=brettcannon">beeware/toga</a></li>
+
+
+
+<li><a href="https://github.com/dusty-phillips/match-variant/commits?author=brettcannon">dusty-phillips/match-variant</a></li>
 
 
 
@@ -2205,19 +2205,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/nowhere-on-the-web/commits?author=brettcannon">brettcannon/nowhere-on-the-web</a></i></li>
+<li><a href="https://github.com/microsoft/vscode-anaconda-extension-pack/commits?author=brettcannon">microsoft/vscode-anaconda-extension-pack</a></li>
 
 
 
 <li><a href="https://github.com/lustre-labs/lustre/commits?author=brettcannon">lustre-labs/lustre</a></li>
-
-
-
-<li><a href="https://github.com/rescript-lang/rescript-lang.org/commits?author=brettcannon">rescript-lang/rescript-lang.org</a></li>
-
-
-
-<li><a href="https://github.com/eclipse-archived/ceylon-lang.org/commits?author=brettcannon">eclipse-archived/ceylon-lang.org</a></li>
 
 
 
@@ -2229,7 +2221,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/microsoft/vscode-anaconda-extension-pack/commits?author=brettcannon">microsoft/vscode-anaconda-extension-pack</a></li>
+<li><a href="https://github.com/rescript-lang/rescript-lang.org/commits?author=brettcannon">rescript-lang/rescript-lang.org</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/nowhere-on-the-web/commits?author=brettcannon">brettcannon/nowhere-on-the-web</a></i></li>
+
+
+
+<li><a href="https://github.com/eclipse-archived/ceylon-lang.org/commits?author=brettcannon">eclipse-archived/ceylon-lang.org</a></li>
 
 
 
@@ -2237,11 +2237,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
-
-
-
 <li><a href="https://github.com/python/cherry-picker/commits?author=brettcannon">python/cherry-picker</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/rust/commits?author=brettcannon">rust-lang/rust</a></li>
 
 
 
@@ -2253,15 +2253,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/micktwomey/pyiso8601/commits?author=brettcannon">micktwomey/pyiso8601</a></li>
-
-
-
-<li><a href="https://github.com/python/typeshed/commits?author=brettcannon">python/typeshed</a></li>
-
-
-
 <li><a href="https://github.com/python/planet/commits?author=brettcannon">python/planet</a></li>
+
+
+
+<li><a href="https://github.com/micktwomey/pyiso8601/commits?author=brettcannon">micktwomey/pyiso8601</a></li>
 
 
 
@@ -2269,19 +2265,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/Homebrew/legacy-homebrew/commits?author=brettcannon">Homebrew/legacy-homebrew</a></li>
-
-
-
-<li><a href="https://github.com/Homebrew/homebrew-core/commits?author=brettcannon">Homebrew/homebrew-core</a></li>
-
-
-
-<li><a href="https://github.com/aosabook/500lines/commits?author=brettcannon">aosabook/500lines</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/vscode-zephyr-asdl/commits?author=brettcannon">brettcannon/vscode-zephyr-asdl</a></i></li>
+<li><a href="https://github.com/python/typeshed/commits?author=brettcannon">python/typeshed</a></li>
 
 
 
@@ -2289,63 +2273,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
-
-
-
-<li><a href="https://github.com/github/gitignore/commits?author=brettcannon">github/gitignore</a></li>
-
-
-
 <li><a href="https://github.com/square/dagger/commits?author=brettcannon">square/dagger</a></li>
-
-
-
-<li><a href="https://github.com/WebAssembly/design/commits?author=brettcannon">WebAssembly/design</a></li>
-
-
-
-<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
-
-
-
-<li><a href="https://github.com/inko-lang/inko/commits?author=brettcannon">inko-lang/inko</a></li>
-
-
-
-<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
-
-
-
-<li><a href="https://github.com/badges/shields/commits?author=brettcannon">badges/shields</a></li>
-
-
-
-<li><a href="https://github.com/micropython/micropython/commits?author=brettcannon">micropython/micropython</a></li>
-
-
-
-<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/cpython-wasi-buildbot/commits?author=brettcannon">brettcannon/cpython-wasi-buildbot</a></i></li>
-
-
-
-<li><a href="https://github.com/dotnet/docs/commits?author=brettcannon">dotnet/docs</a></li>
-
-
-
-<li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-wiki/commits?author=brettcannon">microsoft/vscode-wiki</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/travelbrag/commits?author=brettcannon">brettcannon/travelbrag</a></i></li>
 
 
 
@@ -2353,47 +2281,75 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/asyncio-docs/asyncio-doc/commits?author=brettcannon">asyncio-docs/asyncio-doc</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/commits?author=brettcannon">Homebrew/homebrew-core</a></li>
 
 
 
-<li><a href="https://github.com/jaraco/skeleton/commits?author=brettcannon">jaraco/skeleton</a></li>
+<li><a href="https://github.com/pypa/pipenv/commits?author=brettcannon">pypa/pipenv</a></li>
 
 
 
-<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
+<li><a href="https://github.com/Homebrew/legacy-homebrew/commits?author=brettcannon">Homebrew/legacy-homebrew</a></li>
 
 
 
-<li><a href="https://github.com/conda/conda/commits?author=brettcannon">conda/conda</a></li>
+<li><a href="https://github.com/github/gitignore/commits?author=brettcannon">github/gitignore</a></li>
 
 
 
-<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
+<li><i><a href="https://github.com/brettcannon/vscode-zephyr-asdl/commits?author=brettcannon">brettcannon/vscode-zephyr-asdl</a></i></li>
 
 
 
-<li><a href="https://github.com/python/typing/commits?author=brettcannon">python/typing</a></li>
+<li><a href="https://github.com/WebAssembly/design/commits?author=brettcannon">WebAssembly/design</a></li>
 
 
 
-<li><a href="https://github.com/gleam-lang/website/commits?author=brettcannon">gleam-lang/website</a></li>
+<li><a href="https://github.com/aosabook/500lines/commits?author=brettcannon">aosabook/500lines</a></li>
 
 
 
-<li><a href="https://github.com/kushaldas/pep582/commits?author=brettcannon">kushaldas/pep582</a></li>
+<li><i><a href="https://github.com/brettcannon/travelbrag/commits?author=brettcannon">brettcannon/travelbrag</a></i></li>
 
 
 
-<li><a href="https://github.com/microsoft/vscode-isort/commits?author=brettcannon">microsoft/vscode-isort</a></li>
+<li><a href="https://github.com/micropython/micropython/commits?author=brettcannon">micropython/micropython</a></li>
 
 
 
-<li><a href="https://github.com/astral-sh/ruff/commits?author=brettcannon">astral-sh/ruff</a></li>
+<li><a href="https://github.com/Mariatta/github-bot-tutorial/commits?author=brettcannon">Mariatta/github-bot-tutorial</a></li>
 
 
 
-<li><a href="https://github.com/conda/ceps/commits?author=brettcannon">conda/ceps</a></li>
+<li><a href="https://github.com/jazzband/pip-tools/commits?author=brettcannon">jazzband/pip-tools</a></li>
+
+
+
+<li><a href="https://github.com/badges/shields/commits?author=brettcannon">badges/shields</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/cpython-wasi-buildbot/commits?author=brettcannon">brettcannon/cpython-wasi-buildbot</a></i></li>
+
+
+
+<li><a href="https://github.com/inko-lang/inko/commits?author=brettcannon">inko-lang/inko</a></li>
+
+
+
+<li><a href="https://github.com/dotnet/docs/commits?author=brettcannon">dotnet/docs</a></li>
+
+
+
+<li><a href="https://github.com/vstinner/misc/commits?author=brettcannon">vstinner/misc</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-wiki/commits?author=brettcannon">microsoft/vscode-wiki</a></li>
+
+
+
+<li><a href="https://github.com/python/psf-salt/commits?author=brettcannon">python/psf-salt</a></li>
 
 
 
@@ -2401,35 +2357,43 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/gleam-lang/language-tour/commits?author=brettcannon">gleam-lang/language-tour</a></li>
+<li><a href="https://github.com/microsoft/language-server-protocol/commits?author=brettcannon">microsoft/language-server-protocol</a></li>
 
 
 
-<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
+<li><a href="https://github.com/kushaldas/pep582/commits?author=brettcannon">kushaldas/pep582</a></li>
 
 
 
-<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
+<li><a href="https://github.com/conda/conda/commits?author=brettcannon">conda/conda</a></li>
 
 
 
-<li><a href="https://github.com/pyscript/pyscript/commits?author=brettcannon">pyscript/pyscript</a></li>
+<li><a href="https://github.com/pypa/flit/commits?author=brettcannon">pypa/flit</a></li>
 
 
 
-<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
+<li><a href="https://github.com/hayleigh-dot-dev/rsvp/commits?author=brettcannon">hayleigh-dot-dev/rsvp</a></li>
 
 
 
-<li><a href="https://github.com/matplotlib/matplotlib/commits?author=brettcannon">matplotlib/matplotlib</a></li>
+<li><a href="https://github.com/microsoft/vscode-isort/commits?author=brettcannon">microsoft/vscode-isort</a></li>
 
 
 
-<li><a href="https://github.com/eerhardt/PythonStarter/commits?author=brettcannon">eerhardt/PythonStarter</a></li>
+<li><a href="https://github.com/microsoftarchive/msgraph-sdk-python/commits?author=brettcannon">microsoftarchive/msgraph-sdk-python</a></li>
 
 
 
-<li><a href="https://github.com/WebAssembly/wasi-sdk/commits?author=brettcannon">WebAssembly/wasi-sdk</a></li>
+<li><a href="https://github.com/larryhastings/appeal/commits?author=brettcannon">larryhastings/appeal</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-python-templates/commits?author=brettcannon">microsoft/vscode-python-templates</a></li>
+
+
+
+<li><a href="https://github.com/fastapi/sqlmodel/commits?author=brettcannon">fastapi/sqlmodel</a></li>
 
 
 
@@ -2437,7 +2401,67 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
+<li><a href="https://github.com/eerhardt/PythonStarter/commits?author=brettcannon">eerhardt/PythonStarter</a></li>
+
+
+
+<li><a href="https://github.com/python-hyper/h2/commits?author=brettcannon">python-hyper/h2</a></li>
+
+
+
+<li><a href="https://github.com/asyncio-docs/asyncio-doc/commits?author=brettcannon">asyncio-docs/asyncio-doc</a></li>
+
+
+
+<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
+
+
+
+<li><a href="https://github.com/pyscript/pyscript/commits?author=brettcannon">pyscript/pyscript</a></li>
+
+
+
+<li><a href="https://github.com/progit/progit2/commits?author=brettcannon">progit/progit2</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
+
+
+
+<li><a href="https://github.com/pypa/setuptools-scm/commits?author=brettcannon">pypa/setuptools-scm</a></li>
+
+
+
+<li><a href="https://github.com/astral-sh/ruff/commits?author=brettcannon">astral-sh/ruff</a></li>
+
+
+
+<li><a href="https://github.com/buildout/buildout/commits?author=brettcannon">buildout/buildout</a></li>
+
+
+
+<li><a href="https://github.com/gleam-lang/website/commits?author=brettcannon">gleam-lang/website</a></li>
+
+
+
+<li><a href="https://github.com/MPOS/php-mpos/commits?author=brettcannon">MPOS/php-mpos</a></li>
+
+
+
+<li><a href="https://github.com/python/pyperformance/commits?author=brettcannon">python/pyperformance</a></li>
+
+
+
+<li><a href="https://github.com/matplotlib/matplotlib/commits?author=brettcannon">matplotlib/matplotlib</a></li>
+
+
+
+<li><a href="https://github.com/wntrblm/nox/commits?author=brettcannon">wntrblm/nox</a></li>
+
+
+
+<li><a href="https://github.com/WebAssembly/wasi-sdk/commits?author=brettcannon">WebAssembly/wasi-sdk</a></li>
 
 
 
@@ -2445,35 +2469,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/bytecodealliance/wasmtime/commits?author=brettcannon">bytecodealliance/wasmtime</a></li>
+<li><a href="https://github.com/jaraco/skeleton/commits?author=brettcannon">jaraco/skeleton</a></li>
 
 
 
-<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
+<li><a href="https://github.com/rustwasm/book/commits?author=brettcannon">rustwasm/book</a></li>
 
 
 
-<li><a href="https://github.com/bloodyowl/rescript-test/commits?author=brettcannon">bloodyowl/rescript-test</a></li>
-
-
-
-<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/language-server-protocol/commits?author=brettcannon">microsoft/language-server-protocol</a></li>
-
-
-
-<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
-
-
-
-<li><a href="https://github.com/wntrblm/nox/commits?author=brettcannon">wntrblm/nox</a></li>
+<li><a href="https://github.com/microsoft/vscode-docker/commits?author=brettcannon">microsoft/vscode-docker</a></li>
 
 
 
@@ -2485,39 +2489,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/microsoftarchive/msgraph-sdk-python/commits?author=brettcannon">microsoftarchive/msgraph-sdk-python</a></li>
+<li><a href="https://github.com/conda/ceps/commits?author=brettcannon">conda/ceps</a></li>
 
 
 
-<li><a href="https://github.com/pypa/flit/commits?author=brettcannon">pypa/flit</a></li>
+<li><a href="https://github.com/python/pythonineducation.org/commits?author=brettcannon">python/pythonineducation.org</a></li>
 
 
 
-<li><a href="https://github.com/fastapi/sqlmodel/commits?author=brettcannon">fastapi/sqlmodel</a></li>
-
-
-
-<li><a href="https://github.com/larryhastings/appeal/commits?author=brettcannon">larryhastings/appeal</a></li>
-
-
-
-<li><a href="https://github.com/rustwasm/book/commits?author=brettcannon">rustwasm/book</a></li>
-
-
-
-<li><a href="https://github.com/aio-libs/aiohttp/commits?author=brettcannon">aio-libs/aiohttp</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-python-templates/commits?author=brettcannon">microsoft/vscode-python-templates</a></li>
-
-
-
-<li><a href="https://github.com/python/pyperformance/commits?author=brettcannon">python/pyperformance</a></li>
-
-
-
-<li><a href="https://github.com/MeeseeksBox/meeseeksbox.github.io/commits?author=brettcannon">MeeseeksBox/meeseeksbox.github.io</a></li>
+<li><a href="https://github.com/python/typing/commits?author=brettcannon">python/typing</a></li>
 
 
 
@@ -2525,23 +2505,47 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/MPOS/php-mpos/commits?author=brettcannon">MPOS/php-mpos</a></li>
+<li><a href="https://github.com/MeeseeksBox/meeseeksbox.github.io/commits?author=brettcannon">MeeseeksBox/meeseeksbox.github.io</a></li>
 
 
 
-<li><a href="https://github.com/python-hyper/h2/commits?author=brettcannon">python-hyper/h2</a></li>
+<li><a href="https://github.com/moby/mobywebsite/commits?author=brettcannon">moby/mobywebsite</a></li>
 
 
 
-<li><a href="https://github.com/kushaldas/pym/commits?author=brettcannon">kushaldas/pym</a></li>
+<li><a href="https://github.com/dabeaz/ply/commits?author=brettcannon">dabeaz/ply</a></li>
 
 
 
-<li><a href="https://github.com/progit/progit2/commits?author=brettcannon">progit/progit2</a></li>
+<li><a href="https://github.com/ponylang/pony-tutorial/commits?author=brettcannon">ponylang/pony-tutorial</a></li>
 
 
 
-<li><a href="https://github.com/hayleigh-dot-dev/rsvp/commits?author=brettcannon">hayleigh-dot-dev/rsvp</a></li>
+<li><a href="https://github.com/microsoft/TypeScript-wiki/commits?author=brettcannon">microsoft/TypeScript-wiki</a></li>
+
+
+
+<li><a href="https://github.com/MicrosoftDocs/visualstudio-docs/commits?author=brettcannon">MicrosoftDocs/visualstudio-docs</a></li>
+
+
+
+<li><a href="https://github.com/gleam-lang/language-tour/commits?author=brettcannon">gleam-lang/language-tour</a></li>
+
+
+
+<li><a href="https://github.com/vibora-io/vibora/commits?author=brettcannon">vibora-io/vibora</a></li>
+
+
+
+<li><a href="https://github.com/bytecodealliance/wasmtime/commits?author=brettcannon">bytecodealliance/wasmtime</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/sql-server-samples/commits?author=brettcannon">microsoft/sql-server-samples</a></li>
+
+
+
+<li><a href="https://github.com/bloodyowl/rescript-test/commits?author=brettcannon">bloodyowl/rescript-test</a></li>
 
 
 
@@ -2549,99 +2553,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/gitkraken/vscode-gitlens/commits?author=brettcannon">gitkraken/vscode-gitlens</a></li>
+<li><a href="https://github.com/Quansight-Labs/free-threaded-compatibility/commits?author=brettcannon">Quansight-Labs/free-threaded-compatibility</a></li>
 
 
 
-<li><a href="https://github.com/scikit-learn/scikit-learn/commits?author=brettcannon">scikit-learn/scikit-learn</a></li>
-
-
-
-<li><a href="https://github.com/bytecodealliance/setup-wasi-sdk-action/commits?author=brettcannon">bytecodealliance/setup-wasi-sdk-action</a></li>
-
-
-
-<li><a href="https://github.com/image-rs/blog.image-rs.org/commits?author=brettcannon">image-rs/blog.image-rs.org</a></li>
-
-
-
-<li><a href="https://github.com/rocketreach/rocketreach_python/commits?author=brettcannon">rocketreach/rocketreach_python</a></li>
-
-
-
-<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
-
-
-
-<li><a href="https://github.com/ebkalderon/tower-lsp/commits?author=brettcannon">ebkalderon/tower-lsp</a></li>
-
-
-
-<li><a href="https://github.com/gleam-lang/gleam/commits?author=brettcannon">gleam-lang/gleam</a></li>
-
-
-
-<li><a href="https://github.com/mozilla-services/konfig/commits?author=brettcannon">mozilla-services/konfig</a></li>
-
-
-
-<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
-
-
-
-<li><a href="https://github.com/dusty-phillips/macabre/commits?author=brettcannon">dusty-phillips/macabre</a></li>
-
-
-
-<li><a href="https://github.com/stellar-deprecated/docs/commits?author=brettcannon">stellar-deprecated/docs</a></li>
-
-
-
-<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs-contrib/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs-contrib</a></li>
-
-
-
-<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
-
-
-
-<li><a href="https://github.com/astral-sh/uv/commits?author=brettcannon">astral-sh/uv</a></li>
-
-
-
-<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
-
-
-
-<li><a href="https://github.com/lorenzofox3/zora/commits?author=brettcannon">lorenzofox3/zora</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/exercism-solutions/commits?author=brettcannon">brettcannon/exercism-solutions</a></i></li>
-
-
-
-<li><a href="https://github.com/ansible/ansible/commits?author=brettcannon">ansible/ansible</a></li>
-
-
-
-<li><a href="https://github.com/modelcontextprotocol/rust-sdk/commits?author=brettcannon">modelcontextprotocol/rust-sdk</a></li>
-
-
-
-<li><a href="https://github.com/Homebrew/brew/commits?author=brettcannon">Homebrew/brew</a></li>
-
-
-
-<li><a href="https://github.com/nayafia/nayafia/commits?author=brettcannon">nayafia/nayafia</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/log/commits?author=brettcannon">rust-lang/log</a></li>
-
-
-
-<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
+<li><a href="https://github.com/absurdia/absurdia-py/commits?author=brettcannon">absurdia/absurdia-py</a></li>
 
 
 
@@ -2649,7 +2565,39 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
+<li><a href="https://github.com/MagicStack/MagicPython/commits?author=brettcannon">MagicStack/MagicPython</a></li>
+
+
+
+<li><a href="https://github.com/cometkim/rescript-vitest/commits?author=brettcannon">cometkim/rescript-vitest</a></li>
+
+
+
+<li><a href="https://github.com/hynek/build-and-inspect-python-package/commits?author=brettcannon">hynek/build-and-inspect-python-package</a></li>
+
+
+
+<li><a href="https://github.com/kushaldas/asaman/commits?author=brettcannon">kushaldas/asaman</a></li>
+
+
+
+<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
+
+
+
+<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
+
+
+
+<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
+
+
+
+<li><a href="https://github.com/starship/starship/commits?author=brettcannon">starship/starship</a></li>
+
+
+
+<li><a href="https://github.com/spotify/pedalboard/commits?author=brettcannon">spotify/pedalboard</a></li>
 
 
 
@@ -2657,7 +2605,47 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
+<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/old-pyvideo/commits?author=brettcannon">pyvideo/old-pyvideo</a></li>
+
+
+
+<li><a href="https://github.com/astral-sh/war/commits?author=brettcannon">astral-sh/war</a></li>
+
+
+
+<li><a href="https://github.com/11ty/docs/commits?author=brettcannon">11ty/docs</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
+
+
+
+<li><a href="https://github.com/briandealwis/ferret/commits?author=brettcannon">briandealwis/ferret</a></li>
+
+
+
+<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
+
+
+
+<li><a href="https://github.com/psf/policies/commits?author=brettcannon">psf/policies</a></li>
+
+
+
+<li><a href="https://github.com/Homebrew/brew/commits?author=brettcannon">Homebrew/brew</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/az-partner-center-cli/commits?author=brettcannon">microsoft/az-partner-center-cli</a></li>
 
 
 
@@ -2669,151 +2657,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
-
-
-
-<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
-
-
-
-<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
-
-
-
-<li><a href="https://github.com/psf/webassembly/commits?author=brettcannon">psf/webassembly</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/python-sample-vscode-django-tutorial/commits?author=brettcannon">microsoft/python-sample-vscode-django-tutorial</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/az-partner-center-cli/commits?author=brettcannon">microsoft/az-partner-center-cli</a></li>
-
-
-
-<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
-
-
-
-<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/zwaldowski/match-label-action/commits?author=brettcannon">zwaldowski/match-label-action</a></li>
-
-
-
-<li><a href="https://github.com/lustre-labs/ui/commits?author=brettcannon">lustre-labs/ui</a></li>
-
-
-
-<li><a href="https://github.com/andrew/nesbitt.io/commits?author=brettcannon">andrew/nesbitt.io</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-pylint/commits?author=brettcannon">microsoft/vscode-pylint</a></li>
-
-
-
-<li><a href="https://github.com/livebook-dev/livebook/commits?author=brettcannon">livebook-dev/livebook</a></li>
-
-
-
-<li><a href="https://github.com/lsd-rs/lsd/commits?author=brettcannon">lsd-rs/lsd</a></li>
-
-
-
-<li><a href="https://github.com/pypa/build/commits?author=brettcannon">pypa/build</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/debugpy/commits?author=brettcannon">microsoft/debugpy</a></li>
-
-
-
-<li><a href="https://github.com/Devid-Ba/Text-adventure/commits?author=brettcannon">Devid-Ba/Text-adventure</a></li>
-
-
-
-<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
-
-
-
-<li><a href="https://github.com/lpil/sqlight/commits?author=brettcannon">lpil/sqlight</a></li>
-
-
-
-<li><a href="https://github.com/cometkim/rescript-vitest/commits?author=brettcannon">cometkim/rescript-vitest</a></li>
-
-
-
-<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/aspire/commits?author=brettcannon">microsoft/aspire</a></li>
-
-
-
-<li><a href="https://github.com/absurdia/absurdia-py/commits?author=brettcannon">absurdia/absurdia-py</a></li>
-
-
-
-<li><a href="https://github.com/riscv-software-src/riscv-tests/commits?author=brettcannon">riscv-software-src/riscv-tests</a></li>
-
-
-
-<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
-
-
-
 <li><a href="https://github.com/gvanrossum/gvanrossum.github.io/commits?author=brettcannon">gvanrossum/gvanrossum.github.io</a></li>
-
-
-
-<li><a href="https://github.com/psf/policies/commits?author=brettcannon">psf/policies</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/character-frequency/commits?author=brettcannon">brettcannon/character-frequency</a></i></li>
-
-
-
-<li><a href="https://github.com/aurelia/documentation/commits?author=brettcannon">aurelia/documentation</a></li>
-
-
-
-<li><a href="https://github.com/pypa/setuptools-scm/commits?author=brettcannon">pypa/setuptools-scm</a></li>
-
-
-
-<li><a href="https://github.com/spotify/pedalboard/commits?author=brettcannon">spotify/pedalboard</a></li>
-
-
-
-<li><a href="https://github.com/bitbldr/sprocket_docs/commits?author=brettcannon">bitbldr/sprocket_docs</a></li>
-
-
-
-<li><a href="https://github.com/luabud/hello-vscodespaces/commits?author=brettcannon">luabud/hello-vscodespaces</a></li>
-
-
-
-<li><a href="https://github.com/python-poetry/tomlkit/commits?author=brettcannon">python-poetry/tomlkit</a></li>
-
-
-
-<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
-
-
-
-<li><a href="https://github.com/diogonfs/pyinit/commits?author=brettcannon">diogonfs/pyinit</a></li>
 
 
 
@@ -2821,51 +2665,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
-
-
-
-<li><a href="https://github.com/pdm-project/pdm/commits?author=brettcannon">pdm-project/pdm</a></li>
-
-
-
-<li><a href="https://github.com/conda/conda-build/commits?author=brettcannon">conda/conda-build</a></li>
-
-
-
-<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
-
-
-
-<li><a href="https://github.com/psf/fundable-packaging-improvements/commits?author=brettcannon">psf/fundable-packaging-improvements</a></li>
-
-
-
-<li><a href="https://github.com/pyca/pyopenssl/commits?author=brettcannon">pyca/pyopenssl</a></li>
-
-
-
-<li><a href="https://github.com/stellar/awesome-stellar/commits?author=brettcannon">stellar/awesome-stellar</a></li>
-
-
-
-<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
-
-
-
-<li><a href="https://github.com/starship/starship/commits?author=brettcannon">starship/starship</a></li>
-
-
-
-<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
-
-
-
-<li><a href="https://github.com/victor-o-silva/python-links-from-link-header/commits?author=brettcannon">victor-o-silva/python-links-from-link-header</a></li>
-
-
-
-<li><a href="https://github.com/beeware/podium/commits?author=brettcannon">beeware/podium</a></li>
+<li><a href="https://github.com/google/yapf/commits?author=brettcannon">google/yapf</a></li>
 
 
 
@@ -2873,63 +2673,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/topazproject/topaz/commits?author=brettcannon">topazproject/topaz</a></li>
-
-
-
-<li><a href="https://github.com/VSCodeVim/Vim/commits?author=brettcannon">VSCodeVim/Vim</a></li>
-
-
-
-<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
-
-
-
-<li><a href="https://github.com/pytest-dev/pytest/commits?author=brettcannon">pytest-dev/pytest</a></li>
-
-
-
-<li><a href="https://github.com/reubeno/brush/commits?author=brettcannon">reubeno/brush</a></li>
-
-
-
-<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
-
-
-
-<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
-
-
-
-<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
-
-
-
-<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
-
-
-
-<li><a href="https://github.com/GraphQLGuide/book/commits?author=brettcannon">GraphQLGuide/book</a></li>
-
-
-
-<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
-
-
-
-<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
-
-
-
-<li><a href="https://github.com/hynek/build-and-inspect-python-package/commits?author=brettcannon">hynek/build-and-inspect-python-package</a></li>
-
-
-
-<li><a href="https://github.com/regebro/supporting-python-3/commits?author=brettcannon">regebro/supporting-python-3</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
+<li><a href="https://github.com/jupyter-book/mystmd.org/commits?author=brettcannon">jupyter-book/mystmd.org</a></li>
 
 
 
@@ -2937,131 +2681,7 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/score-spec/spec/commits?author=brettcannon">score-spec/spec</a></li>
-
-
-
-<li><a href="https://github.com/mesonbuild/meson/commits?author=brettcannon">mesonbuild/meson</a></li>
-
-
-
-<li><a href="https://github.com/extism/extism/commits?author=brettcannon">extism/extism</a></li>
-
-
-
-<li><a href="https://github.com/pypa/pipx/commits?author=brettcannon">pypa/pipx</a></li>
-
-
-
-<li><a href="https://github.com/devcontainers/features/commits?author=brettcannon">devcontainers/features</a></li>
-
-
-
-<li><a href="https://github.com/WebAssembly/component-model/commits?author=brettcannon">WebAssembly/component-model</a></li>
-
-
-
-<li><a href="https://github.com/palantir/python-language-server/commits?author=brettcannon">palantir/python-language-server</a></li>
-
-
-
-<li><a href="https://github.com/ericpalakovichcarr/pytest-pythonpath/commits?author=brettcannon">ericpalakovichcarr/pytest-pythonpath</a></li>
-
-
-
-<li><a href="https://github.com/Quansight-Labs/free-threaded-compatibility/commits?author=brettcannon">Quansight-Labs/free-threaded-compatibility</a></li>
-
-
-
-<li><a href="https://github.com/11ty/docs/commits?author=brettcannon">11ty/docs</a></li>
-
-
-
-<li><a href="https://github.com/okken/pytest-srcpaths/commits?author=brettcannon">okken/pytest-srcpaths</a></li>
-
-
-
-<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-cosmos-python/commits?author=brettcannon">Azure/azure-cosmos-python</a></li>
-
-
-
-<li><a href="https://github.com/bytecodealliance/bytecodealliance.org/commits?author=brettcannon">bytecodealliance/bytecodealliance.org</a></li>
-
-
-
-<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
-
-
-
-<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
-
-
-
-<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
-
-
-
-<li><a href="https://github.com/pypa/trove-classifiers/commits?author=brettcannon">pypa/trove-classifiers</a></li>
-
-
-
-<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
-
-
-
-<li><a href="https://github.com/Enderchief/gleam-tools/commits?author=brettcannon">Enderchief/gleam-tools</a></li>
-
-
-
-<li><a href="https://github.com/casey/just/commits?author=brettcannon">casey/just</a></li>
-
-
-
-<li><a href="https://github.com/google/yapf/commits?author=brettcannon">google/yapf</a></li>
-
-
-
-<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
-
-
-
-<li><a href="https://github.com/MagicStack/MagicPython/commits?author=brettcannon">MagicStack/MagicPython</a></li>
-
-
-
-<li><a href="https://github.com/astral-sh/war/commits?author=brettcannon">astral-sh/war</a></li>
-
-
-
-<li><a href="https://github.com/jupyter-book/mystmd.org/commits?author=brettcannon">jupyter-book/mystmd.org</a></li>
-
-
-
-<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
-
-
-
-<li><a href="https://github.com/Azure/azure-functions-python-library/commits?author=brettcannon">Azure/azure-functions-python-library</a></li>
-
-
-
-<li><a href="https://github.com/clearlydefined/website/commits?author=brettcannon">clearlydefined/website</a></li>
-
-
-
-<li><a href="https://github.com/google/grumpy/commits?author=brettcannon">google/grumpy</a></li>
-
-
-
-<li><a href="https://github.com/kushaldas/asaman/commits?author=brettcannon">kushaldas/asaman</a></li>
-
-
-
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
+<li><a href="https://github.com/ansible/ansible/commits?author=brettcannon">ansible/ansible</a></li>
 
 
 
@@ -3069,11 +2689,307 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><a href="https://github.com/conda/conda-docs/commits?author=brettcannon">conda/conda-docs</a></li>
+
+
+
+<li><a href="https://github.com/getsentry/responses/commits?author=brettcannon">getsentry/responses</a></li>
+
+
+
+<li><a href="https://github.com/bytecodealliance/bytecodealliance.org/commits?author=brettcannon">bytecodealliance/bytecodealliance.org</a></li>
+
+
+
+<li><a href="https://github.com/andrew/nesbitt.io/commits?author=brettcannon">andrew/nesbitt.io</a></li>
+
+
+
+<li><a href="https://github.com/pablogsal/cpython_leaderboard/commits?author=brettcannon">pablogsal/cpython_leaderboard</a></li>
+
+
+
+<li><a href="https://github.com/VSCodeVim/Vim/commits?author=brettcannon">VSCodeVim/Vim</a></li>
+
+
+
+<li><a href="https://github.com/luabud/hello-vscodespaces/commits?author=brettcannon">luabud/hello-vscodespaces</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-extension-samples/commits?author=brettcannon">microsoft/vscode-extension-samples</a></li>
+
+
+
+<li><a href="https://github.com/jupyterlab/jupyterlab/commits?author=brettcannon">jupyterlab/jupyterlab</a></li>
+
+
+
+<li><a href="https://github.com/vscode-restructuredtext/vscode-restructuredtext/commits?author=brettcannon">vscode-restructuredtext/vscode-restructuredtext</a></li>
+
+
+
+<li><a href="https://github.com/stellar-deprecated/docs/commits?author=brettcannon">stellar-deprecated/docs</a></li>
+
+
+
+<li><a href="https://github.com/markshannon/faster-cpython/commits?author=brettcannon">markshannon/faster-cpython</a></li>
+
+
+
+<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
+
+
+
+<li><a href="https://github.com/psf/webassembly/commits?author=brettcannon">psf/webassembly</a></li>
+
+
+
+<li><a href="https://github.com/Fyrd/caniuse/commits?author=brettcannon">Fyrd/caniuse</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/character-frequency/commits?author=brettcannon">brettcannon/character-frequency</a></i></li>
+
+
+
+<li><a href="https://github.com/reubeno/brush/commits?author=brettcannon">reubeno/brush</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-pylint/commits?author=brettcannon">microsoft/vscode-pylint</a></li>
+
+
+
+<li><a href="https://github.com/Devid-Ba/Text-adventure/commits?author=brettcannon">Devid-Ba/Text-adventure</a></li>
+
+
+
+<li><a href="https://github.com/mozilla-services/konfig/commits?author=brettcannon">mozilla-services/konfig</a></li>
+
+
+
+<li><a href="https://github.com/lpil/sqlight/commits?author=brettcannon">lpil/sqlight</a></li>
+
+
+
+<li><a href="https://github.com/MicrosoftDocs/azure-docs/commits?author=brettcannon">MicrosoftDocs/azure-docs</a></li>
+
+
+
+<li><a href="https://github.com/pyvideo/data/commits?author=brettcannon">pyvideo/data</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/notebook/commits?author=brettcannon">jupyter/notebook</a></li>
+
+
+
+<li><a href="https://github.com/dusty-phillips/macabre/commits?author=brettcannon">dusty-phillips/macabre</a></li>
+
+
+
+<li><a href="https://github.com/Enderchief/gleam-tools/commits?author=brettcannon">Enderchief/gleam-tools</a></li>
+
+
+
+<li><a href="https://github.com/python/pythontestdotnet/commits?author=brettcannon">python/pythontestdotnet</a></li>
+
+
+
+<li><a href="https://github.com/pypa/build/commits?author=brettcannon">pypa/build</a></li>
+
+
+
+<li><a href="https://github.com/scikit-learn/scikit-learn/commits?author=brettcannon">scikit-learn/scikit-learn</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/rustfmt/commits?author=brettcannon">rust-lang/rustfmt</a></li>
+
+
+
+<li><a href="https://github.com/chhantyal/py3readiness/commits?author=brettcannon">chhantyal/py3readiness</a></li>
+
+
+
 <li><a href="https://github.com/w3c/ServiceWorker/commits?author=brettcannon">w3c/ServiceWorker</a></li>
 
 
 
-<li><a href="https://github.com/bytecodealliance/wasm-tools/commits?author=brettcannon">bytecodealliance/wasm-tools</a></li>
+<li><a href="https://github.com/modelcontextprotocol/rust-sdk/commits?author=brettcannon">modelcontextprotocol/rust-sdk</a></li>
+
+
+
+<li><a href="https://github.com/conda/conda-build/commits?author=brettcannon">conda/conda-build</a></li>
+
+
+
+<li><a href="https://github.com/victor-o-silva/python-links-from-link-header/commits?author=brettcannon">victor-o-silva/python-links-from-link-header</a></li>
+
+
+
+<li><a href="https://github.com/jupyter/jupyter.github.io/commits?author=brettcannon">jupyter/jupyter.github.io</a></li>
+
+
+
+<li><a href="https://github.com/pyca/pyopenssl/commits?author=brettcannon">pyca/pyopenssl</a></li>
+
+
+
+<li><a href="https://github.com/PyCQA/pyflakes/commits?author=brettcannon">PyCQA/pyflakes</a></li>
+
+
+
+<li><a href="https://github.com/beeware/podium/commits?author=brettcannon">beeware/podium</a></li>
+
+
+
+<li><a href="https://github.com/python-poetry/tomlkit/commits?author=brettcannon">python-poetry/tomlkit</a></li>
+
+
+
+<li><a href="https://github.com/sphinx-doc/sphinx/commits?author=brettcannon">sphinx-doc/sphinx</a></li>
+
+
+
+<li><a href="https://github.com/gitkraken/vscode-gitlens/commits?author=brettcannon">gitkraken/vscode-gitlens</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/python-sample-vscode-django-tutorial/commits?author=brettcannon">microsoft/python-sample-vscode-django-tutorial</a></li>
+
+
+
+<li><a href="https://github.com/pycascades/welcome-wagon-2018/commits?author=brettcannon">pycascades/welcome-wagon-2018</a></li>
+
+
+
+<li><a href="https://github.com/nayafia/nayafia/commits?author=brettcannon">nayafia/nayafia</a></li>
+
+
+
+<li><a href="https://github.com/python/mypy/commits?author=brettcannon">python/mypy</a></li>
+
+
+
+<li><a href="https://github.com/bagder/http2-explained/commits?author=brettcannon">bagder/http2-explained</a></li>
+
+
+
+<li><a href="https://github.com/score-spec/spec/commits?author=brettcannon">score-spec/spec</a></li>
+
+
+
+<li><a href="https://github.com/Lukasa/language-restructuredtext/commits?author=brettcannon">Lukasa/language-restructuredtext</a></li>
+
+
+
+<li><a href="https://github.com/ericpalakovichcarr/pytest-pythonpath/commits?author=brettcannon">ericpalakovichcarr/pytest-pythonpath</a></li>
+
+
+
+<li><a href="https://github.com/rust-lang/log/commits?author=brettcannon">rust-lang/log</a></li>
+
+
+
+<li><a href="https://github.com/aurelia/documentation/commits?author=brettcannon">aurelia/documentation</a></li>
+
+
+
+<li><a href="https://github.com/pypa/pipx/commits?author=brettcannon">pypa/pipx</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/vscode-tools-for-ai/commits?author=brettcannon">microsoft/vscode-tools-for-ai</a></li>
+
+
+
+<li><a href="https://github.com/lorenzofox3/zora/commits?author=brettcannon">lorenzofox3/zora</a></li>
+
+
+
+<li><a href="https://github.com/okken/pytest-srcpaths/commits?author=brettcannon">okken/pytest-srcpaths</a></li>
+
+
+
+<li><a href="https://github.com/bungcip/better-toml/commits?author=brettcannon">bungcip/better-toml</a></li>
+
+
+
+<li><a href="https://github.com/WebAssembly/component-model/commits?author=brettcannon">WebAssembly/component-model</a></li>
+
+
+
+<li><a href="https://github.com/Azure/azure-cli/commits?author=brettcannon">Azure/azure-cli</a></li>
+
+
+
+<li><a href="https://github.com/lustre-labs/ui/commits?author=brettcannon">lustre-labs/ui</a></li>
+
+
+
+<li><a href="https://github.com/ebkalderon/tower-lsp/commits?author=brettcannon">ebkalderon/tower-lsp</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/aspire/commits?author=brettcannon">microsoft/aspire</a></li>
+
+
+
+<li><a href="https://github.com/livebook-dev/livebook/commits?author=brettcannon">livebook-dev/livebook</a></li>
+
+
+
+<li><a href="https://github.com/casey/just/commits?author=brettcannon">casey/just</a></li>
+
+
+
+<li><a href="https://github.com/astral-sh/uv/commits?author=brettcannon">astral-sh/uv</a></li>
+
+
+
+<li><a href="https://github.com/realpython/python-guide/commits?author=brettcannon">realpython/python-guide</a></li>
+
+
+
+<li><a href="https://github.com/lsd-rs/lsd/commits?author=brettcannon">lsd-rs/lsd</a></li>
+
+
+
+<li><a href="https://github.com/rocketreach/rocketreach_python/commits?author=brettcannon">rocketreach/rocketreach_python</a></li>
+
+
+
+<li><a href="https://github.com/facebook/pyre-check/commits?author=brettcannon">facebook/pyre-check</a></li>
+
+
+
+<li><a href="https://github.com/devcontainers/features/commits?author=brettcannon">devcontainers/features</a></li>
+
+
+
+<li><a href="https://github.com/GraphQLGuide/book/commits?author=brettcannon">GraphQLGuide/book</a></li>
+
+
+
+<li><a href="https://github.com/clearlydefined/website/commits?author=brettcannon">clearlydefined/website</a></li>
+
+
+
+<li><a href="https://github.com/gleam-lang/gleam/commits?author=brettcannon">gleam-lang/gleam</a></li>
+
+
+
+<li><a href="https://github.com/twisted/klein/commits?author=brettcannon">twisted/klein</a></li>
+
+
+
+<li><a href="https://github.com/zwaldowski/match-label-action/commits?author=brettcannon">zwaldowski/match-label-action</a></li>
+
+
+
+<li><a href="https://github.com/mesonbuild/meson/commits?author=brettcannon">mesonbuild/meson</a></li>
 
 
 
@@ -3081,7 +2997,91 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/golang/go/commits?author=brettcannon">golang/go</a></li>
+<li><a href="https://github.com/psf/fundable-packaging-improvements/commits?author=brettcannon">psf/fundable-packaging-improvements</a></li>
+
+
+
+<li><a href="https://github.com/image-rs/blog.image-rs.org/commits?author=brettcannon">image-rs/blog.image-rs.org</a></li>
+
+
+
+<li><a href="https://github.com/pdm-project/pdm/commits?author=brettcannon">pdm-project/pdm</a></li>
+
+
+
+<li><a href="https://github.com/vega/ipyvega/commits?author=brettcannon">vega/ipyvega</a></li>
+
+
+
+<li><a href="https://github.com/bitbldr/sprocket_docs/commits?author=brettcannon">bitbldr/sprocket_docs</a></li>
+
+
+
+<li><a href="https://github.com/oauthlib/oauthlib/commits?author=brettcannon">oauthlib/oauthlib</a></li>
+
+
+
+<li><a href="https://github.com/microsoftgraph/python-sample-pagination/commits?author=brettcannon">microsoftgraph/python-sample-pagination</a></li>
+
+
+
+<li><a href="https://github.com/bytecodealliance/setup-wasi-sdk-action/commits?author=brettcannon">bytecodealliance/setup-wasi-sdk-action</a></li>
+
+
+
+<li><a href="https://github.com/extism/extism/commits?author=brettcannon">extism/extism</a></li>
+
+
+
+<li><a href="https://github.com/saschpe/mozilla-plugins/commits?author=brettcannon">saschpe/mozilla-plugins</a></li>
+
+
+
+<li><a href="https://github.com/stellar/awesome-stellar/commits?author=brettcannon">stellar/awesome-stellar</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/debugpy/commits?author=brettcannon">microsoft/debugpy</a></li>
+
+
+
+<li><a href="https://github.com/microsoftgraph/microsoft-graph-docs-contrib/commits?author=brettcannon">microsoftgraph/microsoft-graph-docs-contrib</a></li>
+
+
+
+<li><a href="https://github.com/cardoe/stderrlog-rs/commits?author=brettcannon">cardoe/stderrlog-rs</a></li>
+
+
+
+<li><a href="https://github.com/pytest-dev/pytest/commits?author=brettcannon">pytest-dev/pytest</a></li>
+
+
+
+<li><a href="https://github.com/pypa/trove-classifiers/commits?author=brettcannon">pypa/trove-classifiers</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/exercism-solutions/commits?author=brettcannon">brettcannon/exercism-solutions</a></i></li>
+
+
+
+<li><a href="https://github.com/actions-rs/install/commits?author=brettcannon">actions-rs/install</a></li>
+
+
+
+<li><a href="https://github.com/bytecodealliance/wasm-tools/commits?author=brettcannon">bytecodealliance/wasm-tools</a></li>
+
+
+
+<li><a href="https://github.com/psf/black/commits?author=brettcannon">psf/black</a></li>
+
+
+
+<li><a href="https://github.com/riscv-software-src/riscv-tests/commits?author=brettcannon">riscv-software-src/riscv-tests</a></li>
+
+
+
+<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/commits?author=brettcannon">adafruit/Adafruit_CircuitPython_CircuitPlayground</a></li>
 
 
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/731 PEPs (4.8%).</summary>
+<summary>I have (co-)authored 35/732 PEPs (4.8%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3553,6 +3553,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="72">Shantanu Jain (3)</li>
 
+<li value="72">Serhiy Storchaka (3)</li>
+
 <li value="72">Sergey B Kirpichev (3)</li>
 
 <li value="72">Peter Bierma (3)</li>
@@ -3595,145 +3597,143 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="72">Alex Martelli (3)</li>
 
-<li value="97">Vladimir Diaz (2)</li>
+<li value="98">Vladimir Diaz (2)</li>
 
-<li value="97">Vinay Sajip (2)</li>
+<li value="98">Vinay Sajip (2)</li>
 
-<li value="97">Trishank Karthik Kuppusamy (2)</li>
+<li value="98">Trishank Karthik Kuppusamy (2)</li>
 
-<li value="97">Tobias Kohn (2)</li>
+<li value="98">Tobias Kohn (2)</li>
 
-<li value="97">Tim Delaney (2)</li>
+<li value="98">Tim Delaney (2)</li>
 
-<li value="97">Till Varoquaux (2)</li>
+<li value="98">Till Varoquaux (2)</li>
 
-<li value="97">Terry Reedy (2)</li>
+<li value="98">Terry Reedy (2)</li>
 
-<li value="97">Tal Einat (2)</li>
+<li value="98">Tal Einat (2)</li>
 
-<li value="97">Stéphane Bidoul (2)</li>
+<li value="98">Stéphane Bidoul (2)</li>
 
-<li value="97">Steven Troxler (2)</li>
+<li value="98">Steven Troxler (2)</li>
 
-<li value="97">Stephen J. Turnbull (2)</li>
+<li value="98">Stephen J. Turnbull (2)</li>
 
-<li value="97">Stefano Borini (2)</li>
+<li value="98">Stefano Borini (2)</li>
 
-<li value="97">Stefan Behnel (2)</li>
+<li value="98">Stefan Behnel (2)</li>
 
-<li value="97">Stan Ulbrych (2)</li>
+<li value="98">Stan Ulbrych (2)</li>
 
-<li value="97">Shannon Zhu (2)</li>
+<li value="98">Shannon Zhu (2)</li>
 
-<li value="97">Seth Michael Larson (2)</li>
+<li value="98">Seth Michael Larson (2)</li>
 
-<li value="97">Serhiy Storchaka (2)</li>
+<li value="98">Sam Gross (2)</li>
 
-<li value="97">Sam Gross (2)</li>
+<li value="98">Ronald Oussoren (2)</li>
 
-<li value="97">Ronald Oussoren (2)</li>
+<li value="98">Robert Collins (2)</li>
 
-<li value="97">Robert Collins (2)</li>
+<li value="98">Paul Ganssle (2)</li>
 
-<li value="97">Paul Ganssle (2)</li>
+<li value="98">Oleg Broytman (2)</li>
 
-<li value="97">Oleg Broytman (2)</li>
+<li value="98">Nick Humrich (2)</li>
 
-<li value="97">Nick Humrich (2)</li>
+<li value="98">Ned Deily (2)</li>
 
-<li value="97">Ned Deily (2)</li>
+<li value="98">Miro Hrončok (2)</li>
 
-<li value="97">Miro Hrončok (2)</li>
+<li value="98">Michael J. Sullivan (2)</li>
 
-<li value="97">Michael J. Sullivan (2)</li>
+<li value="98">Mark Mendoza (2)</li>
 
-<li value="97">Mark Mendoza (2)</li>
+<li value="98">Mark Hammond (2)</li>
 
-<li value="97">Mark Hammond (2)</li>
+<li value="98">Mark E. Haase (2)</li>
 
-<li value="97">Mark E. Haase (2)</li>
+<li value="98">Mario Corchero (2)</li>
 
-<li value="97">Mario Corchero (2)</li>
+<li value="98">Marina Moore (2)</li>
 
-<li value="97">Marina Moore (2)</li>
+<li value="98">Marcel Plch (2)</li>
 
-<li value="97">Marcel Plch (2)</li>
+<li value="98">Magnus Lie Hetland (2)</li>
 
-<li value="97">Magnus Lie Hetland (2)</li>
+<li value="98">Maggie Moss (2)</li>
 
-<li value="97">Maggie Moss (2)</li>
+<li value="98">Koos Zevenhoven (2)</li>
 
-<li value="97">Koos Zevenhoven (2)</li>
+<li value="98">Justin Cappos (2)</li>
 
-<li value="97">Justin Cappos (2)</li>
+<li value="98">Josiah Carlson (2)</li>
 
-<li value="97">Josiah Carlson (2)</li>
+<li value="98">Joe Carey (2)</li>
 
-<li value="97">Joe Carey (2)</li>
+<li value="98">Jesse Noller (2)</li>
 
-<li value="97">Jesse Noller (2)</li>
+<li value="98">Jaime Rodríguez-Guerra (2)</li>
 
-<li value="97">Jaime Rodríguez-Guerra (2)</li>
+<li value="98">Jack Jansen (2)</li>
 
-<li value="97">Jack Jansen (2)</li>
+<li value="98">Greg Wilson (2)</li>
 
-<li value="97">Greg Wilson (2)</li>
+<li value="98">Greg Stein (2)</li>
 
-<li value="97">Greg Stein (2)</li>
+<li value="98">Gordon McMillan (2)</li>
 
-<li value="97">Gordon McMillan (2)</li>
+<li value="98">Germán Méndez Bravo (2)</li>
 
-<li value="97">Germán Méndez Bravo (2)</li>
+<li value="98">Geoffrey Thomas (2)</li>
 
-<li value="97">Geoffrey Thomas (2)</li>
+<li value="98">Fred L. Drake, Jr. (2)</li>
 
-<li value="97">Fred L. Drake, Jr. (2)</li>
+<li value="98">Facundo Batista (2)</li>
 
-<li value="97">Facundo Batista (2)</li>
+<li value="98">Erik De Bonte (2)</li>
 
-<li value="97">Erik De Bonte (2)</li>
+<li value="98">Eli Uriegas (2)</li>
 
-<li value="97">Eli Uriegas (2)</li>
+<li value="98">Donghee Na (2)</li>
 
-<li value="97">Donghee Na (2)</li>
+<li value="98">Dirkjan Ochtman (2)</li>
 
-<li value="97">Dirkjan Ochtman (2)</li>
+<li value="98">Dino Viehland (2)</li>
 
-<li value="97">Dino Viehland (2)</li>
+<li value="98">David Foster (2)</li>
 
-<li value="97">David Foster (2)</li>
+<li value="98">David Ascher (2)</li>
 
-<li value="97">David Ascher (2)</li>
+<li value="98">Daniel Stutzbach (2)</li>
 
-<li value="97">Daniel Stutzbach (2)</li>
+<li value="98">Daniel F Moisset (2)</li>
 
-<li value="97">Daniel F Moisset (2)</li>
+<li value="98">Cory Benfield (2)</li>
 
-<li value="97">Cory Benfield (2)</li>
+<li value="98">Clark C. Evans (2)</li>
 
-<li value="97">Clark C. Evans (2)</li>
+<li value="98">Christopher A. Craig (2)</li>
 
-<li value="97">Christopher A. Craig (2)</li>
+<li value="98">Charlie Marsh (2)</li>
 
-<li value="97">Charlie Marsh (2)</li>
+<li value="98">Cameron Simpson (2)</li>
 
-<li value="97">Cameron Simpson (2)</li>
+<li value="98">Calvin Spealman (2)</li>
 
-<li value="97">Calvin Spealman (2)</li>
+<li value="98">Ben Finney (2)</li>
 
-<li value="97">Ben Finney (2)</li>
+<li value="98">Andy R. Terrel (2)</li>
 
-<li value="97">Andy R. Terrel (2)</li>
+<li value="98">Andrey Talman (2)</li>
 
-<li value="97">Andrey Talman (2)</li>
+<li value="98">Alexander Belopolsky (2)</li>
 
-<li value="97">Alexander Belopolsky (2)</li>
+<li value="98">Alex Gaynor (2)</li>
 
-<li value="97">Alex Gaynor (2)</li>
+<li value="98">Adam Turner (2)</li>
 
-<li value="97">Adam Turner (2)</li>
-
-<li value="97">Aahz (2)</li>
+<li value="98">Aahz (2)</li>
 
 <li value="167">Łukasz Modzelewski (1)</li>
 
