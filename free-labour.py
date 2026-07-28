@@ -19,7 +19,9 @@ import json
 import operator
 import os
 import pathlib
+import sys
 import typing
+import urllib.parse
 
 import feedparser
 import gidgethub.abc
@@ -28,6 +30,10 @@ import httpx
 import jinja2
 import tomllib
 import trio
+
+
+# GitHub search API returns at most 1000 results per query.
+_COMMIT_SEARCH_MAX_RESULTS = 1000
 
 
 async def fetch_json(url, client):
@@ -94,47 +100,431 @@ class GitHubProject(Contribution):
         return f"<{self.owner}/{self.name}: {stats_str}>"
 
 
-async def contribution_counts(gh: gidgethub.httpx.GitHubAPI, username: str):
-    """Get the commit count for repositories.
+def load_contribution_baseline(
+    jsonl_glob: str = "*.jsonl",
+) -> tuple[dict[tuple[str, str], GitHubProject], datetime.datetime | None, set[str]]:
+    """Load the most recent valid contribution baseline from JSONL log files.
 
-    All private repositories and forks are dropped.
+    Scans all files matching *jsonl_glob* (e.g. yearly files like 2025.jsonl,
+    2026.jsonl) from newest to oldest and returns the most recent log entry that
+    contains GitHub-project contribution data.
 
+    Returns:
+        github_projects: mapping from (owner, name) to GitHubProject
+        watermark:       datetime of the last successful incremental refresh,
+                         or None if no watermark has been stored yet
+        seen_shas:       set of commit SHAs already processed in the last window
+                         (used to prevent double-counting across runs)
     """
-    with open("queries/commit_counts.graphql", "r", encoding="utf-8") as file:
-        query = file.read()
-    contributions = {}
-    activity_in_the_past = True
-    contributions_up_to = None
-    while activity_in_the_past:
-        query_result = await gh.graphql(
-            query, username=username, endDate=contributions_up_to
-        )
-        data = query_result["user"]["contributionsCollection"]
-        activity_in_the_past = data["hasActivityInThePast"]
-        contributions_up_to = data["startedAt"]
-        for contribution in data["commitContributionsByRepository"]:
-            repo = contribution["repository"]
-            # Don't care about forks as those are not contributions to upstream.
-            # Don't care about private repositories as that isn't giving back
-            # to open source.
-            if repo["isFork"] or repo["isPrivate"]:
+    all_files = sorted(pathlib.Path(".").glob(jsonl_glob))
+
+    for jsonl_file in reversed(all_files):
+        try:
+            with jsonl_file.open(encoding="utf-8") as f:
+                lines = f.readlines()
+        except OSError:
+            continue
+
+        for raw_line in reversed(lines):
+            raw_line = raw_line.strip()
+            if not raw_line:
                 continue
-            owner = repo["owner"]["login"]
-            name = repo["name"]
-            project = contributions.setdefault(
-                (owner, name), GitHubProject(owner, name, username)
+            try:
+                entry = json.loads(raw_line)
+            except json.JSONDecodeError:
+                continue
+
+            contributions = entry.get("contributions")
+            if not contributions:
+                continue
+
+            github_projects: dict[tuple[str, str], GitHubProject] = {}
+            for contrib in contributions:
+                if "owner" not in contrib or "name" not in contrib:
+                    # RecordedContribution (non-GitHub); skip – will be re-applied
+                    # from overrides.toml at render time.
+                    continue
+                owner = contrib["owner"]
+                name = contrib["name"]
+                github_projects[(owner, name)] = GitHubProject(
+                    owner=owner,
+                    name=name,
+                    contributor=contrib.get("contributor", ""),
+                    stars=contrib.get("stars", 0),
+                    commits=contrib.get("commits", 0),
+                    contributors=contrib.get("contributors", 0),
+                    started=contrib.get("started", False),
+                )
+
+            if not github_projects:
+                continue
+
+            # Backward-compatible: older entries lack these fields.
+            watermark: datetime.datetime | None = None
+            raw_watermark = entry.get("contribution_refresh_watermark")
+            if raw_watermark:
+                try:
+                    watermark = datetime.datetime.fromisoformat(raw_watermark)
+                except ValueError:
+                    pass
+
+            seen_shas: set[str] = set(entry.get("contribution_seen_shas", []))
+
+            return github_projects, watermark, seen_shas
+
+    return {}, None, set()
+
+
+async def _commit_search_page(
+    gh: gidgethub.abc.GitHubAPI,
+    query: str,
+    page: int,
+    per_page: int = 100,
+) -> dict:
+    """Fetch one page of GitHub commit-search results."""
+    encoded = urllib.parse.quote(query, safe="")
+    url = f"/search/commits?q={encoded}&per_page={per_page}&page={page}"
+    return await gh.getitem(url, accept="application/vnd.github+json")
+
+
+async def search_commits_in_window(
+    gh: gidgethub.abc.GitHubAPI,
+    username: str,
+    since: datetime.datetime,
+    until: datetime.datetime,
+) -> list[dict]:
+    """Return all public commits by *username* in the interval [since, until].
+
+    Searches commits reachable from each repository's default branch only.
+    Independent mirrors may expose the same SHA; callers must deduplicate by SHA.
+
+    When the result set exceeds the 1 000-item GitHub API limit the window is
+    recursively split in half until each sub-window fits within the limit.
+    """
+    since_str = since.strftime("%Y-%m-%dT%H:%M:%SZ")
+    until_str = until.strftime("%Y-%m-%dT%H:%M:%SZ")
+    query = f"author:{username} author-date:{since_str}..{until_str}"
+
+    first_page = await _commit_search_page(gh, query, page=1, per_page=100)
+    total_count = first_page.get("total_count", 0)
+
+    if total_count == 0:
+        return []
+
+    if total_count > _COMMIT_SEARCH_MAX_RESULTS:
+        window = until - since
+        if window <= datetime.timedelta(seconds=1):
+            # Cannot split further; take the first 1 000 and warn.
+            print(
+                f"WARNING: date window [{since_str}, {until_str}] has "
+                f"{total_count} commits but cannot be split further; "
+                f"retrieving first {_COMMIT_SEARCH_MAX_RESULTS} only.",
+                file=sys.stderr,
             )
-            project.stars = repo["stargazers"]["totalCount"]
-            project.commits += contribution["contributions"]["totalCount"]
-    return set(contributions.values())
+            # Fall through to normal pagination below.
+        else:
+            mid = since + window / 2
+            # Left half:  [since, mid]
+            left = await search_commits_in_window(gh, username, since, mid)
+            # Right half: [mid + 1 s, until]  (avoid double-counting mid)
+            right_since = mid + datetime.timedelta(seconds=1)
+            right = await search_commits_in_window(gh, username, right_since, until)
+            return left + right
+
+    # Normal pagination: collect up to _COMMIT_SEARCH_MAX_RESULTS items.
+    items: list[dict] = list(first_page.get("items", []))
+    max_items = min(total_count, _COMMIT_SEARCH_MAX_RESULTS)
+    page = 2
+    while len(items) < max_items:
+        result = await _commit_search_page(gh, query, page=page, per_page=100)
+        page_items = result.get("items", [])
+        if not page_items:
+            break
+        items.extend(page_items)
+        page += 1
+
+    return items
 
 
-async def star_count(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
-    """Add the star count to a GitHub project."""
-    with open("queries/star_count.graphql", "r", encoding="utf-8") as file:
-        query = file.read()
-    data = await gh.graphql(query, owner=project.owner, name=project.name)
-    project.stars = data["repository"]["stargazers"]["totalCount"]
+async def process_new_commits(
+    gh: gidgethub.abc.GitHubAPI,
+    username: str,
+    raw_commits: list[dict],
+    cached: dict[tuple[str, str], GitHubProject],
+    seen_shas: set[str],
+) -> tuple[dict[tuple[str, str], GitHubProject], set[str]]:
+    """Apply newly found commit-search results to the cached contribution data.
+
+    Deduplicates commits by SHA using the following preference order:
+      1. A repository already present in the historical contribution cache.
+      2. A repository already selected for another SHA in this refresh batch.
+      3. Fetch metadata for the remaining candidates; prefer a non-fork
+         repository with the highest star count, with full_name as a stable
+         tiebreaker.  Ambiguous selections are logged to stderr so they can be
+         corrected via overrides.toml.
+
+    Returns (updated_cached, new_seen_shas).
+    """
+    # ------------------------------------------------------------------ #
+    # Build SHA → [candidate repos] mapping, filtering formal forks/private
+    # ------------------------------------------------------------------ #
+    sha_to_candidates: dict[str, list[tuple[str, str]]] = {}
+    for item in raw_commits:
+        sha = item["sha"]
+        if sha in seen_shas:
+            continue
+        repo_info = item.get("repository", {})
+        if repo_info.get("fork", False) or repo_info.get("private", False):
+            continue
+        full_name = repo_info.get("full_name", "")
+        if "/" not in full_name:
+            continue
+        owner, _, name = full_name.partition("/")
+        key = (owner, name)
+        cands = sha_to_candidates.setdefault(sha, [])
+        if key not in cands:
+            cands.append(key)
+
+    # ------------------------------------------------------------------ #
+    # First pass: resolve unambiguous SHAs and those matching cached/selected
+    # ------------------------------------------------------------------ #
+    metadata_cache: dict[tuple[str, str], dict] = {}
+    sha_to_repo: dict[str, tuple[str, str]] = {}
+    selected_repos: set[tuple[str, str]] = set()
+    ambiguous: list[tuple[str, list[tuple[str, str]]]] = []
+
+    for sha, candidates in sha_to_candidates.items():
+        if len(candidates) == 1:
+            key = candidates[0]
+            sha_to_repo[sha] = key
+            selected_repos.add(key)
+            continue
+
+        # Prefer a repo already present in the historical baseline.
+        cached_cands = [c for c in candidates if c in cached]
+        if cached_cands:
+            best = max(cached_cands, key=lambda k: cached[k].commits)
+            sha_to_repo[sha] = best
+            selected_repos.add(best)
+            continue
+
+        # Prefer a repo already selected for a different SHA in this batch.
+        sel_cands = [c for c in candidates if c in selected_repos]
+        if len(sel_cands) == 1:
+            sha_to_repo[sha] = sel_cands[0]
+            continue
+        if len(sel_cands) > 1:
+            counts = {k: sum(1 for v in sha_to_repo.values() if v == k) for k in sel_cands}
+            sha_to_repo[sha] = max(sel_cands, key=lambda k: counts[k])
+            continue
+
+        ambiguous.append((sha, candidates))
+
+    # ------------------------------------------------------------------ #
+    # Fetch metadata only for repos involved in ambiguous SHAs
+    # ------------------------------------------------------------------ #
+    repos_needing_meta: set[tuple[str, str]] = {
+        cand
+        for _, candidates in ambiguous
+        for cand in candidates
+        if cand not in metadata_cache
+    }
+    for owner, name in repos_needing_meta:
+        try:
+            meta = await gh.getitem(
+                "/repos/{owner}/{repo}",
+                {"owner": owner, "repo": name},
+                accept="application/vnd.github+json",
+            )
+            metadata_cache[(owner, name)] = meta
+        except Exception as exc:  # noqa: BLE001
+            print(
+                f"WARNING: Could not fetch metadata for {owner}/{name}: {exc}; "
+                "treating as fork.",
+                file=sys.stderr,
+            )
+            metadata_cache[(owner, name)] = {"fork": True, "stargazers_count": 0}
+
+    # ------------------------------------------------------------------ #
+    # Second pass: resolve ambiguous SHAs using metadata
+    # ------------------------------------------------------------------ #
+    for sha, candidates in ambiguous:
+        # A first-pass assignment may now cover one of these candidates.
+        sel_cands = [c for c in candidates if c in selected_repos]
+        if len(sel_cands) == 1:
+            sha_to_repo[sha] = sel_cands[0]
+            selected_repos.add(sel_cands[0])
+            continue
+
+        # Filter out repositories that GitHub metadata marks as actual forks.
+        non_fork_cands = [
+            c
+            for c in candidates
+            if not metadata_cache.get(c, {}).get("fork", False)
+        ]
+        if not non_fork_cands:
+            print(
+                f"WARNING: SHA {sha[:12]}: all candidate repositories are forks "
+                f"({[f'{o}/{n}' for o, n in candidates]}); skipping.",
+                file=sys.stderr,
+            )
+            continue
+
+        if len(non_fork_cands) == 1:
+            sha_to_repo[sha] = non_fork_cands[0]
+            selected_repos.add(non_fork_cands[0])
+            continue
+
+        # Pick highest-starred non-fork; full_name is the stable tiebreaker.
+        def sort_key(k: tuple[str, str]) -> tuple[int, str]:
+            meta = metadata_cache.get(k, {})
+            return (-meta.get("stargazers_count", 0), f"{k[0]}/{k[1]}")
+
+        best = min(non_fork_cands, key=sort_key)
+        sha_to_repo[sha] = best
+        selected_repos.add(best)
+        print(
+            f"WARNING: Ambiguous SHA {sha[:12]}: selected {best[0]}/{best[1]} "
+            f"from {[f'{o}/{n}' for o, n in non_fork_cands]} "
+            "(resolve via overrides.toml if incorrect).",
+            file=sys.stderr,
+        )
+
+    # ------------------------------------------------------------------ #
+    # Apply assignments to the cached contribution dict
+    # ------------------------------------------------------------------ #
+    updated = dict(cached)
+    new_seen_shas = set(seen_shas)
+
+    for sha, (owner, name) in sha_to_repo.items():
+        new_seen_shas.add(sha)
+        key = (owner, name)
+        if key in updated:
+            updated[key] = dataclasses.replace(
+                updated[key], commits=updated[key].commits + 1
+            )
+        else:
+            stars = metadata_cache.get(key, {}).get("stargazers_count", 0)
+            updated[key] = GitHubProject(
+                owner=owner,
+                name=name,
+                contributor=username,
+                stars=stars,
+                commits=1,
+            )
+
+    return updated, new_seen_shas
+
+
+async def contribution_details(details, client):
+    """Gather relevant contribution details via incremental public commit search.
+
+    Loads the most recent contribution baseline from JSONL log files, then
+    searches GitHub's public commit-search API for commits authored by the user
+    since the last successful refresh watermark.  Applies overrides.toml on top
+    of the refreshed data.
+
+    Uses GITHUB_TOKEN (the workflow-provided token) for all GitHub API reads.
+    No organisation-scoped SAML-protected token is required.
+    """
+    username = details["github_username"]
+    token = os.environ.get("GITHUB_TOKEN", "")
+
+    with open("overrides.toml", "r", encoding="utf-8") as file:
+        manual_overrides = tomllib.loads(file.read())
+
+    # Load the most recent cached contribution baseline across all yearly JSONL files.
+    cached_projects, watermark, seen_shas = load_contribution_baseline()
+
+    new_watermark = watermark
+    new_seen_shas = seen_shas
+
+    if not token:
+        print(
+            "WARNING: GITHUB_TOKEN is not set; using cached contributions only.",
+            file=sys.stderr,
+        )
+    elif watermark is None:
+        # First run after switching to the incremental approach: the cached
+        # baseline is already correct from previous GraphQL-based runs.  Set
+        # the watermark to now so the *next* daily run performs an incremental
+        # search from today onward.
+        new_watermark = datetime.datetime.now(tz=datetime.UTC)
+    else:
+        gh = gidgethub.httpx.GitHubAPI(
+            client, f"{username}/{username}", oauth_token=token
+        )
+        try:
+            now = datetime.datetime.now(tz=datetime.UTC)
+            raw_commits = await search_commits_in_window(gh, username, watermark, now)
+            cached_projects, new_seen_shas = await process_new_commits(
+                gh, username, raw_commits, cached_projects, seen_shas
+            )
+            new_watermark = now
+        except Exception as exc:  # noqa: BLE001
+            print(
+                f"WARNING: Incremental contribution search failed: {exc}\n"
+                "Retaining cached contributions and prior watermark.",
+                file=sys.stderr,
+            )
+            # new_watermark and new_seen_shas stay unchanged (no progress made).
+
+    # ------------------------------------------------------------------ #
+    # Apply overrides.toml
+    # ------------------------------------------------------------------ #
+    github_overrides = manual_overrides.get("github", {})
+
+    # 1. Remove explicitly excluded repositories.
+    for remove in github_overrides.get("remove", []):
+        owner, _, name = remove.partition("/")
+        cached_projects.pop((owner, name), None)
+
+    # 2. Replace/augment with manually corrected entries from github.repos.
+    contribution_overrides = []
+    for repo in github_overrides.get("repos", []):
+        owner, name = repo["owner"], repo["name"]
+        cached_projects.pop((owner, name), None)
+        contribution_overrides.append(
+            RecordedContribution(
+                f"{owner}/{name}",
+                f"https://github.com/{owner}/{name}/commits?author={username}",
+                repo["commits"],
+            )
+        )
+
+    # 3. Mark "started by me" projects.
+    started_orgs = {
+        proj.partition("/")[0] for proj in github_overrides.get("started", [])
+    }
+    started_orgs.add(username)
+
+    contributions_list = list(cached_projects.values())
+    for project in contributions_list:
+        if project.owner in started_orgs:
+            project.started = True
+
+    contributions_list.extend(contribution_overrides)
+
+    # 4. Add non-GitHub contributions.
+    for project in manual_overrides.get("contributions", []):
+        name = project["name"]
+        url = project["url"]
+        if "commit_count" in project:
+            commits = project["commit_count"]
+        else:
+            commits = len(project["commits"])
+        contributions_list.append(RecordedContribution(name, url, commits))
+
+    details.update(
+        {
+            "contributions": contributions_list,
+            "contribution_refresh_watermark": (
+                new_watermark.isoformat() if new_watermark is not None else None
+            ),
+            # Store the SHAs processed in the last window for idempotency.
+            "contribution_seen_shas": sorted(new_seen_shas),
+        }
+    )
 
 
 async def contributors(gh: gidgethub.abc.GitHubAPI, project: GitHubProject):
@@ -202,65 +592,6 @@ def gh_overrides_repos(
     return frozenset(repos)
 
 
-async def contribution_details(details, client):
-    """Gather relevant contribution details."""
-    username = details["github_username"]
-    if not (token := os.environ.get("GH_USER_READ_TOKEN")):
-        details.update(
-            {
-                "contributions": [],
-            }
-        )
-        return
-
-    with open("overrides.toml", "r", encoding="utf-8") as file:
-        manual_overrides = tomllib.loads(file.read())
-    contribution_overrides = [
-        RecordedContribution(
-            f"{repo['owner']}/{repo['name']}",
-            f"https://github.com/{repo['owner']}/{repo['name']}/commits?author={username}",
-            repo["commits"],
-        )
-        for repo in manual_overrides["github"]["repos"]
-    ]
-    gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
-    gh_projects = await contribution_counts(gh, username)
-    for remove in manual_overrides["github"]["remove"]:
-        owner, _, name = remove.partition("/")
-        try:
-            gh_projects.remove(GitHubProject(owner, name))
-        except KeyError:
-            pass
-    for remove in manual_overrides["github"]["repos"]:
-        try:
-            gh_projects.remove(GitHubProject(remove["owner"], remove["name"]))
-        except KeyError:
-            pass
-    contributions_list = list(gh_projects)
-    started_orgs = {
-        proj.partition("/")[0] for proj in manual_overrides["github"]["started"]
-    }
-    started_orgs.add(details["github_username"])
-    for project in contributions_list:
-        if project.owner in started_orgs:
-            project.started = True
-    contributions_list.extend(contribution_overrides)
-    for project in manual_overrides["contributions"]:
-        name = project["name"]
-        url = project["url"]
-        if "commit_count" in project:
-            commits = project["commit_count"]
-        else:
-            commits = len(project["commits"])
-        contributions_list.append(RecordedContribution(name, url, commits))
-
-    details.update(
-        {
-            "contributions": contributions_list,
-        }
-    )
-
-
 async def latest_blog_post(details, client):
     """Find the latest blog post's URL and publication date."""
     feed = details["feed"]
@@ -291,7 +622,8 @@ async def fetch_bluesky_follower_count(details, client):
 
 async def fetch_cpython_contributors(details, client):
     username = details["github_username"]
-    if not (token := os.environ.get("GH_USER_READ_TOKEN")):
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
         details["cpython_contributor_ranking"] = 0
         return
     gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
