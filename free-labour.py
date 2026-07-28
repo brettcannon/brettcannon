@@ -19,6 +19,7 @@ import json
 import operator
 import os
 import pathlib
+import sys
 import typing
 
 import feedparser
@@ -202,7 +203,33 @@ def gh_overrides_repos(
     return frozenset(repos)
 
 
-async def contribution_details(details, client):
+def load_contributions_from_log(log_path):
+    """Load contributions from the last entry in the JSONL log file.
+
+    Returns a list of contribution objects, or None if the log is unavailable.
+    Used as a fallback when the GitHub API is not accessible.
+    """
+    if log_path is None or not log_path.exists():
+        return None
+    last_line = None
+    with log_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            stripped = line.strip()
+            if stripped:
+                last_line = stripped
+    if not last_line:
+        return None
+    data = json.loads(last_line)
+    contributions = []
+    for contrib_dict in data.get("contributions", []):
+        if "owner" in contrib_dict:
+            contributions.append(GitHubProject(**contrib_dict))
+        else:
+            contributions.append(RecordedContribution(**contrib_dict))
+    return contributions
+
+
+async def contribution_details(details, client, log_path=None):
     """Gather relevant contribution details."""
     username = details["github_username"]
     if not (token := os.environ.get("GITHUB_TOKEN")):
@@ -224,7 +251,23 @@ async def contribution_details(details, client):
         for repo in manual_overrides["github"]["repos"]
     ]
     gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
-    gh_projects = await contribution_counts(gh, username)
+    try:
+        gh_projects = await contribution_counts(gh, username)
+    except gidgethub.QueryError as exc:
+        if "Resource not accessible by integration" in str(exc):
+            print(
+                f"Warning: Could not fetch contribution data from GitHub API ({exc}). "
+                "A personal access token with 'read:user' scope is required for live data. "
+                "Falling back to cached data from the log file.",
+                file=sys.stderr,
+            )
+            cached = load_contributions_from_log(log_path)
+            if cached is not None:
+                details.update({"contributions": cached})
+            else:
+                details.update({"contributions": contribution_overrides})
+            return
+        raise
     for remove in manual_overrides["github"]["remove"]:
         owner, _, name = remove.partition("/")
         try:
@@ -476,8 +519,8 @@ async def main():
     }
     async with httpx.AsyncClient(timeout=10.0) as client:
         async with trio.open_nursery() as nursery:
+            nursery.start_soon(contribution_details, details, client, args.log)
             for func in (
-                contribution_details,
                 latest_blog_post,
                 fetch_mastodon_follower_count,
                 fetch_bluesky_follower_count,
