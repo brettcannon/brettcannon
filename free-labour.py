@@ -291,7 +291,7 @@ async def fetch_bluesky_follower_count(details, client):
 
 async def fetch_cpython_contributors(details, client):
     username = details["github_username"]
-    if not (token := os.environ.get("GITHUB_TOKEN")):
+    if not (token := os.environ.get("GH_USER_READ_TOKEN")):
         details["cpython_contributor_ranking"] = 0
         return
     gh = gidgethub.httpx.GitHubAPI(client, f"{username}/{username}", oauth_token=token)
