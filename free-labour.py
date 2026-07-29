@@ -337,13 +337,10 @@ async def process_new_commits(
                 accept="application/vnd.github+json",
             )
             metadata_cache[(owner, name)] = meta
-        except Exception as exc:  # noqa: BLE001
-            print(
-                f"WARNING: Could not fetch metadata for {owner}/{name}: {exc}; "
-                "treating as fork.",
-                file=sys.stderr,
-            )
-            metadata_cache[(owner, name)] = {"fork": True, "stargazers_count": 0}
+        except Exception as exc:
+            raise RuntimeError(
+                f"Could not fetch metadata for {owner}/{name}: {exc}"
+            ) from exc
 
     # ------------------------------------------------------------------ #
     # Second pass: resolve ambiguous SHAs using metadata
@@ -394,7 +391,7 @@ async def process_new_commits(
     # Apply assignments to the cached contribution dict
     # ------------------------------------------------------------------ #
     updated = dict(cached)
-    new_seen_shas = set(seen_shas)
+    new_seen_shas: set[str] = set()
 
     for sha, (owner, name) in sha_to_repo.items():
         new_seen_shas.add(sha)
