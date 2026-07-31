@@ -2,11 +2,11 @@
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/how-to-publish-to-pypi-using-github-actions-securely/) published on 2026-07-07)
 - [Mastodon](https://mastodon.social/@brettcannon) (with 3,565 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,070 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,071 followers)
 
 # Open Source
 
-<small>Last updated 2026-07-30.</small>
+<small>Last updated 2026-07-31.</small>
 
 ## Contributions
 
