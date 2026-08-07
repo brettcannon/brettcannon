@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/how-to-publish-to-pypi-using-github-actions-securely/) published on 2026-07-07)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,567 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,569 followers)
 - [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,073 followers)
 
 # Open Source
 
-<small>Last updated 2026-08-06.</small>
+<small>Last updated 2026-08-07.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/733 PEPs (4.8%).</summary>
+<summary>I have (co-)authored 35/734 PEPs (4.8%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3589,6 +3589,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="73">Eli Bendersky (3)</li>
 
+<li value="73">Donghee Na (3)</li>
+
 <li value="73">Carol Willing (3)</li>
 
 <li value="73">Batuhan Taskaya (3)</li>
@@ -3597,143 +3599,141 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="73">Alex Martelli (3)</li>
 
-<li value="98">Vladimir Diaz (2)</li>
+<li value="99">Vladimir Diaz (2)</li>
 
-<li value="98">Vinay Sajip (2)</li>
+<li value="99">Vinay Sajip (2)</li>
 
-<li value="98">Trishank Karthik Kuppusamy (2)</li>
+<li value="99">Trishank Karthik Kuppusamy (2)</li>
 
-<li value="98">Tobias Kohn (2)</li>
+<li value="99">Tobias Kohn (2)</li>
 
-<li value="98">Tim Delaney (2)</li>
+<li value="99">Tim Delaney (2)</li>
 
-<li value="98">Till Varoquaux (2)</li>
+<li value="99">Till Varoquaux (2)</li>
 
-<li value="98">Terry Reedy (2)</li>
+<li value="99">Terry Reedy (2)</li>
 
-<li value="98">Tal Einat (2)</li>
+<li value="99">Tal Einat (2)</li>
 
-<li value="98">Stéphane Bidoul (2)</li>
+<li value="99">Stéphane Bidoul (2)</li>
 
-<li value="98">Steven Troxler (2)</li>
+<li value="99">Steven Troxler (2)</li>
 
-<li value="98">Stephen J. Turnbull (2)</li>
+<li value="99">Stephen J. Turnbull (2)</li>
 
-<li value="98">Stefano Borini (2)</li>
+<li value="99">Stefano Borini (2)</li>
 
-<li value="98">Stefan Behnel (2)</li>
+<li value="99">Stefan Behnel (2)</li>
 
-<li value="98">Stan Ulbrych (2)</li>
+<li value="99">Stan Ulbrych (2)</li>
 
-<li value="98">Shannon Zhu (2)</li>
+<li value="99">Shannon Zhu (2)</li>
 
-<li value="98">Seth Michael Larson (2)</li>
+<li value="99">Seth Michael Larson (2)</li>
 
-<li value="98">Sam Gross (2)</li>
+<li value="99">Sam Gross (2)</li>
 
-<li value="98">Ronald Oussoren (2)</li>
+<li value="99">Ronald Oussoren (2)</li>
 
-<li value="98">Robert Collins (2)</li>
+<li value="99">Robert Collins (2)</li>
 
-<li value="98">Paul Ganssle (2)</li>
+<li value="99">Paul Ganssle (2)</li>
 
-<li value="98">Oleg Broytman (2)</li>
+<li value="99">Oleg Broytman (2)</li>
 
-<li value="98">Nick Humrich (2)</li>
+<li value="99">Nick Humrich (2)</li>
 
-<li value="98">Ned Deily (2)</li>
+<li value="99">Ned Deily (2)</li>
 
-<li value="98">Miro Hrončok (2)</li>
+<li value="99">Miro Hrončok (2)</li>
 
-<li value="98">Michael J. Sullivan (2)</li>
+<li value="99">Michael J. Sullivan (2)</li>
 
-<li value="98">Mark Mendoza (2)</li>
+<li value="99">Mark Mendoza (2)</li>
 
-<li value="98">Mark Hammond (2)</li>
+<li value="99">Mark Hammond (2)</li>
 
-<li value="98">Mark E. Haase (2)</li>
+<li value="99">Mark E. Haase (2)</li>
 
-<li value="98">Mario Corchero (2)</li>
+<li value="99">Mario Corchero (2)</li>
 
-<li value="98">Marina Moore (2)</li>
+<li value="99">Marina Moore (2)</li>
 
-<li value="98">Marcel Plch (2)</li>
+<li value="99">Marcel Plch (2)</li>
 
-<li value="98">Magnus Lie Hetland (2)</li>
+<li value="99">Magnus Lie Hetland (2)</li>
 
-<li value="98">Maggie Moss (2)</li>
+<li value="99">Maggie Moss (2)</li>
 
-<li value="98">Koos Zevenhoven (2)</li>
+<li value="99">Koos Zevenhoven (2)</li>
 
-<li value="98">Justin Cappos (2)</li>
+<li value="99">Justin Cappos (2)</li>
 
-<li value="98">Josiah Carlson (2)</li>
+<li value="99">Josiah Carlson (2)</li>
 
-<li value="98">Joe Carey (2)</li>
+<li value="99">Joe Carey (2)</li>
 
-<li value="98">Jesse Noller (2)</li>
+<li value="99">Jesse Noller (2)</li>
 
-<li value="98">Jaime Rodríguez-Guerra (2)</li>
+<li value="99">Jaime Rodríguez-Guerra (2)</li>
 
-<li value="98">Jack Jansen (2)</li>
+<li value="99">Jack Jansen (2)</li>
 
-<li value="98">Greg Wilson (2)</li>
+<li value="99">Greg Wilson (2)</li>
 
-<li value="98">Greg Stein (2)</li>
+<li value="99">Greg Stein (2)</li>
 
-<li value="98">Gordon McMillan (2)</li>
+<li value="99">Gordon McMillan (2)</li>
 
-<li value="98">Germán Méndez Bravo (2)</li>
+<li value="99">Germán Méndez Bravo (2)</li>
 
-<li value="98">Geoffrey Thomas (2)</li>
+<li value="99">Geoffrey Thomas (2)</li>
 
-<li value="98">Fred L. Drake, Jr. (2)</li>
+<li value="99">Fred L. Drake, Jr. (2)</li>
 
-<li value="98">Facundo Batista (2)</li>
+<li value="99">Facundo Batista (2)</li>
 
-<li value="98">Erik De Bonte (2)</li>
+<li value="99">Erik De Bonte (2)</li>
 
-<li value="98">Eli Uriegas (2)</li>
+<li value="99">Eli Uriegas (2)</li>
 
-<li value="98">Donghee Na (2)</li>
+<li value="99">Dirkjan Ochtman (2)</li>
 
-<li value="98">Dirkjan Ochtman (2)</li>
+<li value="99">Dino Viehland (2)</li>
 
-<li value="98">Dino Viehland (2)</li>
+<li value="99">David Foster (2)</li>
 
-<li value="98">David Foster (2)</li>
+<li value="99">David Ascher (2)</li>
 
-<li value="98">David Ascher (2)</li>
+<li value="99">Daniel Stutzbach (2)</li>
 
-<li value="98">Daniel Stutzbach (2)</li>
+<li value="99">Daniel F Moisset (2)</li>
 
-<li value="98">Daniel F Moisset (2)</li>
+<li value="99">Cory Benfield (2)</li>
 
-<li value="98">Cory Benfield (2)</li>
+<li value="99">Clark C. Evans (2)</li>
 
-<li value="98">Clark C. Evans (2)</li>
+<li value="99">Christopher A. Craig (2)</li>
 
-<li value="98">Christopher A. Craig (2)</li>
+<li value="99">Charlie Marsh (2)</li>
 
-<li value="98">Charlie Marsh (2)</li>
+<li value="99">Cameron Simpson (2)</li>
 
-<li value="98">Cameron Simpson (2)</li>
+<li value="99">Calvin Spealman (2)</li>
 
-<li value="98">Calvin Spealman (2)</li>
+<li value="99">Ben Finney (2)</li>
 
-<li value="98">Ben Finney (2)</li>
+<li value="99">Andy R. Terrel (2)</li>
 
-<li value="98">Andy R. Terrel (2)</li>
+<li value="99">Andrey Talman (2)</li>
 
-<li value="98">Andrey Talman (2)</li>
+<li value="99">Alexander Belopolsky (2)</li>
 
-<li value="98">Alexander Belopolsky (2)</li>
+<li value="99">Alex Gaynor (2)</li>
 
-<li value="98">Alex Gaynor (2)</li>
+<li value="99">Adam Turner (2)</li>
 
-<li value="98">Adam Turner (2)</li>
-
-<li value="98">Aahz (2)</li>
+<li value="99">Aahz (2)</li>
 
 <li value="167">Łukasz Modzelewski (1)</li>
 
@@ -3860,6 +3860,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 <li value="167">Oren Tirosh (1)</li>
 
 <li value="167">Noah Kim (1)</li>
+
+<li value="167">Nikita Sobolev (1)</li>
 
 <li value="167">Neil Hodgson (1)</li>
 
