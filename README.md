@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
-- [Blog](https://snarky.ca) ([latest post](https://snarky.ca/how-to-publish-to-pypi-using-github-actions-securely/) published on 2026-07-07)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,573 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,073 followers)
+- [Blog](https://snarky.ca) ([latest post](https://snarky.ca/my-nomination-statement-for-the-2026-python-packaging-council/) published on 2026-08-10)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,574 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,075 followers)
 
 # Open Source
 
-<small>Last updated 2026-08-10.</small>
+<small>Last updated 2026-08-11.</small>
 
 ## Contributions
 
