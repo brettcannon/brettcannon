@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/my-nomination-statement-for-the-2026-python-packaging-council/) published on 2026-08-10)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,574 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,075 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,576 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,077 followers)
 
 # Open Source
 
-<small>Last updated 2026-08-11.</small>
+<small>Last updated 2026-08-12.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/734 PEPs (4.8%).</summary>
+<summary>I have (co-)authored 35/735 PEPs (4.8%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3407,7 +3407,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="2">Guido van Rossum (50)</li>
 
-<li value="3">Barry Warsaw (45)</li>
+<li value="3">Barry Warsaw (46)</li>
 
 <li value="4">Victor Stinner (35)</li>
 
