@@ -6,7 +6,7 @@
 
 # Open Source
 
-<small>Last updated 2026-08-15.</small>
+<small>Last updated 2026-08-16.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/735 PEPs (4.8%).</summary>
+<summary>I have (co-)authored 35/736 PEPs (4.8%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3545,59 +3545,59 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="55">Eric V. Smith (4)</li>
 
+<li value="55">Donghee Na (4)</li>
+
 <li value="55">Carl Meyer (4)</li>
 
-<li value="73">Travis Oliphant (3)</li>
+<li value="74">Travis Oliphant (3)</li>
 
-<li value="73">Steven D'Aprano (3)</li>
+<li value="74">Steven D'Aprano (3)</li>
 
-<li value="73">Steven Bethard (3)</li>
+<li value="74">Steven Bethard (3)</li>
 
-<li value="73">Shantanu Jain (3)</li>
+<li value="74">Shantanu Jain (3)</li>
 
-<li value="73">Serhiy Storchaka (3)</li>
+<li value="74">Serhiy Storchaka (3)</li>
 
-<li value="73">Sergey B Kirpichev (3)</li>
+<li value="74">Sergey B Kirpichev (3)</li>
 
-<li value="73">Neal Norwitz (3)</li>
+<li value="74">Neal Norwitz (3)</li>
 
-<li value="73">Michel Pelletier (3)</li>
+<li value="74">Michel Pelletier (3)</li>
 
-<li value="73">Michał Górny (3)</li>
+<li value="74">Michał Górny (3)</li>
 
-<li value="73">Michael Hudson (3)</li>
+<li value="74">Michael Hudson (3)</li>
 
-<li value="73">Ken Jin (3)</li>
+<li value="74">Ken Jin (3)</li>
 
-<li value="73">Jonathan Dekhtiar (3)</li>
+<li value="74">Jonathan Dekhtiar (3)</li>
 
-<li value="73">Jeffrey Yasskin (3)</li>
+<li value="74">Jeffrey Yasskin (3)</li>
 
-<li value="73">James Hilton-Balfe (3)</li>
+<li value="74">James Hilton-Balfe (3)</li>
 
-<li value="73">Hugo van Kemenade (3)</li>
+<li value="74">Hugo van Kemenade (3)</li>
 
-<li value="73">Hood Chatham (3)</li>
+<li value="74">Hood Chatham (3)</li>
 
-<li value="73">Filipe Laíns (3)</li>
+<li value="74">Filipe Laíns (3)</li>
 
-<li value="73">Facundo Tuesca (3)</li>
+<li value="74">Facundo Tuesca (3)</li>
 
-<li value="73">Ewa Jodlowska (3)</li>
+<li value="74">Ewa Jodlowska (3)</li>
 
-<li value="73">Erlend Egeberg Aasland (3)</li>
+<li value="74">Erlend Egeberg Aasland (3)</li>
 
-<li value="73">Eli Bendersky (3)</li>
+<li value="74">Eli Bendersky (3)</li>
 
-<li value="73">Donghee Na (3)</li>
+<li value="74">Carol Willing (3)</li>
 
-<li value="73">Carol Willing (3)</li>
+<li value="74">Batuhan Taskaya (3)</li>
 
-<li value="73">Batuhan Taskaya (3)</li>
+<li value="74">Armin Ronacher (3)</li>
 
-<li value="73">Armin Ronacher (3)</li>
-
-<li value="73">Alex Martelli (3)</li>
+<li value="74">Alex Martelli (3)</li>
 
 <li value="99">Vladimir Diaz (2)</li>
 
