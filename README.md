@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,583 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,586 followers)
 - [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,083 followers)
 
 # Open Source
 
-<small>Last updated 2026-08-21.</small>
+<small>Last updated 2026-08-22.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/736 PEPs (4.8%).</summary>
+<summary>I have (co-)authored 35/737 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3643,6 +3643,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="99">Nick Humrich (2)</li>
 
+<li value="99">Neil Girdhar (2)</li>
+
 <li value="99">Ned Deily (2)</li>
 
 <li value="99">Miro Hrončok (2)</li>
@@ -3735,405 +3737,403 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="99">Aahz (2)</li>
 
-<li value="167">Łukasz Modzelewski (1)</li>
+<li value="168">Łukasz Modzelewski (1)</li>
 
-<li value="167">Zixuan James Li (1)</li>
+<li value="168">Zixuan James Li (1)</li>
 
-<li value="167">Zachary Ware (1)</li>
+<li value="168">Zachary Ware (1)</li>
 
-<li value="167">Wenzel Jakob (1)</li>
+<li value="168">Wenzel Jakob (1)</li>
 
-<li value="167">Walter Dörwald (1)</li>
+<li value="168">Walter Dörwald (1)</li>
 
-<li value="167">W Isaac Carroll (1)</li>
+<li value="168">W Isaac Carroll (1)</li>
 
-<li value="167">Vincent Siles (1)</li>
+<li value="168">Vincent Siles (1)</li>
 
-<li value="167">Vikram Jayanthi (1)</li>
+<li value="168">Vikram Jayanthi (1)</li>
 
-<li value="167">Victorien Plot (1)</li>
+<li value="168">Victorien Plot (1)</li>
 
-<li value="167">Trent Mick (1)</li>
+<li value="168">Trent Mick (1)</li>
 
-<li value="167">Tony Lownds (1)</li>
+<li value="168">Tony Lownds (1)</li>
 
-<li value="167">Tomáš Orsava (1)</li>
+<li value="168">Tomáš Orsava (1)</li>
 
-<li value="167">Todd Rovito (1)</li>
+<li value="168">Todd Rovito (1)</li>
 
-<li value="167">Tim Stumbaugh (1)</li>
+<li value="168">Tim Stumbaugh (1)</li>
 
-<li value="167">Tim Felgentreff (1)</li>
+<li value="168">Tim Felgentreff (1)</li>
 
-<li value="167">Tian Gao (1)</li>
+<li value="168">Tian Gao (1)</li>
 
-<li value="167">Thomas Robitaille (1)</li>
+<li value="168">Thomas Robitaille (1)</li>
 
-<li value="167">Thomas Heller (1)</li>
+<li value="168">Thomas Heller (1)</li>
 
-<li value="167">Thomas Bellman (1)</li>
+<li value="168">Thomas Bellman (1)</li>
 
-<li value="167">The Python core team and community (1)</li>
+<li value="168">The Python core team and community (1)</li>
 
-<li value="167">The PEP Editors (1)</li>
+<li value="168">The PEP Editors (1)</li>
 
-<li value="167">Terence Way (1)</li>
+<li value="168">Terence Way (1)</li>
 
-<li value="167">Taneli Hukkinen (1)</li>
+<li value="168">Taneli Hukkinen (1)</li>
 
-<li value="167">Sébastien Eustace (1)</li>
+<li value="168">Sébastien Eustace (1)</li>
 
-<li value="167">Sumana Harihareswara (1)</li>
+<li value="168">Sumana Harihareswara (1)</li>
 
-<li value="167">Steven Taschuk (1)</li>
+<li value="168">Steven Taschuk (1)</li>
 
-<li value="167">Stephen Rosen (1)</li>
+<li value="168">Stephen Rosen (1)</li>
 
-<li value="167">Stepan Sindelar (1)</li>
+<li value="168">Stepan Sindelar (1)</li>
 
-<li value="167">Stepan Koltsov (1)</li>
+<li value="168">Stepan Koltsov (1)</li>
 
-<li value="167">Stefano Rivera (1)</li>
+<li value="168">Stefano Rivera (1)</li>
 
-<li value="167">Stefan Krah (1)</li>
+<li value="168">Stefan Krah (1)</li>
 
-<li value="167">Simon Cross (1)</li>
+<li value="168">Simon Cross (1)</li>
 
-<li value="167">Seth Larson (1)</li>
+<li value="168">Seth Larson (1)</li>
 
-<li value="167">Sebastián Ramírez (1)</li>
+<li value="168">Sebastián Ramírez (1)</li>
 
-<li value="167">Sebastian Kreft (1)</li>
+<li value="168">Sebastian Kreft (1)</li>
 
-<li value="167">Sean Reifschneider (1)</li>
+<li value="168">Sean Reifschneider (1)</li>
 
-<li value="167">Scott Gilbert (1)</li>
+<li value="168">Scott Gilbert (1)</li>
 
-<li value="167">Samuele Pedroni (1)</li>
+<li value="168">Samuele Pedroni (1)</li>
 
-<li value="167">Ryan Gonzalez (1)</li>
+<li value="168">Ryan Gonzalez (1)</li>
 
-<li value="167">Russell Keith-Magee (1)</li>
+<li value="168">Russell Keith-Magee (1)</li>
 
-<li value="167">Roman Suzi (1)</li>
+<li value="168">Roman Suzi (1)</li>
 
-<li value="167">Robert T. McGibbon (1)</li>
+<li value="168">Robert T. McGibbon (1)</li>
 
-<li value="167">Robert Kuska (1)</li>
+<li value="168">Robert Kuska (1)</li>
 
-<li value="167">Richard Oudkerk (1)</li>
+<li value="168">Richard Oudkerk (1)</li>
 
-<li value="167">Rich Chiodo (1)</li>
+<li value="168">Rich Chiodo (1)</li>
 
-<li value="167">Reid Kleckner (1)</li>
+<li value="168">Reid Kleckner (1)</li>
 
-<li value="167">R David Murray (1)</li>
+<li value="168">R David Murray (1)</li>
 
-<li value="167">Philippe PRADOS (1)</li>
+<li value="168">Philippe PRADOS (1)</li>
 
-<li value="167">Philippe Ombredanne (1)</li>
+<li value="168">Philippe Ombredanne (1)</li>
 
-<li value="167">Philipp Angerer (1)</li>
+<li value="168">Philipp Angerer (1)</li>
 
-<li value="167">Philip House (1)</li>
+<li value="168">Philip House (1)</li>
 
-<li value="167">Peter Schneider-Kamp (1)</li>
+<li value="168">Peter Schneider-Kamp (1)</li>
 
-<li value="167">Peter Moody (1)</li>
+<li value="168">Peter Moody (1)</li>
 
-<li value="167">Peter Harris (1)</li>
+<li value="168">Peter Harris (1)</li>
 
-<li value="167">Peter Astrand (1)</li>
+<li value="168">Peter Astrand (1)</li>
 
-<li value="167">Paul F. Dubois (1)</li>
+<li value="168">Paul F. Dubois (1)</li>
 
-<li value="167">Paul Everitt (1)</li>
+<li value="168">Paul Everitt (1)</li>
 
-<li value="167">Paul Colomiets (1)</li>
+<li value="168">Paul Colomiets (1)</li>
 
-<li value="167">Paul Barrett (1)</li>
+<li value="168">Paul Barrett (1)</li>
 
-<li value="167">Patrick Maupin (1)</li>
+<li value="168">Patrick Maupin (1)</li>
 
-<li value="167">Pablo Ruiz Cuevas (1)</li>
+<li value="168">Pablo Ruiz Cuevas (1)</li>
 
-<li value="167">Oren Tirosh (1)</li>
+<li value="168">Oren Tirosh (1)</li>
 
-<li value="167">Noah Kim (1)</li>
+<li value="168">Noah Kim (1)</li>
 
-<li value="167">Nikita Sobolev (1)</li>
+<li value="168">Nikita Sobolev (1)</li>
 
-<li value="167">Neil Hodgson (1)</li>
+<li value="168">Neil Hodgson (1)</li>
 
-<li value="167">Neil Girdhar (1)</li>
+<li value="168">Nathan Goldbaum (1)</li>
 
-<li value="167">Nathan Goldbaum (1)</li>
+<li value="168">Mike Verdone (1)</li>
 
-<li value="167">Mike Verdone (1)</li>
+<li value="168">Mike Meyer (1)</li>
 
-<li value="167">Mike Meyer (1)</li>
+<li value="168">Mike G. Miller (1)</li>
 
-<li value="167">Mike G. Miller (1)</li>
+<li value="168">Michael P. Dubner (1)</li>
 
-<li value="167">Michael P. Dubner (1)</li>
+<li value="168">Michael Lee (1)</li>
 
-<li value="167">Michael Lee (1)</li>
+<li value="168">Michael Foord (1)</li>
 
-<li value="167">Michael Foord (1)</li>
+<li value="168">Micah Elliott (1)</li>
 
-<li value="167">Micah Elliott (1)</li>
+<li value="168">Matthias Klose (1)</li>
 
-<li value="167">Matthias Klose (1)</li>
+<li value="168">Matthew Rahtz (1)</li>
 
-<li value="167">Matthew Rahtz (1)</li>
+<li value="168">Matt Wozniski (1)</li>
 
-<li value="167">Matt Wozniski (1)</li>
+<li value="168">Matt Page (1)</li>
 
-<li value="167">Matt Page (1)</li>
+<li value="168">Matt Chisholm (1)</li>
 
-<li value="167">Matt Chisholm (1)</li>
+<li value="168">Masayuki Yamamoto (1)</li>
 
-<li value="167">Masayuki Yamamoto (1)</li>
+<li value="168">Martin Teichmann (1)</li>
 
-<li value="167">Martin Teichmann (1)</li>
+<li value="168">Martijn Faassen (1)</li>
 
-<li value="167">Martijn Faassen (1)</li>
+<li value="168">Marta Gómez Macías (1)</li>
 
-<li value="167">Marta Gómez Macías (1)</li>
+<li value="168">Markus Meskanen (1)</li>
 
-<li value="167">Markus Meskanen (1)</li>
+<li value="168">Mark  Williams (1)</li>
 
-<li value="167">Mark  Williams (1)</li>
+<li value="168">Marc-Andre Lemburg (1)</li>
 
-<li value="167">Marc-Andre Lemburg (1)</li>
+<li value="168">Malcolm Smith (1)</li>
 
-<li value="167">Malcolm Smith (1)</li>
+<li value="168">László Kiss Kollár (1)</li>
 
-<li value="167">László Kiss Kollár (1)</li>
+<li value="168">Lukas Puehringer (1)</li>
 
-<li value="167">Lukas Puehringer (1)</li>
+<li value="168">Lois Anne DeLong (1)</li>
 
-<li value="167">Lois Anne DeLong (1)</li>
+<li value="168">Lisa Roach (1)</li>
 
-<li value="167">Lisa Roach (1)</li>
+<li value="168">Lino Mastrodomenico (1)</li>
 
-<li value="167">Lino Mastrodomenico (1)</li>
+<li value="168">Lie Ryan (1)</li>
 
-<li value="167">Lie Ryan (1)</li>
+<li value="168">Lennart Regebro (1)</li>
 
-<li value="167">Lennart Regebro (1)</li>
+<li value="168">Laurie Opperman (1)</li>
 
-<li value="167">Laurie Opperman (1)</li>
+<li value="168">Laurens Van Houtven (1)</li>
 
-<li value="167">Laurens Van Houtven (1)</li>
+<li value="168">Laura Creighton (1)</li>
 
-<li value="167">Laura Creighton (1)</li>
+<li value="168">Kushal Das (1)</li>
 
-<li value="167">Kushal Das (1)</li>
+<li value="168">Koudai Aono (1)</li>
 
-<li value="167">Koudai Aono (1)</li>
+<li value="168">Konstantin Kashin (1)</li>
 
-<li value="167">Konstantin Kashin (1)</li>
+<li value="168">Klaus Zimmermann (1)</li>
 
-<li value="167">Klaus Zimmermann (1)</li>
+<li value="168">Kevin D. Smith (1)</li>
 
-<li value="167">Kevin D. Smith (1)</li>
+<li value="168">Kevin Altis (1)</li>
 
-<li value="167">Kevin Altis (1)</li>
+<li value="168">Kerrick Staley (1)</li>
 
-<li value="167">Kerrick Staley (1)</li>
+<li value="168">Karolina Surma (1)</li>
 
-<li value="167">Karolina Surma (1)</li>
+<li value="168">Karl Nelson (1)</li>
 
-<li value="167">Karl Nelson (1)</li>
+<li value="168">Just van Rossum (1)</li>
 
-<li value="167">Just van Rossum (1)</li>
+<li value="168">Julien Palard (1)</li>
 
-<li value="167">Julien Palard (1)</li>
+<li value="168">Joshua Xu (1)</li>
 
-<li value="167">Joshua Xu (1)</li>
+<li value="168">Joshua Lock (1)</li>
 
-<li value="167">Joshua Lock (1)</li>
+<li value="168">Joshua Landau (1)</li>
 
-<li value="167">Joshua Landau (1)</li>
+<li value="168">Joshua Cannon (1)</li>
 
-<li value="167">Joshua Cannon (1)</li>
+<li value="168">Joshua Bambrick (1)</li>
 
-<li value="167">Joshua Bambrick (1)</li>
+<li value="168">Joseph Martinot-Lagarde (1)</li>
 
-<li value="167">Joseph Martinot-Lagarde (1)</li>
+<li value="168">Joseph Jevnik (1)</li>
 
-<li value="167">Joseph Jevnik (1)</li>
+<li value="168">Joop van de Pol (1)</li>
 
-<li value="167">Joop van de Pol (1)</li>
+<li value="168">Jonathan Riehl (1)</li>
 
-<li value="167">Jonathan Riehl (1)</li>
+<li value="168">John Belmonte (1)</li>
 
-<li value="167">John Belmonte (1)</li>
+<li value="168">Joanna Jablonski (1)</li>
 
-<li value="167">Joanna Jablonski (1)</li>
+<li value="168">Jiwon Seo (1)</li>
 
-<li value="167">Jiwon Seo (1)</li>
+<li value="168">Jim Baker (1)</li>
 
-<li value="167">Jim Baker (1)</li>
+<li value="168">Jim Althoff (1)</li>
 
-<li value="167">Jim Althoff (1)</li>
+<li value="168">Jervis Whitley (1)</li>
 
-<li value="167">Jervis Whitley (1)</li>
+<li value="168">Jeff Epler (1)</li>
 
-<li value="167">Jeff Epler (1)</li>
+<li value="168">Jay Berry (1)</li>
 
-<li value="167">Jay Berry (1)</li>
+<li value="168">Jason Petrone (1)</li>
 
-<li value="167">Jason Petrone (1)</li>
+<li value="168">Jason Orendorff (1)</li>
 
-<li value="167">Jason Orendorff (1)</li>
+<li value="168">Jarek Potiuk (1)</li>
 
-<li value="167">Jarek Potiuk (1)</li>
+<li value="168">James Polley (1)</li>
 
-<li value="167">James Polley (1)</li>
+<li value="168">James C. Ahlstrom (1)</li>
 
-<li value="167">James C. Ahlstrom (1)</li>
+<li value="168">Jack Diederich (1)</li>
 
-<li value="167">Jack Diederich (1)</li>
+<li value="168">Ivona Stojanovic (1)</li>
 
-<li value="167">Ivona Stojanovic (1)</li>
+<li value="168">Huaiyu Zhu (1)</li>
 
-<li value="167">Huaiyu Zhu (1)</li>
+<li value="168">Holger Krekel (1)</li>
 
-<li value="167">Holger Krekel (1)</li>
+<li value="168">Henry Schreiner (1)</li>
 
-<li value="167">Henry Schreiner (1)</li>
+<li value="168">Gregory R. Warnes (1)</li>
 
-<li value="167">Gregory R. Warnes (1)</li>
+<li value="168">Gregory Lielens (1)</li>
 
-<li value="167">Gregory Lielens (1)</li>
+<li value="168">Greg Slodkowicz (1)</li>
 
-<li value="167">Greg Slodkowicz (1)</li>
+<li value="168">Grant Griffin (1)</li>
 
-<li value="167">Grant Griffin (1)</li>
+<li value="168">Graham Bleaney (1)</li>
 
-<li value="167">Graham Bleaney (1)</li>
+<li value="168">Gerald Britton (1)</li>
 
-<li value="167">Gerald Britton (1)</li>
+<li value="168">Frédéric B. Giacometti (1)</li>
 
-<li value="167">Frédéric B. Giacometti (1)</li>
+<li value="168">Fridolín Pokorný (1)</li>
 
-<li value="167">Fridolín Pokorný (1)</li>
+<li value="168">Franek Magiera (1)</li>
 
-<li value="167">Franek Magiera (1)</li>
+<li value="168">Ezio Melotti (1)</li>
 
-<li value="167">Ezio Melotti (1)</li>
+<li value="168">Erik M. Bray (1)</li>
 
-<li value="167">Erik M. Bray (1)</li>
+<li value="168">Erik Demaine (1)</li>
 
-<li value="167">Erik Demaine (1)</li>
+<li value="168">Eric Pruitt (1)</li>
 
-<li value="167">Eric Pruitt (1)</li>
+<li value="168">Eric N. Vander Weele (1)</li>
 
-<li value="167">Eric N. Vander Weele (1)</li>
+<li value="168">Emily Morehouse-Valcarcel (1)</li>
 
-<li value="167">Emily Morehouse-Valcarcel (1)</li>
+<li value="168">Elvis Pranskevichus (1)</li>
 
-<li value="167">Elvis Pranskevichus (1)</li>
+<li value="168">Elana Hashman (1)</li>
 
-<li value="167">Elana Hashman (1)</li>
+<li value="168">Eddie Elizondo (1)</li>
 
-<li value="167">Eddie Elizondo (1)</li>
+<li value="168">Ed Schofield (1)</li>
 
-<li value="167">Ed Schofield (1)</li>
+<li value="168">Doug Hellmann (1)</li>
 
-<li value="167">Doug Hellmann (1)</li>
+<li value="168">Domenico Andreoli (1)</li>
 
-<li value="167">Domenico Andreoli (1)</li>
+<li value="168">Diego Russo (1)</li>
 
-<li value="167">Diego Russo (1)</li>
+<li value="168">Dennis Sweeney (1)</li>
 
-<li value="167">Dennis Sweeney (1)</li>
+<li value="168">Deb Nicholson (1)</li>
 
-<li value="167">Deb Nicholson (1)</li>
+<li value="168">David Woods (1)</li>
 
-<li value="167">David Woods (1)</li>
+<li value="168">David Hewitt (1)</li>
 
-<li value="167">David Hewitt (1)</li>
+<li value="168">David Eppstein (1)</li>
 
-<li value="167">David Eppstein (1)</li>
+<li value="168">Dave Peck (1)</li>
 
-<li value="167">Dave Peck (1)</li>
+<li value="168">Dave Cole (1)</li>
 
-<li value="167">Dave Cole (1)</li>
+<li value="168">Daniel W. Park (1)</li>
 
-<li value="167">Daniel W. Park (1)</li>
+<li value="168">Daniel Urban (1)</li>
 
-<li value="167">Daniel Urban (1)</li>
+<li value="168">Daniel Sperber (1)</li>
 
-<li value="167">Daniel Sperber (1)</li>
+<li value="168">Damien George (1)</li>
 
-<li value="167">Damien George (1)</li>
+<li value="168">Cristian Le (1)</li>
 
-<li value="167">Cristian Le (1)</li>
+<li value="168">Cooper Lees (1)</li>
 
-<li value="167">Cooper Lees (1)</li>
+<li value="168">Cliff Wells (1)</li>
 
-<li value="167">Cliff Wells (1)</li>
+<li value="168">Christopher Barker (1)</li>
 
-<li value="167">Christopher Barker (1)</li>
+<li value="168">Christian R. Reis (1)</li>
 
-<li value="167">Christian R. Reis (1)</li>
+<li value="168">Chris McDonough (1)</li>
 
-<li value="167">Chris McDonough (1)</li>
+<li value="168">Chris Jerdonek (1)</li>
 
-<li value="167">Chris Jerdonek (1)</li>
+<li value="168">Charles-François Natali (1)</li>
 
-<li value="167">Charles-François Natali (1)</li>
+<li value="168">Charles R. McCreary (1)</li>
 
-<li value="167">Charles R. McCreary (1)</li>
+<li value="168">Carl Friedrich Bolz-Tereick (1)</li>
 
-<li value="167">Carl Friedrich Bolz-Tereick (1)</li>
+<li value="168">Carl Banks (1)</li>
 
-<li value="167">Carl Banks (1)</li>
+<li value="168">C.A.M. Gerlach (1)</li>
 
-<li value="167">C.A.M. Gerlach (1)</li>
+<li value="168">Brittany Reynoso (1)</li>
 
-<li value="167">Brittany Reynoso (1)</li>
+<li value="168">Brian Quinlan (1)</li>
 
-<li value="167">Brian Quinlan (1)</li>
+<li value="168">Björn Lindqvist (1)</li>
 
-<li value="167">Björn Lindqvist (1)</li>
+<li value="168">Bernát Gábor (1)</li>
 
-<li value="167">Bernát Gábor (1)</li>
+<li value="168">Berker Peksag (1)</li>
 
-<li value="167">Berker Peksag (1)</li>
+<li value="168">Benoit Bryon (1)</li>
 
-<li value="167">Benoit Bryon (1)</li>
+<li value="168">Ben North (1)</li>
 
-<li value="167">Ben North (1)</li>
+<li value="168">Ben Hoyt (1)</li>
 
-<li value="167">Ben Hoyt (1)</li>
+<li value="168">Atsuo Ishimoto (1)</li>
 
-<li value="167">Atsuo Ishimoto (1)</li>
+<li value="168">Arun Babu Neelicattu (1)</li>
 
-<li value="167">Arun Babu Neelicattu (1)</li>
+<li value="168">Andrew McNamara (1)</li>
 
-<li value="167">Andrew McNamara (1)</li>
+<li value="168">Andrew McClelland (1)</li>
 
-<li value="167">Andrew McClelland (1)</li>
+<li value="168">Andre Roberge (1)</li>
 
-<li value="167">Andre Roberge (1)</li>
+<li value="168">Ammar Askar (1)</li>
 
-<li value="167">Ammar Askar (1)</li>
+<li value="168">Amethyst Reese (1)</li>
 
-<li value="167">Amethyst Reese (1)</li>
+<li value="168">Alice Purcell (1)</li>
 
-<li value="167">Alice Purcell (1)</li>
+<li value="168">Alexis Challande (1)</li>
 
-<li value="167">Alexis Challande (1)</li>
+<li value="168">Alexandre Vassalotti (1)</li>
 
-<li value="167">Alexandre Vassalotti (1)</li>
+<li value="168">Adrian Garcia Badaracco (1)</li>
 
-<li value="167">Adrian Garcia Badaracco (1)</li>
-
-<li value="167">Adam Hartz (1)</li>
+<li value="168">Adam Hartz (1)</li>
 
 
 </details>
