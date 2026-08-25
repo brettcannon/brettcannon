@@ -2,11 +2,11 @@
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
 - [Mastodon](https://mastodon.social/@brettcannon) (with 3,589 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,086 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,088 followers)
 
 # Open Source
 
-<small>Last updated 2026-08-24.</small>
+<small>Last updated 2026-08-25.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/737 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/738 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3429,11 +3429,11 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="13">Raymond Hettinger (14)</li>
 
+<li value="14">Mark Shannon (13)</li>
+
 <li value="14">Antoine Pitrou (13)</li>
 
-<li value="15">Mark Shannon (12)</li>
-
-<li value="15">Eric Snow (12)</li>
+<li value="16">Eric Snow (12)</li>
 
 <li value="17">Tim Peters (11)</li>
 
@@ -4062,6 +4062,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 <li value="168">Dave Peck (1)</li>
 
 <li value="168">Dave Cole (1)</li>
+
+<li value="168">Daniele Parmeggiani (1)</li>
 
 <li value="168">Daniel W. Park (1)</li>
 
