@@ -4,7 +4,7 @@ from __future__ import annotations
 # dependencies = [
 #   "feedparser",
 #   "gidgethub",
-#   "httpx",
+#   "httpx2",
 #   "jinja2",
 #   "trio",
 # ]
@@ -26,7 +26,7 @@ import urllib.parse
 import feedparser
 import gidgethub.abc
 import gidgethub.httpx
-import httpx
+import httpx2 as httpx
 import jinja2
 import tomllib
 import trio
