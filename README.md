@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,599 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,088 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,600 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,087 followers)
 
 # Open Source
 
-<small>Last updated 2026-09-09.</small>
+<small>Last updated 2026-09-10.</small>
 
 ## Contributions
 
@@ -1507,11 +1507,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/pip-secure-install/commits?author=brettcannon">brettcannon/pip-secure-install</a></i></li>
-
-
-
 <li><a href="https://github.com/python/buildmaster-config/commits?author=brettcannon">python/buildmaster-config</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/pip-secure-install/commits?author=brettcannon">brettcannon/pip-secure-install</a></i></li>
 
 
 
