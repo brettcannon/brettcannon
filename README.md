@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,600 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,087 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,598 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,086 followers)
 
 # Open Source
 
-<small>Last updated 2026-09-10.</small>
+<small>Last updated 2026-09-11.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/738 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/739 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3435,13 +3435,13 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="16">Eric Snow (12)</li>
 
+<li value="17">William Woodruff (11)</li>
+
 <li value="17">Tim Peters (11)</li>
 
 <li value="17">Georg Brandl (11)</li>
 
-<li value="19">William Woodruff (10)</li>
-
-<li value="19">A.M. Kuchling (10)</li>
+<li value="20">A.M. Kuchling (10)</li>
 
 <li value="21">Yury Selivanov (9)</li>
 
@@ -3739,6 +3739,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="168">Łukasz Modzelewski (1)</li>
 
+<li value="168">Zsolt Dollenstein (1)</li>
+
 <li value="168">Zixuan James Li (1)</li>
 
 <li value="168">Zachary Ware (1)</li>
@@ -3912,6 +3914,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 <li value="168">László Kiss Kollár (1)</li>
 
 <li value="168">Lukas Puehringer (1)</li>
+
+<li value="168">Luis Gonzalez (1)</li>
 
 <li value="168">Lois Anne DeLong (1)</li>
 
