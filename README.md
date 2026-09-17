@@ -2,11 +2,11 @@
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
 - [Mastodon](https://mastodon.social/@brettcannon) (with 3,607 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,089 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,090 followers)
 
 # Open Source
 
-<small>Last updated 2026-09-16.</small>
+<small>Last updated 2026-09-17.</small>
 
 ## Contributions
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/739 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/740 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -4116,6 +4116,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 <li value="168">Ben North (1)</li>
 
 <li value="168">Ben Hoyt (1)</li>
+
+<li value="168">Bartosz Sławecki (1)</li>
 
 <li value="168">Atsuo Ishimoto (1)</li>
 
