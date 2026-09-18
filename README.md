@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,607 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,090 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,606 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,092 followers)
 
 # Open Source
 
-<small>Last updated 2026-09-17.</small>
+<small>Last updated 2026-09-18.</small>
 
 ## Contributions
 
@@ -1451,11 +1451,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/uranusjr/packaging-metadata-comparisons/commits?author=brettcannon">uranusjr/packaging-metadata-comparisons</a></li>
-
-
-
 <li><a href="https://github.com/python/cpython-devcontainers/commits?author=brettcannon">python/cpython-devcontainers</a></li>
+
+
+
+<li><a href="https://github.com/uranusjr/packaging-metadata-comparisons/commits?author=brettcannon">uranusjr/packaging-metadata-comparisons</a></li>
 
 
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/740 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/741 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3773,6 +3773,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="168">Thomas Robitaille (1)</li>
 
+<li value="168">Thomas Kehrenberg (1)</li>
+
 <li value="168">Thomas Heller (1)</li>
 
 <li value="168">Thomas Bellman (1)</li>
@@ -3908,6 +3910,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 <li value="168">Mark  Williams (1)</li>
 
 <li value="168">Marc-Andre Lemburg (1)</li>
+
+<li value="168">Marc Mueller (1)</li>
 
 <li value="168">Malcolm Smith (1)</li>
 
