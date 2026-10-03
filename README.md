@@ -2,11 +2,11 @@
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
 - [Mastodon](https://mastodon.social/@brettcannon) (with 3,610 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,092 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,094 followers)
 
 # Open Source
 
-<small>Last updated 2026-10-02.</small>
+<small>Last updated 2026-10-03.</small>
 
 ## Contributions
 
@@ -1447,11 +1447,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/basicenum/commits?author=brettcannon">brettcannon/basicenum</a></i></li>
-
-
-
 <li><a href="https://github.com/python/cpython-devcontainers/commits?author=brettcannon">python/cpython-devcontainers</a></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/basicenum/commits?author=brettcannon">brettcannon/basicenum</a></i></li>
 
 
 
