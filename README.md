@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,617 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,097 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,619 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,098 followers)
 
 # Open Source
 
-<small>Last updated 2026-10-16.</small>
+<small>Last updated 2026-10-17.</small>
 
 ## Contributions
 
@@ -1355,11 +1355,11 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/python/bedevere/commits?author=brettcannon">python/bedevere</a></li>
-
-
-
 <li><i><a href="https://github.com/brettcannon/cpython-wasi-build/commits?author=brettcannon">brettcannon/cpython-wasi-build</a></i></li>
+
+
+
+<li><a href="https://github.com/python/bedevere/commits?author=brettcannon">python/bedevere</a></li>
 
 
 
