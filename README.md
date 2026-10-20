@@ -6,7 +6,7 @@
 
 # Open Source
 
-<small>Last updated 2026-10-19.</small>
+<small>Last updated 2026-10-20.</small>
 
 ## Contributions
 
@@ -1515,6 +1515,10 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><i><a href="https://github.com/brettcannon/feedbin-deduplication/commits?author=brettcannon">brettcannon/feedbin-deduplication</a></i></li>
+
+
+
 <li><a href="https://github.com/emmatyping/python-wasm/commits?author=brettcannon">emmatyping/python-wasm</a></li>
 
 
@@ -1540,10 +1544,6 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 <li><a href="https://github.com/orsenthil/cpython-hg-to-git/commits?author=brettcannon">orsenthil/cpython-hg-to-git</a></li>
-
-
-
-<li><i><a href="https://github.com/brettcannon/feedbin-deduplication/commits?author=brettcannon">brettcannon/feedbin-deduplication</a></i></li>
 
 
 
@@ -3129,7 +3129,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/745 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/746 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3477,6 +3477,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="37">Tzu-ping Chung (6)</li>
 
+<li value="37">Ralf Gommers (6)</li>
+
 <li value="37">Phillip J. Eby (6)</li>
 
 <li value="37">Ka-Ping Yee (6)</li>
@@ -3493,113 +3495,111 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="37">Chris Angelico (6)</li>
 
-<li value="46">Talin (5)</li>
+<li value="47">Talin (5)</li>
 
-<li value="46">Skip Montanaro (5)</li>
+<li value="47">Skip Montanaro (5)</li>
 
-<li value="46">Savannah Ostrowski (5)</li>
+<li value="47">Savannah Ostrowski (5)</li>
 
-<li value="46">Ralf Gommers (5)</li>
+<li value="47">Neil Schemenauer (5)</li>
 
-<li value="46">Neil Schemenauer (5)</li>
+<li value="47">Konstantin Schütze (5)</li>
 
-<li value="46">Irit Katriel (5)</li>
+<li value="47">Irit Katriel (5)</li>
 
-<li value="46">Ethan Furman (5)</li>
+<li value="47">Ethan Furman (5)</li>
 
-<li value="46">Eric Traut (5)</li>
+<li value="47">Eric Traut (5)</li>
 
-<li value="46">Anthony Baxter (5)</li>
+<li value="47">Anthony Baxter (5)</li>
 
-<li value="55">Zac Hatfield-Dodds (4)</li>
+<li value="56">Zac Hatfield-Dodds (4)</li>
 
-<li value="55">Thomas Kluyver (4)</li>
+<li value="56">Thomas Kluyver (4)</li>
 
-<li value="55">Tarek Ziadé (4)</li>
+<li value="56">Tarek Ziadé (4)</li>
 
-<li value="55">Richard Jones (4)</li>
+<li value="56">Richard Jones (4)</li>
 
-<li value="55">Pradeep Kumar Srinivasan (4)</li>
+<li value="56">Pradeep Kumar Srinivasan (4)</li>
 
-<li value="55">Peter Bierma (4)</li>
+<li value="56">Peter Bierma (4)</li>
 
-<li value="55">Paul Prescod (4)</li>
+<li value="56">Paul Prescod (4)</li>
 
-<li value="55">Ofek Lev (4)</li>
+<li value="56">Ofek Lev (4)</li>
 
-<li value="55">Michael Sarahan (4)</li>
+<li value="56">Michał Górny (4)</li>
 
-<li value="55">Mariatta (4)</li>
+<li value="56">Michael Sarahan (4)</li>
 
-<li value="55">Lysandros Nikolaou (4)</li>
+<li value="56">Mariatta (4)</li>
 
-<li value="55">Konstantin Schütze (4)</li>
+<li value="56">Lysandros Nikolaou (4)</li>
 
-<li value="55">Jukka Lehtosalo (4)</li>
+<li value="56">Jukka Lehtosalo (4)</li>
 
-<li value="55">Jeroen Demeyer (4)</li>
+<li value="56">Jonathan Dekhtiar (4)</li>
 
-<li value="55">Gregory P. Smith (4)</li>
+<li value="56">Jeroen Demeyer (4)</li>
 
-<li value="55">Gregory Ewing (4)</li>
+<li value="56">Gregory P. Smith (4)</li>
 
-<li value="55">Eric V. Smith (4)</li>
+<li value="56">Gregory Ewing (4)</li>
 
-<li value="55">Donghee Na (4)</li>
+<li value="56">Eric V. Smith (4)</li>
 
-<li value="55">Carl Meyer (4)</li>
+<li value="56">Donghee Na (4)</li>
 
-<li value="74">Travis Oliphant (3)</li>
+<li value="56">Carl Meyer (4)</li>
 
-<li value="74">Steven D'Aprano (3)</li>
+<li value="76">Travis Oliphant (3)</li>
 
-<li value="74">Steven Bethard (3)</li>
+<li value="76">Steven D'Aprano (3)</li>
 
-<li value="74">Shantanu Jain (3)</li>
+<li value="76">Steven Bethard (3)</li>
 
-<li value="74">Serhiy Storchaka (3)</li>
+<li value="76">Shantanu Jain (3)</li>
 
-<li value="74">Sergey B Kirpichev (3)</li>
+<li value="76">Serhiy Storchaka (3)</li>
 
-<li value="74">Neal Norwitz (3)</li>
+<li value="76">Sergey B Kirpichev (3)</li>
 
-<li value="74">Michel Pelletier (3)</li>
+<li value="76">Neal Norwitz (3)</li>
 
-<li value="74">Michał Górny (3)</li>
+<li value="76">Michel Pelletier (3)</li>
 
-<li value="74">Michael Hudson (3)</li>
+<li value="76">Michael Hudson (3)</li>
 
-<li value="74">Marc Mueller (3)</li>
+<li value="76">Marc Mueller (3)</li>
 
-<li value="74">Ken Jin (3)</li>
+<li value="76">Ken Jin (3)</li>
 
-<li value="74">Jonathan Dekhtiar (3)</li>
+<li value="76">Jeffrey Yasskin (3)</li>
 
-<li value="74">Jeffrey Yasskin (3)</li>
+<li value="76">James Hilton-Balfe (3)</li>
 
-<li value="74">James Hilton-Balfe (3)</li>
+<li value="76">Hugo van Kemenade (3)</li>
 
-<li value="74">Hugo van Kemenade (3)</li>
+<li value="76">Hood Chatham (3)</li>
 
-<li value="74">Hood Chatham (3)</li>
+<li value="76">Filipe Laíns (3)</li>
 
-<li value="74">Filipe Laíns (3)</li>
+<li value="76">Facundo Tuesca (3)</li>
 
-<li value="74">Facundo Tuesca (3)</li>
+<li value="76">Ewa Jodlowska (3)</li>
 
-<li value="74">Ewa Jodlowska (3)</li>
+<li value="76">Erlend Egeberg Aasland (3)</li>
 
-<li value="74">Erlend Egeberg Aasland (3)</li>
+<li value="76">Eli Bendersky (3)</li>
 
-<li value="74">Eli Bendersky (3)</li>
+<li value="76">Carol Willing (3)</li>
 
-<li value="74">Carol Willing (3)</li>
+<li value="76">Batuhan Taskaya (3)</li>
 
-<li value="74">Batuhan Taskaya (3)</li>
+<li value="76">Armin Ronacher (3)</li>
 
-<li value="74">Armin Ronacher (3)</li>
-
-<li value="74">Alex Martelli (3)</li>
+<li value="76">Alex Martelli (3)</li>
 
 <li value="100">Vladimir Diaz (2)</li>
 
