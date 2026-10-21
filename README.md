@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,616 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,098 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,617 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,101 followers)
 
 # Open Source
 
-<small>Last updated 2026-10-20.</small>
+<small>Last updated 2026-10-21.</small>
 
 ## Contributions
 
@@ -1499,15 +1499,15 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><a href="https://github.com/python/buildmaster-config/commits?author=brettcannon">python/buildmaster-config</a></li>
+
+
+
 <li><i><a href="https://github.com/brettcannon/record-type/commits?author=brettcannon">brettcannon/record-type</a></i></li>
 
 
 
 <li><a href="https://github.com/Azure/msrest-for-python/commits?author=brettcannon">Azure/msrest-for-python</a></li>
-
-
-
-<li><a href="https://github.com/python/buildmaster-config/commits?author=brettcannon">python/buildmaster-config</a></li>
 
 
 
