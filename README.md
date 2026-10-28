@@ -1,16 +1,16 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,618 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,619 followers)
 - [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,104 followers)
 
 # Open Source
 
-<small>Last updated 2026-10-27.</small>
+<small>Last updated 2026-10-28.</small>
 
 ## Contributions
 
-I have made _some_ commit to 307 projects (some of which I started and are denoted with *italics*).
+I have made _some_ commit to 308 projects (some of which I started and are denoted with *italics*).
 
 <small>(Grouped by commit count.)</small>
 
@@ -24,6 +24,8 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 <li><a href="https://github.com/python/peps/commits?author=brettcannon">python/peps</a></li>
+
+
 
 
 
@@ -1288,6 +1290,8 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+
+
 </ol>
 
 </details>
@@ -1548,6 +1552,8 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 <li><a href="https://selenic.com/repo/python-hglib/log?rev=brett%40python.org">python-hglib</a></li>
+
+
 
 
 
@@ -3085,6 +3091,10 @@ I have made _some_ commit to 307 projects (some of which I started and are denot
 
 
 
+<li><a href="https://github.com/microsoft/sarif-tools/commits?author=brettcannon">microsoft/sarif-tools</a></li>
+
+
+
 <li><a href="https://foss.heptapod.net/pypy/pypy/-/commit/fde2d9745a1cbce34b90d73c359a4b9ffa2ecaa9">PyPy</a></li>
 
 
@@ -3129,7 +3139,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/746 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/747 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3559,6 +3569,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="76">Steven Bethard (3)</li>
 
+<li value="76">Stan Ulbrych (3)</li>
+
 <li value="76">Shantanu Jain (3)</li>
 
 <li value="76">Serhiy Storchaka (3)</li>
@@ -3601,143 +3613,141 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="76">Alex Martelli (3)</li>
 
-<li value="100">Vladimir Diaz (2)</li>
+<li value="101">Vladimir Diaz (2)</li>
 
-<li value="100">Vinay Sajip (2)</li>
+<li value="101">Vinay Sajip (2)</li>
 
-<li value="100">Trishank Karthik Kuppusamy (2)</li>
+<li value="101">Trishank Karthik Kuppusamy (2)</li>
 
-<li value="100">Tobias Kohn (2)</li>
+<li value="101">Tobias Kohn (2)</li>
 
-<li value="100">Tim Delaney (2)</li>
+<li value="101">Tim Delaney (2)</li>
 
-<li value="100">Till Varoquaux (2)</li>
+<li value="101">Till Varoquaux (2)</li>
 
-<li value="100">Terry Reedy (2)</li>
+<li value="101">Terry Reedy (2)</li>
 
-<li value="100">Tal Einat (2)</li>
+<li value="101">Tal Einat (2)</li>
 
-<li value="100">Stéphane Bidoul (2)</li>
+<li value="101">Stéphane Bidoul (2)</li>
 
-<li value="100">Steven Troxler (2)</li>
+<li value="101">Steven Troxler (2)</li>
 
-<li value="100">Stephen J. Turnbull (2)</li>
+<li value="101">Stephen J. Turnbull (2)</li>
 
-<li value="100">Stefano Borini (2)</li>
+<li value="101">Stefano Borini (2)</li>
 
-<li value="100">Stefan Behnel (2)</li>
+<li value="101">Stefan Behnel (2)</li>
 
-<li value="100">Stan Ulbrych (2)</li>
+<li value="101">Shannon Zhu (2)</li>
 
-<li value="100">Shannon Zhu (2)</li>
+<li value="101">Seth Michael Larson (2)</li>
 
-<li value="100">Seth Michael Larson (2)</li>
+<li value="101">Sam Gross (2)</li>
 
-<li value="100">Sam Gross (2)</li>
+<li value="101">Ronald Oussoren (2)</li>
 
-<li value="100">Ronald Oussoren (2)</li>
+<li value="101">Robert Collins (2)</li>
 
-<li value="100">Robert Collins (2)</li>
+<li value="101">Paul Ganssle (2)</li>
 
-<li value="100">Paul Ganssle (2)</li>
+<li value="101">Oleg Broytman (2)</li>
 
-<li value="100">Oleg Broytman (2)</li>
+<li value="101">Nick Humrich (2)</li>
 
-<li value="100">Nick Humrich (2)</li>
+<li value="101">Neil Girdhar (2)</li>
 
-<li value="100">Neil Girdhar (2)</li>
+<li value="101">Ned Deily (2)</li>
 
-<li value="100">Ned Deily (2)</li>
+<li value="101">Miro Hrončok (2)</li>
 
-<li value="100">Miro Hrončok (2)</li>
+<li value="101">Michael J. Sullivan (2)</li>
 
-<li value="100">Michael J. Sullivan (2)</li>
+<li value="101">Mark Mendoza (2)</li>
 
-<li value="100">Mark Mendoza (2)</li>
+<li value="101">Mark Hammond (2)</li>
 
-<li value="100">Mark Hammond (2)</li>
+<li value="101">Mark E. Haase (2)</li>
 
-<li value="100">Mark E. Haase (2)</li>
+<li value="101">Mario Corchero (2)</li>
 
-<li value="100">Mario Corchero (2)</li>
+<li value="101">Marina Moore (2)</li>
 
-<li value="100">Marina Moore (2)</li>
+<li value="101">Marcel Plch (2)</li>
 
-<li value="100">Marcel Plch (2)</li>
+<li value="101">Magnus Lie Hetland (2)</li>
 
-<li value="100">Magnus Lie Hetland (2)</li>
+<li value="101">Maggie Moss (2)</li>
 
-<li value="100">Maggie Moss (2)</li>
+<li value="101">Koos Zevenhoven (2)</li>
 
-<li value="100">Koos Zevenhoven (2)</li>
+<li value="101">Justin Cappos (2)</li>
 
-<li value="100">Justin Cappos (2)</li>
+<li value="101">Josiah Carlson (2)</li>
 
-<li value="100">Josiah Carlson (2)</li>
+<li value="101">Joe Carey (2)</li>
 
-<li value="100">Joe Carey (2)</li>
+<li value="101">Jesse Noller (2)</li>
 
-<li value="100">Jesse Noller (2)</li>
+<li value="101">Jaime Rodríguez-Guerra (2)</li>
 
-<li value="100">Jaime Rodríguez-Guerra (2)</li>
+<li value="101">Jack Jansen (2)</li>
 
-<li value="100">Jack Jansen (2)</li>
+<li value="101">Greg Wilson (2)</li>
 
-<li value="100">Greg Wilson (2)</li>
+<li value="101">Greg Stein (2)</li>
 
-<li value="100">Greg Stein (2)</li>
+<li value="101">Gordon McMillan (2)</li>
 
-<li value="100">Gordon McMillan (2)</li>
+<li value="101">Germán Méndez Bravo (2)</li>
 
-<li value="100">Germán Méndez Bravo (2)</li>
+<li value="101">Geoffrey Thomas (2)</li>
 
-<li value="100">Geoffrey Thomas (2)</li>
+<li value="101">Fred L. Drake, Jr. (2)</li>
 
-<li value="100">Fred L. Drake, Jr. (2)</li>
+<li value="101">Facundo Batista (2)</li>
 
-<li value="100">Facundo Batista (2)</li>
+<li value="101">Erik De Bonte (2)</li>
 
-<li value="100">Erik De Bonte (2)</li>
+<li value="101">Eli Uriegas (2)</li>
 
-<li value="100">Eli Uriegas (2)</li>
+<li value="101">Dirkjan Ochtman (2)</li>
 
-<li value="100">Dirkjan Ochtman (2)</li>
+<li value="101">Dino Viehland (2)</li>
 
-<li value="100">Dino Viehland (2)</li>
+<li value="101">David Foster (2)</li>
 
-<li value="100">David Foster (2)</li>
+<li value="101">David Ascher (2)</li>
 
-<li value="100">David Ascher (2)</li>
+<li value="101">Daniel Stutzbach (2)</li>
 
-<li value="100">Daniel Stutzbach (2)</li>
+<li value="101">Daniel F Moisset (2)</li>
 
-<li value="100">Daniel F Moisset (2)</li>
+<li value="101">Cory Benfield (2)</li>
 
-<li value="100">Cory Benfield (2)</li>
+<li value="101">Clark C. Evans (2)</li>
 
-<li value="100">Clark C. Evans (2)</li>
+<li value="101">Christopher A. Craig (2)</li>
 
-<li value="100">Christopher A. Craig (2)</li>
+<li value="101">Charlie Marsh (2)</li>
 
-<li value="100">Charlie Marsh (2)</li>
+<li value="101">Cameron Simpson (2)</li>
 
-<li value="100">Cameron Simpson (2)</li>
+<li value="101">Calvin Spealman (2)</li>
 
-<li value="100">Calvin Spealman (2)</li>
+<li value="101">Ben Finney (2)</li>
 
-<li value="100">Ben Finney (2)</li>
+<li value="101">Andy R. Terrel (2)</li>
 
-<li value="100">Andy R. Terrel (2)</li>
+<li value="101">Andrey Talman (2)</li>
 
-<li value="100">Andrey Talman (2)</li>
+<li value="101">Alexander Belopolsky (2)</li>
 
-<li value="100">Alexander Belopolsky (2)</li>
+<li value="101">Alex Gaynor (2)</li>
 
-<li value="100">Alex Gaynor (2)</li>
+<li value="101">Adam Turner (2)</li>
 
-<li value="100">Adam Turner (2)</li>
-
-<li value="100">Aahz (2)</li>
+<li value="101">Aahz (2)</li>
 
 <li value="169">Łukasz Modzelewski (1)</li>
 
