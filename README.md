@@ -6,7 +6,7 @@
 
 # Open Source
 
-<small>Last updated 2026-11-10.</small>
+<small>Last updated 2026-11-11.</small>
 
 ## Contributions
 
@@ -1355,11 +1355,11 @@ I have made _some_ commit to 308 projects (some of which I started and are denot
 
 
 
-<li><i><a href="https://github.com/brettcannon/release-often/commits?author=brettcannon">brettcannon/release-often</a></i></li>
-
-
-
 <li><i><a href="https://github.com/brettcannon/cpython-wasi-build/commits?author=brettcannon">brettcannon/cpython-wasi-build</a></i></li>
+
+
+
+<li><i><a href="https://github.com/brettcannon/release-often/commits?author=brettcannon">brettcannon/release-often</a></i></li>
 
 
 
@@ -3139,7 +3139,7 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 ### [Python Enhancement Proposals](https://peps.python.org)
 
 <details>
-<summary>I have (co-)authored 35/747 PEPs (4.7%).</summary>
+<summary>I have (co-)authored 35/748 PEPs (4.7%).</summary>
 
 (Listed from oldest to newest, although I may have become a co-author post-creation.)
 
@@ -3511,6 +3511,8 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="47">Savannah Ostrowski (5)</li>
 
+<li value="47">Peter Bierma (5)</li>
+
 <li value="47">Neil Schemenauer (5)</li>
 
 <li value="47">Konstantin Schütze (5)</li>
@@ -3523,45 +3525,43 @@ In that time I have become the 12th most prolific [contributor to CPython](https
 
 <li value="47">Anthony Baxter (5)</li>
 
-<li value="56">Zac Hatfield-Dodds (4)</li>
+<li value="57">Zac Hatfield-Dodds (4)</li>
 
-<li value="56">Thomas Kluyver (4)</li>
+<li value="57">Thomas Kluyver (4)</li>
 
-<li value="56">Tarek Ziadé (4)</li>
+<li value="57">Tarek Ziadé (4)</li>
 
-<li value="56">Richard Jones (4)</li>
+<li value="57">Richard Jones (4)</li>
 
-<li value="56">Pradeep Kumar Srinivasan (4)</li>
+<li value="57">Pradeep Kumar Srinivasan (4)</li>
 
-<li value="56">Peter Bierma (4)</li>
+<li value="57">Paul Prescod (4)</li>
 
-<li value="56">Paul Prescod (4)</li>
+<li value="57">Ofek Lev (4)</li>
 
-<li value="56">Ofek Lev (4)</li>
+<li value="57">Michał Górny (4)</li>
 
-<li value="56">Michał Górny (4)</li>
+<li value="57">Michael Sarahan (4)</li>
 
-<li value="56">Michael Sarahan (4)</li>
+<li value="57">Mariatta (4)</li>
 
-<li value="56">Mariatta (4)</li>
+<li value="57">Lysandros Nikolaou (4)</li>
 
-<li value="56">Lysandros Nikolaou (4)</li>
+<li value="57">Jukka Lehtosalo (4)</li>
 
-<li value="56">Jukka Lehtosalo (4)</li>
+<li value="57">Jonathan Dekhtiar (4)</li>
 
-<li value="56">Jonathan Dekhtiar (4)</li>
+<li value="57">Jeroen Demeyer (4)</li>
 
-<li value="56">Jeroen Demeyer (4)</li>
+<li value="57">Gregory P. Smith (4)</li>
 
-<li value="56">Gregory P. Smith (4)</li>
+<li value="57">Gregory Ewing (4)</li>
 
-<li value="56">Gregory Ewing (4)</li>
+<li value="57">Eric V. Smith (4)</li>
 
-<li value="56">Eric V. Smith (4)</li>
+<li value="57">Donghee Na (4)</li>
 
-<li value="56">Donghee Na (4)</li>
-
-<li value="56">Carl Meyer (4)</li>
+<li value="57">Carl Meyer (4)</li>
 
 <li value="76">Travis Oliphant (3)</li>
 
