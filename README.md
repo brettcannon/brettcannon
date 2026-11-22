@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,619 followers)
-- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,114 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,622 followers)
+- [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,113 followers)
 
 # Open Source
 
-<small>Last updated 2026-11-21.</small>
+<small>Last updated 2026-11-22.</small>
 
 ## Contributions
 
