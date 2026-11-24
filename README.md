@@ -1,12 +1,12 @@
 # Biographical Links
 - [FAQ about me](https://opensource.snarky.ca/About+Me/Frequently+Asked+Questions) (including links to [talks and interviews](https://opensource.snarky.ca/About+Me/Appearances))
 - [Blog](https://snarky.ca) ([latest post](https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/) published on 2026-08-16)
-- [Mastodon](https://mastodon.social/@brettcannon) (with 3,623 followers)
+- [Mastodon](https://mastodon.social/@brettcannon) (with 3,620 followers)
 - [Bluesky](https://bsky.app/profile/snarky.ca) (with 4,114 followers)
 
 # Open Source
 
-<small>Last updated 2026-11-23.</small>
+<small>Last updated 2026-11-24.</small>
 
 ## Contributions
 
@@ -1339,11 +1339,11 @@ I have made _some_ commit to 308 projects (some of which I started and are denot
 
 
 
-<li><a href="https://github.com/microsoft/pvscbot/commits?author=brettcannon">microsoft/pvscbot</a></li>
-
-
-
 <li><a href="https://github.com/pypa/packaging.python.org/commits?author=brettcannon">pypa/packaging.python.org</a></li>
+
+
+
+<li><a href="https://github.com/microsoft/pvscbot/commits?author=brettcannon">microsoft/pvscbot</a></li>
 
 
 
